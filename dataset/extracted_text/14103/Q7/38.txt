@@ -1,0 +1,17 @@
+Hist In full virtualization, no Changes are
+required to be made in the DS.(inthe
+virtual machine )
+wohereas in case of
+a para virtualized system, the OS needs
+to be modified and its divers short-
+circuited ). This leads to a tight-coubling
+between the hypervisor and the
+quest OS. This eoseeld cause a problem
+if any of the 2 is updated or upgraded
+This would not be an issuee in case of
+full virtualization as the quest OS's are
+independent and unaware of a virtual
+environment and they do not need any
+modification. Also, if any os ( guest ) or
+theyperversar his updated or upgraded, it
+would not break the virtualization set uf

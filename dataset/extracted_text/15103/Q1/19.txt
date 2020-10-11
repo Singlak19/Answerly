@@ -1,0 +1,46 @@
+Quest Virtualization :
+In Cloud Computing, virtualization refers to the process
+of creating virtual copies of computing resources in order to
+simulate these copies as real resources.
+Virtualization is a very important aspect of Cloud computi
+-nq. For cloud Service providers (Csp's ) to be able to provide
+adequate computing resources like storage, processor access,
+etc ., it needs virtualization .
+Need of Virtualization's .
+1. Virtualization enables the CSP to pool their resources
+to get maximum efficiency and utilise them to full extent.
+2 . Virtualization increases the performance of a server
+by accomodating multiple useus and providing them
+processor execution time a simultaneously 6 reduced the
+idle time for the server.
+3. It also helps in balancing the load on Server by
+VM Migration VM Migration is very important technique
+used by CSP's to balance the load on a seuven by transfer-
+-ing virtual Machines to another idle leiver . This is only
+possible with the computing resources being virtual. The
+Scanned with CamScanner
+Virtualization is of 3 types :
+1 . Full- Virtualization : In this type of virtualization, all
+the vintual machine " all completely isolated from one -
+- another and moest very machine acte as if it is
+The sole owner of the server.
+2. Para - Virtualization : In this type of virtualization, all
+the virtual machines are aware "of other VM's and that
+They are virtual and not the sole owner. This ook
+reduce the time required by the VM manager to translate
+all the requests.
+3. 04- Virtualization : In this type, there is no thardwall
+component managing - the VM's. Infact, the host os itself
+manages the VM's
+Drawbacks of Pasa - visitualization
+In
+To to Para-virtualization to the resource request
+by a UM is directly addressed by the sewer instead of an
+hypervisor ( VMM ) mediating between them. To enable
+Auch procedure, #specific modifications in The
+operating systems are required so that it can directly
+# communicate with the host for any resource
+request .
+Since not all operating system allow for custom changes,
+not all . OSh canbe alsed in para-visitual environment.
+Scanned with CamScanner

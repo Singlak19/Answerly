@@ -1,0 +1,41 @@
+4 .
+a ) What do you do to keep my data safe ?
+The data stoud in cloud can be ratected using
+various cryptographic encryptions like ABE based, for
+eg, KP- ABE, CP-ABE, etc. Thus the data stoud
+in encrypted form is safe as the decryption lont
+be allowed to people not having the keys and required
+attributed. So the data at rest is protected.
+How do I know data can't be accessed by others?
+The confidentiality of the data is protected using
+access control policies. The date in transit is
+Alcured by authentication + network securities like
+SSL, TLS, etc. This only authenticated user
+can access only the data that it is authorized
+to use + can't access other's data.
+( ) Prevent deta from being hecked + stolen ?
+Authentication and Authorization provided by DAM
+(Identity and Access management don't let
+outsiders access or stade the data. Also, encryption
+and Intrusion Detection System doesn't allowe enternal
+attacks hacks take place.
+A ) Sucurity certifications from 3 rd party ?
+)All the regulatory issues + combliance issues should be
+prementioned in the contractual papers, either they are
+related to CSP or the 3rd party, so, all the customers
+will get to know about security certifications & other
+compliance beforehand through the contractuel bakers
+of the CSP
+e
+cloud security combared to on-premises security?
+On - premises is more secure then cloud, as in cloud
+the resources are shared by multiple customers due
+to multitenancy. But a lot of security measures all
+4
+takea like access control, authorization, encryption, etc.
+But in case there is some very sensitive data, the customer
+can also be given choice to cowell in private cloud
+wheres / he will be provided on - premises deta
+storage for further more security Moreover IT IL of
+ISO / IEC 27002 takes care of rules of regulation around
+security issues.

@@ -1,0 +1,75 @@
+Ans3:
+(a)
+There are several
+of the
+customer's
+ways in which the confidentiality
+credit card can be preserved.
+Encryption
+-> The module must implement secure encryption
+mechanisms to while transferring sensitive
+information and even Boring
+in the database .
+This ensures privacy even if the data is
+compromised .
+(ii)
+Firewall
+The sections of the system dealing with
+card information must be protected a by
+a Strong corporate firewall. to protect it
+S
+against external attacks.
+( iii )
+Secure communication Protocol.
+- The module must use
+secure comm. protocols
+Such as SOL/TLS OY HTTPS .
+( iv )
+Proper authentication .
+9
+The module must implement a secure
+authentication process such as OTP Or
+dual factor authentication to allow only the
+card owner
+to
+access the information.
+A dual factor authentication protocol is the
+preferred choice for this application. The usey
+must give both CVV and a correct one Time
+Password (OTP ) to successfully make a transaction.
+This is because CVVs can potentially be stolen,
+but OTPs are
+alwayssent to the real customer
+and hence confidentiality is ensured.
+(b)
+The company needs to comply with the industry
+standard
+Payment Card Industry - Data security
+service
+OY
+PCI - DSS . This standard provides
+various
+requirements that a cloud service must
+follow
+to avoid compromise of payment info.
+These
+requirements, as listed in part ci) of
+the question, are: -
+O
+Encryption
+Secure Firewall
+3
+Secure Authentication
+y
+4 )
+Secure data communication
+Apart from these
+4
+requirements the
+standard also mentions other important
+requirements' ,
+Restricted (or no) access to card information
+2
+Maintaining minimum logg of transactions.
+3
+Re-authentication of customer once in a while.

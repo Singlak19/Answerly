@@ -1,0 +1,82 @@
+Virtualization is one of the most Important concept of
+Cloud Computing. It is the process of abstraction in
+a mannty
+that a virtual machine comprising of storage,
+processing power and computing resances is created over on
+actual physical machine. Thus, Virtualization can be viewed
+as
+humerous logical machines made out of a physical
+machine.
+V MI
+Application
+Application
+Application
+after
+Guest Os
+Guest Os
+Os
+virtualization.
+emulated
+physical resources
+Emuladed
+resources
+Actual physical
+Actual practical resources
+machine
+This virtualization is carried out by a software known as
+Hypervisor or Virtual Machine Monitor (UMM) which allocates
+or distributes resources to make a number of Urstual machines
+over actual physical server.
+The need of virtualization could be well understood by
+its advantages: -
+( 1 ) Optimum utilization of resames-
+The idle resources could be well utilized by
+virtualization as the resources get divided Into multiple
+logical units that could be utilized for other purposes.
+(im Reduces cost and energy usage:-
+Where 'n' number of machines had to be bought
+to run no number of systems, virtualization could
+Convert a single machine into number of individual
+isolated systems, thus reducing cost. Algo less energy
+will be required to operate the same number
+of
+systems .
+Scanned with CamScanner
+cilin Aids in load balancing and maintenance ! -
+With vitualzation comes the concept of UM migration
+in which a virtual machine could be shifted to another
+physical server without shutting it down. This helps in
+balaning load, maintenance work, etc.
+Para-virtualization involves short circuiting of
+drivers
+of the
+hypervisor and the quest operating systems in order to
+overcome the instruction translation latency that Is common
+in full virtualization. To actieve his, the quest as is
+modified by recompiling with new APls
+enatting it to
+call for
+the new PPTs. This is frustrated below-
+( modified danstes )
+VM,
+VN: VA'S
+Hypervisor ( modified)
+Physical Rescueles
+But there are certain drawbacks to para vidualization :-
+(i) Meification of quest OS Is mandatory. This e
+popular vendors like Hirsesoft one unable to
+Pathbut para- virtualization. This limits the choices
+of selecting a quest cs
+(iin Compatibility issues may drie between modified
+hypervies and the shoot- circuted drivers in case
+of
+updation of any one of them
+In paravotatination, unite kill vinhanation, the
+UM, Are made aware of each other . Thus, a
+Scanned with CamScanner
+security breach in one UM will compromise the security of
+all
+others .
+ci) Contant updation and modification of Hypervisor and the
+guest operating systems is a drawback in Itself.
+Scanned with CamScanner

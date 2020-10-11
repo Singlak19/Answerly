@@ -1,0 +1,45 @@
+Aus I.
+Virtualization is basically abstraction over physical resources so
+multiple users can use the physical resources optimally. I'm
+Virtualization a virtualization layer comes between operationg
+System and the physical hardware.
+VM /1
+VM-2
+VM-3
+HYPERVISOR
+Virtualization Layer
+HARDWARE
+There are many benefits of virtualization which explains why it
+is needed in today's world :-
+1. Resource Utilization- Virtualization is responsible for creating
+Several virtual machine over a single, real, physical machine.
+So, when many virtualized machines are running on a
+real hardware then the resources are utilized optimally. There
+are very less chances of all machines sitting in idle state.
+2 .
+Migration is Easy ! - Developers need to update their application
+sometimes and after updating the application they need to
+push their changes in the production. So without shutting
+doon the machine, they can migrate their virtual machine
+to a new hardware & they can push their changes easily.
+Scanned with CamScanner
+3 Cost effective : - As many virtual machines seen on a single.
+physical machine, the cost of using a UM also reducey
+Also when a user feels the need of more resources , the
+CSP can easily create more VM for them.
+# Drawbacks
+of para-virtualization '-
+1. change in OS: - To make the operating system compatible
+with Hypervisors, developers need to work hard on the
+development of updated us . For companies like Microsoft
+it is not possible to make changes in their OS for
+para - virtualization .
+1.
+2 .
+Security issues!- As the updated OS make direct calls
+to the hardware via hypervisor APls , there is a risk
+to the other Vitual machines because the affected VM
+Can corrupt the whole computing system. Also the VM's are
+aware of the presence of each other, so it can cause
+damage to alt the hardware.
+Scanned with CamScanner

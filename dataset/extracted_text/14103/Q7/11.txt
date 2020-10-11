@@ -1,0 +1,109 @@
+7 In full virtualization, the devices
+are emulated
+These devices include
+network adapters, RAM memory, DMA
+etc .
+The problem with device emulation
+is that
+it introduces time overhead
+surce emulated
+operations ore Dow, Thus
+the performance is affected.
+eater
+-)
+in order
+to reduce these
+overheach , , the
+performance
+concept
+of
+para -
+virtualization was emplared.
+The
+funda mental difference blow the two types
+is that in full votialyation , the OS is
+unaware
+about
+the
+esistence
+of
+Hyper visor
+50
+wat is not
+the
+-cat in
+case
+of para
+virtualijalon
+In para-ourtualyation
+, the
+OS
+is
+modified to acknowledge the
+eviolence
+of
+Hypervisor
+and the path
+blus
+device
+OS
+is
+short - cureuited.
+Ft
+no
+longer
+has
+to
+go
+through an
+emulated
+channel . Haveng
+said that,
+hypervisor still manages the access to the
+devices, multiplewing the devices Hur different
+UMS
+A
+since
+access is direct performance is
+vark by unproved in case of para.
+Full - Hardware has advantages -
+No
+need
+to modify OS. The IS
+needs
+to
+18
+modified
+in
+case of
+para - verlualization
+This
+modification introduces proftems-
+1 )
+since
+UM
+S
+talking to hypervisor, it
+can
+lead
+to
+security compromises
+through
+cuecution
+of malicious instructions
+affecting
+other
+VM
+2 )
+It introduces cohesion blur
+Hypervisor
+siuve "code have been altered
+to
+Match
+requirements
+of
+Hypervisor.
+Hence parking VerssiONS
+of WS
+would
+became troublesome,

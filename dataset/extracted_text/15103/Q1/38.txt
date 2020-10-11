@@ -1,0 +1,75 @@
+Qucolion
+1.
+Vuilu alization
+Viilualization means weing the physical resources / holdware resources
+effectively and efficiently which means multiple processes can be
+grun on a single operating system. Various OS ( known as quest operating
+system ) ask for the access to particular resources that they regiow to do
+their tak and hence many quest os can work yaralul on a single
+in
+Operating system .
+The concept of virtualization can be achieved with the help of Hypervvier !
+Virtual Machine Manager which on the demand of various resources by
+different virtual machines allocate them the resources and act as a
+meduin beturen the applications and hardware component of the system.
+Need of virtualization :
+1. By the concept of virtualization; we puyorn the actions of resource
+sharing and pooling.
+9 . Hence we can say? by the help of Hypervisor or VMM we can actually
+help in bitter resource utilization because then the particular resource
+will be allocated to the particular application on request.
+3 . It alop helps in cost reduction because of carlier different
+systems were required for running different tasks individually
+in
+now many tanks can be own parallel on a single eystems; hence cost
+Scanned with CamScanner
+reduction .
+4.
+It helps in better CPU utilization because then CPU doesnot have to
+stay for a longer duration of time in idle state as many processes
+can go on parael.
+Now under virtualization I we have different kind of virtualization :
+D Full virtualization : Where different quest is are dinawave of presence of
+Other Os and thinks only it is using the hardware resources.
+Hoe hypervisor act as instruction translator beliveen application and
+hardware .
+Para Virtu alization: Here quest os are aware of presence of other os
+( quest ) in the system and hence help in vocaing overhead.
+3)
+Of land virtualization : Here we dovic have any hypervisor; the
+Varle of hypervisor is porjoined by post or isely .
+Drawbacks of Para Vvilualization:
+I. In Paravirtualization ; since quest Off knows before hand it is Not
+quet
+only OS present in bre system and hence other os are peuvent
+and using the resources of the hort operating system ; it tries to
+Scanned with CamScanner
+Heduce overhead; hence it also help in induction mandation
+with hypervisor unlital in full virtualization where only hyperonsor
+was responsible joy instruction translation. But for this the guest of
+med to be modified and should randale instructions.
+Nuance drawback here is need for modification for quest O.
+2 .
+Decond drawback is this concent of paravirtualization; is available only
+for some few host OS ( as like Windows doesnot work well with concept of
+paravirtualization ) ; Lance it limit the choices of host offer users.
+3 . Third drawback is now siva the coordination between the quester
+and hypervisor ; so there can be cases we have updation in any one of the
+both ; which can had to sors of compatibility.
+But paravirtualization is better in respect to full virtualization ; as it
+helps in reducing time cost because here virtual machines know that
+they are being virtualized ; so they avoid overhead of particular nnovice
+and also hups in instruction transaction along with hypervisor.
+VM
+VM
+VM
+travolation
+instruction
+msauction
+translation
+Tramstation
+Hypovisor
+Paravirtu alization
+Host Os
+Hardware
+Scanned with CamScanner

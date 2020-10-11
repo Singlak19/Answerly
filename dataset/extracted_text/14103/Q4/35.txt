@@ -1,0 +1,95 @@
+Answer ? 4) Hyper-jacking is a security threat
+condition in which the hypervisor, a
+module that controls um, is comple-
+- miked .
+In buch a condition, all the VMs
+that were under the compromised hypervisor's
+control comes under high risk . In
+Other words, hy borjacking exposes VMs&
+the data & applications hosted on it to
+la great deal of theeat.
+Possible security threats & wilmerabilities that lake
+inherent in virtualized systems alle +
+* Hypervisor API calls-
+hypervisor communicates with Vms ( that
+alce undele it's control ) using API calls.
+of these API calls aren't hardened
+O lack good amount of authorization
+and validation, they can pose la
+security risk to the virtualized systeme.
+Scanned with CamScanner
+*
+Shaving of resources-
+Since all vMs thave the same hardware
+resources, a compromised / trM-malicious
+VM poses a security risk to all other
+tement UMs in form of data breach
+lisk: That is, the compromised VM
+Can steal the data of other VMS after
+from
+escaping the control of hypervisor
+(VM escape).
+( * )
+hypervisor Add ons
+Manageus
+systems, usually install add- ons
+On the hypervisor layers to improve
+its sfeed & efficiency of by mistake
+any compromised hyberiter add - on is installed,
+it can pose security risk to the whole of
+Virtualized system.
+*
+VM Migration
+due to maintainence & fault - tolurance reasons,
+VMs are voually migrated from one mode to
+another.
+Scanned with CamScanner
+This opens up a big becurity vulnerability as
+um data can be stolen or compromised in
+transit .
+R )
+Hypervisor Control Module :
+Within hypervisor, there is a control module
+that takes care of spawning, stopping & controlling
+the VMs. If that module get's compromised,
+it could lead to itsues like image theft,
+VM Sprawl Crm this UMb are sferamled in huge mumbeles &
+most of them are ideal ) et c.
+VM specific becurity techniques have been enlisted
+below : -
+* ) Hardening of VM -
+VM needs to be hardened by modifying its
+default configurations (like disabling unused
+services & protocole ) . This will not only save
+VM from getting compromised but will also
+give better security to the hypervisor.
+Scanned with CamScanner
+VM isolation -
+Hypervisor should be properly implemented
+and should be stringent in terms of VM
+isolation, ie VMs should have strong logical
+partitions. This will avoid data breach
+in cate one UM is compromised ..
+same physical
+Fole eq. Hypervisor thouild not allocate the memory
+previously being used by a UM to a new LVM
+because if foruious VM's date without properly
+erabing the exicting data. Otherwise it could
+stealing of
+Read to loss of privacy & data
+Encryption while vr migrations
+VM images should be encrypted suite using
+a strong algowithm using migration to
+avoid image theft.
+* )
+Penetration Testing
+Regular penetration testing of NM systems
+should be carried out to check the exter
+effectiveness of UM security present in the
+Bystem .
+Scanned with CamScanner
+Xy
+Regular of Awake upddates -
+All new security patches should be installed
+on UM & hypervisor to keep them more secure.
+Scanned with CamScanner

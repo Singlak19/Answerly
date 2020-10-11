@@ -1,0 +1,28 @@
+Question 7:
+Para virtualization /s full hardware- level virtualization
+FULL VIRTUALIZATION Involves the simulation of hardware such that
+the I'Ms are isolated and Grust Ds are rimmodified.
+. It requires a lot of tasks to be performed by the UMM Hypervisor.
+" including communication with phy resources, GOS and also controlling
+all the resource allocation tasks .
+Eg VMWare .
+PARA VIRTUALIZATION inoshees short circuiting of the OS & UMM drivers
+such that the communication becomes direct & the 90s is modified &
+it knows that it has been virtualized.
+Eg Xen
+. Paravirtualization outperform the full virtualization bicause
+in full virtualization , the hypervisor has special computation &
+resource needs which overalls affects the performance of the system
+as resounces have to be allocated for hypuvisor.
+But paravirtualization involves close dependency and light coughing
+of the OS and the hypervisor which poses security vulnerability
+and compatibility issues.
+ADVANTAGE Of FULL VIRT.
+The GOS ( just Operating System) is unmodified in full but
+it has to be modified in para virtualization .
+The modified Gos appears unappealing to the vendors & also poses
+problems like
+- Version compatibility elw Os & UMM
+- security vulnerability
+- tight coupling t/w gs & 6MM.
+G

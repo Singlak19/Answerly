@@ -1,0 +1,127 @@
+Hyper-Jacking refers to the hypervisor being
+attacked and put under compromised seaviity.
+The hypervisor is the software firmware that
+Creates and eins virtual
+machines. In case of
+hypervisor been security breach, all the vMs under
+that hypervisor are at risk and also the under-
+lying shavedware might be affected ..
+Security threats and vulnerabilities in a virtualized
+System
+1 Hypervisor security is the key. If the hypervisor is
+breached , all the ums under the vMm would
+be under the control of the attacker. The attacker
+could also gain access to the hardware (storage
+and metwreck ) through his access on the hypervisor.
+2 )
+Threats to Confidentiality of data :
+a ) intermal attacker
+- at the cloud service provider i might
+be logging user information and activities ; could
+even replicate a um and misuse client forma-
+tion .
+- at the customer " might pide uf passwords
+Scanned with CamScanner
+and again unauthenticated access to a
+um .
+b )
+External attacker
+- a software attack on the cloud infrastrucation.
+- a software attack on the cloud services
+- a software / hardware attack on the
+cloud user/ client's end machines.
+-
+a hardware attack on cloud infrastructure
+- lored social engineering
+Sech attacks might be launched on the
+Cloud service / infrastructure which would
+pose a security threat to the UMs and
+data .
+c ) Data Leakage
+- unauthorized intentional / unintentional leakage
+sensitive reformation
+might lead to an
+attack on the closed (as that leaked
+information
+might land of in wering hands).
+3) Threats to integrity of data
+- Invalid / Incorrect data security perimeters
+- Euvalid configuration of Vms.
+Scanned with CamScanner
+- faulty data / applications . In case of a
+multitenant model , faulty applications on
+Due UM might lead to security threat's and
+breaches to data in Other UMs on the
+same hardware.
+(14 Threats to availability of services
+- Denial of Service attack : an attacker might
+flood the service endpoint with
+fictiones requests and make the service
+go into a denial
+of service mode
+(partially or wholly )
+- Physical intrusion to resources : at the cloud
+service provider or the customer fr
+any third party provider.
+- Unavailability
+if services: The CSP server
+might be down or to
+the internet service
+outage might have occured.
+5
+VM Escape
+VM Escape us a situation where a malicious vm
+escapes the control of its VMM. This can cause
+the VM to be infected and also might infect the
+Scanned with CamScanner
+other um's un the network .
+6 VM Sprawl
+A situation
+in which the mo. of VM's on a
+specific hardware resource are continuous
+increasing with most of the initial UMs being
+Idle . This
+would lead to wastage
+OP
+gresources.
+7
+Um
+Miquation
+During the migration of a um , it is exposed to the
+network and all the threats associated with it.
+VM specific security techniques
+0 um Hardening . A technique in restich the
+defaillt configuration of a virtual machine
+is changed, in order to achieve a higher
+level of security Rund privacy.
+2
+VM Isolation : Multiple VM's might be running
+In the same hardemore / wunder the same VIMM.
+Special care must be take to ensure that
+the
+different UMs are isolated from each other
+le . they wwwen independently and malware
+of each other's existance.
+Scanned with CamScanner
+3 um migration :
+um migration us the process
+migrating a Um from one device to
+another ( with the same manufacturer's processor)
+without twining the UM
+This exposes
+the UM and x
+related
+data
+to
+the metwork
+migration is done for fault tolerance, load
+balancing etc , and must be dove withe
+extra
+care security and precautious.
+4)
+Authentication : Along with isolation, peper
+carre must be taken while providing
+access to any UM resources. The access meest-
+be authenticated properly so as to ensure
+that mo faulty access is being granted.
+Scanned with CamScanner

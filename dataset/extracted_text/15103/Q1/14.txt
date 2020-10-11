@@ -1,0 +1,93 @@
+Ques 1
+Virtualization is basically an abstraction of physical resources
+than can be shared by a number of virtual machines.
+Vistual machines
+Virtualization
+( Abstraction )
+Physical resources
+The physical resources that will be shaved bet among virtual
+machines is called " host " .
+The Operating system sunning on vritual machines is called
+ilest Operating system (OS ) "
+Hypervisor or vmm is basically a hardware, software or
+Middleware framework that help in virtualization or we can
+say an interface between physical resources" and vwritual
+machines .
+. Hypervisor helpis in creating an environment for vitual machines
+that is same like original computing envisonment ie vistual
+machines are unaware that they are viatualizazed and shared
+the physical resoluaces with other leactual machines .
+In worst case senesio of hypervisor os vmm, they create only
+minor Speed problems in virtualization.
+Scanned with CamScanner
+Need of Villadization :-
+a) Resource booking:-
+Posa -
+With the help of virtualization, ist is possible that physical
+The
+resources like database, servers, Storages etc are shased
+Syster
+among mose than one machine. in some particular type
+itspou
+of virtualization, even vistual machines are even unaware
+pl
+that they are sharing acsouacs with other machines .
+b )
+Consolidation ! -
+wode
+It help in consolidation of hardware resources with
+drivers
+virtual machines . In base hypervisor, there is no host operating
+System and hypervisor works as a consolidate between
+Guest c
+hardware resources and vistual machines .
+Like Xe
+c )
+Isolated machines ! -
+Th Even in vistualization, virtual machines act as an isolated
+machines because hypomisos creates an environment that
+ulatual machines thinks that it is living, physical resources
+.only .
+d)
+Jucrease Efficiency ! -
+Physical resources are shared alloug so many viudual machines
+the because of that, physical resources are properly utilised
+and used. At increases the efficiency of physical resources.
+Scanned with CamScanner
+Pasa - Viotualization : -
+The major drawback of full virtualization us that guest operating
+System are unaware about virtualization which increases
+responsibility on hypervisor , because of that , speed and efficiency
+of physical resources decreased.
+In Para - virtualization , quest operating system are modified and
+made aware about vistualization . Guest operating system
+drivees interact with hypermisos drinces and help in vintialization ."
+Guest operating system us modified so that it is interacting
+with - AP ) and helps the hypermisos in virtualization.
+Like You hypervisor is summing on Linux OS.
+Application
+50
+PVdrivers
+vm
+VM
+Py drivers
+Hypervisor OR VMM
+Physical Resources
+Pasa - Vistualization
+Scanned with CamScanner
+KNEERING COLLEGE (DEEN))
+Drawbacks of Pasa- Vistualization
+O
+- Modified Gulest opesaling system
+TOI
+ot
+-
+Mayor vendoss like Microsoft etc do not agree to modify
+a
+operating system.
+-
+It increases depandancy between hypomisos and guest spesating
+system .
+- Due to dependency, & make it vulnerable for various
+attacks .
+Scanned with CamScanner

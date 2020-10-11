@@ -1,0 +1,30 @@
+6. 95 ## Paas
+Customers should monitor Paas health as
+it
+is not available or there is some issue with its
+working, the applications built over it will not be
+able to work. There will be compilation issues and
+any
+new development or deployment will
+not be possible.
+To check the health monitoring ) Paas ,
+- we can use the logging service of the provider.
+- The providers usually the current status of the
+health and its history on their website .
+- There are also test end points that can be
+accessed to check the health monitor of the
+Poos provider.
+( b ) Inas
+S
+Customers should monitor Ings health
+as
+the
+provider is not available connection with the url will
+not be possible, the user will
+not be able to
+access the resources. Any application tunning on the VIM
+will also be unsearchable.
+To check the health monitoring of Iaas ,
+- we Can use CCID ( Cloud Computing, Incident Database ),
+it stores all the incidents or issued that take
+place on any cloud server.

@@ -1,0 +1,33 @@
+Ans 2:
+APls form the operational backbone of any
+cloud service. A customer typically interacts with
+a CSP cloud service using the APIs provided
+by the service provider . For example, a
+customer using the Google maps service will
+access it using various APIs (may be free or
+paid ) provided by Google .
+Also , within a cloud service , there may exist
+multiple segregated sub-services which
+assists the main service. The communication between
+them also happens with secure private APls.
+Various IAM standards such as OAuth and
+OpenID also use APIs to provided by other
+CSPs to exchange information securely. For
+developers of
+cloud services , it provides a
+Simple mechanism ( mostly just a fonction call )
+to open a service to large no. of users.
+Scanned with CamScanner
+-
+-
+-
+~
+Backend
+Logic
+API
+Customer
+-
+cloud service
+It acts as an interface for the customer to
+access the backend logic of a cloud service.
+Scanned with CamScanner

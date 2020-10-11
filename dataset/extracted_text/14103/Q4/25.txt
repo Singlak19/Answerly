@@ -1,0 +1,96 @@
+COU y
+Hyper- Jacking : It is basically a technique used by an attacker
+to high-jack or take control of Bystem hypervisor.
+This can be dime by Installing malicious software on
+hyper visors .
+Once the
+hypervisor
+is compromised everything (including
+Virtual machines ,
+Os guest & host ) will be compromised.
+Scanned with CamScanner
+Now if attacker
+take amboe of hypervisor them all
+the virtual machies that are running on it are also in
+the attacker's control.
+Once the virtual machine
+is
+in attacker's control ,
+attacker
+can :
+Install
+malicious
+software
+on the machine .
+Replicate
+the Virtual machine
+O
+Access
+the data from the machine.
+O
+can use the machine to extract the data from other
+virtual machine.
+can destroy the system .
+O Can Install malicious software in operating mystom.
+Can chany the uiliguration of virtual machine
+O Can accen physical resources of the system.
+vm - specific
+Security
+Techniques
+-
+UM - hardening :
+This is basically a security technique
+In which some software is installed on VM for more
+security .
+-
+VM - ISOLATION : This is a security technique
+which
+two
+or
+more
+virtual machines running on a
+same
+Ash physical server is isolated, from one- another.
+Threat: If attacker takes control of hypervisor then
+this would affect on VM - isolation.
+Scanned with CamScanner
+- VM- migration : This is a technique in which VM is
+migrated from one physical nurver to another
+without shuting down.
+VM
+Why
+Physical seever !!
+Physical Server 2 1
+Concerns
+- fault tolerance
+Lo compromised ?
+- maintainence
+network
+I load balancing
+5 Privacy & integrity concerns.
+."" use secure protical like SSL / TLS
+VM - Escape : In the UM will escape from the control
+of its
+hypervisor .
+rollback
+imaging
+VM
+VM
+out of
+HYPER VISOR
+control of hypervisor
+VM escape.
+attacker
+gets control
+of
+hypervuur
+various numberof
+VM- SPRAWL , This is a technique in which virtual
+imachines
+are created on physical server
+such met
+monto VM
+are idle .
+. very difficult to manage such a large number of VMS.
+. decrease the server performance
+Scanned with CamScanner

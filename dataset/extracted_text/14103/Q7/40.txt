@@ -1,0 +1,33 @@
+Answer-7), Though paravirtualization is better than
+Full hardware level virtualization in
+almost all fronts like cost effective, energy
+efficient, & feet etc, there is one &
+area where paravirtualizations lacks
+behind full virtualization. That area is -
+In paravirtualization, the guest OS is
+aware that it is being virtualiget. That is
+i'm this type of virtualization, quest OS
+needs to be modified . This is because
+quest OS drivers has special drivers which
+teck thout circuit the normal route fou
+of instructions from hardware to hypervisor.
+to questos. In other words , quest OS &
+hypervisor coordinate with each other to
+make the solution fastle & cost-effective.
+Bust in for full virtualization this is not
+the case as hypervisor emulates all of
+the resources & quest is the issues normal
+handmake instructions.
+Hence, the issue with paravirtualization
+is that it requires quest OS modification.
+This leads to problems like
+Every guest os needs to be modified based
+on to the hypervisor. This makes it
+difficult to scale.
+There &'This leads to strong coupling
+between quest OS x hypervisor. tience, it beads
+limits the available combinations.
+3
+of any one of quest OS DE hypervisor needs
+can
+to be updated, it leads to compatibility issues
