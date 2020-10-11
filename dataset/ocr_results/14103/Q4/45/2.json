@@ -1,0 +1,247 @@
+{
+    "status": "succeeded",
+    "createdDateTime": "2020-10-11T08:27:50Z",
+    "lastUpdatedDateTime": "2020-10-11T08:27:51Z",
+    "analyzeResult": {
+        "version": "3.0.0",
+        "readResults": [
+            {
+                "page": 1,
+                "language": "en",
+                "angle": -0.3409,
+                "width": 1653,
+                "height": 2339,
+                "unit": "pixel",
+                "lines": [
+                    {
+                        "boundingBox": [
+                            164,
+                            1050,
+                            385,
+                            1048,
+                            387,
+                            1102,
+                            166,
+                            1108
+                        ],
+                        "text": "5 ) VM",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    165,
+                                    1050,
+                                    172,
+                                    1050,
+                                    175,
+                                    1109,
+                                    168,
+                                    1109
+                                ],
+                                "text": "5",
+                                "confidence": 0.986
+                            },
+                            {
+                                "boundingBox": [
+                                    184,
+                                    1050,
+                                    242,
+                                    1049,
+                                    245,
+                                    1105,
+                                    187,
+                                    1108
+                                ],
+                                "text": ")",
+                                "confidence": 0.979
+                            },
+                            {
+                                "boundingBox": [
+                                    277,
+                                    1049,
+                                    377,
+                                    1049,
+                                    380,
+                                    1098,
+                                    280,
+                                    1103
+                                ],
+                                "text": "VM",
+                                "confidence": 0.959
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            421,
+                            1039,
+                            1514,
+                            1035,
+                            1514,
+                            1091,
+                            422,
+                            1100
+                        ],
+                        "text": "migration should done over SSL or TLS",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    476,
+                                    1052,
+                                    704,
+                                    1041,
+                                    709,
+                                    1093,
+                                    481,
+                                    1099
+                                ],
+                                "text": "migration",
+                                "confidence": 0.75
+                            },
+                            {
+                                "boundingBox": [
+                                    768,
+                                    1039,
+                                    929,
+                                    1036,
+                                    933,
+                                    1089,
+                                    772,
+                                    1092
+                                ],
+                                "text": "should",
+                                "confidence": 0.786
+                            },
+                            {
+                                "boundingBox": [
+                                    993,
+                                    1035,
+                                    1100,
+                                    1036,
+                                    1103,
+                                    1088,
+                                    996,
+                                    1089
+                                ],
+                                "text": "done",
+                                "confidence": 0.978
+                            },
+                            {
+                                "boundingBox": [
+                                    1142,
+                                    1036,
+                                    1252,
+                                    1038,
+                                    1254,
+                                    1088,
+                                    1145,
+                                    1088
+                                ],
+                                "text": "over",
+                                "confidence": 0.942
+                            },
+                            {
+                                "boundingBox": [
+                                    1270,
+                                    1039,
+                                    1352,
+                                    1041,
+                                    1354,
+                                    1088,
+                                    1272,
+                                    1088
+                                ],
+                                "text": "SSL",
+                                "confidence": 0.941
+                            },
+                            {
+                                "boundingBox": [
+                                    1361,
+                                    1041,
+                                    1428,
+                                    1044,
+                                    1430,
+                                    1089,
+                                    1363,
+                                    1088
+                                ],
+                                "text": "or",
+                                "confidence": 0.805
+                            },
+                            {
+                                "boundingBox": [
+                                    1440,
+                                    1045,
+                                    1513,
+                                    1048,
+                                    1515,
+                                    1090,
+                                    1442,
+                                    1089
+                                ],
+                                "text": "TLS",
+                                "confidence": 0.819
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            1065,
+                            2272,
+                            1498,
+                            2272,
+                            1498,
+                            2308,
+                            1065,
+                            2309
+                        ],
+                        "text": "Scanned with CamScanner",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    1065,
+                                    2272,
+                                    1202,
+                                    2273,
+                                    1203,
+                                    2309,
+                                    1067,
+                                    2310
+                                ],
+                                "text": "Scanned",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    1209,
+                                    2273,
+                                    1278,
+                                    2273,
+                                    1279,
+                                    2309,
+                                    1211,
+                                    2309
+                                ],
+                                "text": "with",
+                                "confidence": 0.987
+                            },
+                            {
+                                "boundingBox": [
+                                    1285,
+                                    2273,
+                                    1498,
+                                    2272,
+                                    1497,
+                                    2309,
+                                    1286,
+                                    2309
+                                ],
+                                "text": "CamScanner",
+                                "confidence": 0.981
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

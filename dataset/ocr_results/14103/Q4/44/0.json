@@ -1,0 +1,1985 @@
+{
+    "status": "succeeded",
+    "createdDateTime": "2020-10-11T08:27:29Z",
+    "lastUpdatedDateTime": "2020-10-11T08:27:30Z",
+    "analyzeResult": {
+        "version": "3.0.0",
+        "readResults": [
+            {
+                "page": 1,
+                "language": "en",
+                "angle": -0.4804,
+                "width": 1653,
+                "height": 2339,
+                "unit": "pixel",
+                "lines": [
+                    {
+                        "boundingBox": [
+                            19,
+                            349,
+                            492,
+                            349,
+                            493,
+                            422,
+                            19,
+                            422
+                        ],
+                        "text": "4. Hyperjacking",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    19,
+                                    350,
+                                    111,
+                                    350,
+                                    112,
+                                    420,
+                                    20,
+                                    423
+                                ],
+                                "text": "4.",
+                                "confidence": 0.563
+                            },
+                            {
+                                "boundingBox": [
+                                    150,
+                                    350,
+                                    493,
+                                    353,
+                                    494,
+                                    420,
+                                    150,
+                                    418
+                                ],
+                                "text": "Hyperjacking",
+                                "confidence": 0.69
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            536,
+                            368,
+                            572,
+                            367,
+                            573,
+                            409,
+                            537,
+                            410
+                        ],
+                        "text": "-",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    544,
+                                    368,
+                                    569,
+                                    367,
+                                    571,
+                                    409,
+                                    545,
+                                    410
+                                ],
+                                "text": "-",
+                                "confidence": 0.982
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            153,
+                            494,
+                            1447,
+                            487,
+                            1448,
+                            550,
+                            153,
+                            562
+                        ],
+                        "text": "Hypervisor is a hardware, firmware or",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    169,
+                                    504,
+                                    489,
+                                    494,
+                                    491,
+                                    554,
+                                    171,
+                                    563
+                                ],
+                                "text": "Hypervisor",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    523,
+                                    493,
+                                    600,
+                                    491,
+                                    602,
+                                    552,
+                                    525,
+                                    553
+                                ],
+                                "text": "is",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    635,
+                                    491,
+                                    693,
+                                    489,
+                                    695,
+                                    550,
+                                    637,
+                                    551
+                                ],
+                                "text": "a",
+                                "confidence": 0.986
+                            },
+                            {
+                                "boundingBox": [
+                                    731,
+                                    489,
+                                    1082,
+                                    487,
+                                    1084,
+                                    548,
+                                    733,
+                                    549
+                                ],
+                                "text": "hardware,",
+                                "confidence": 0.876
+                            },
+                            {
+                                "boundingBox": [
+                                    1101,
+                                    487,
+                                    1375,
+                                    491,
+                                    1377,
+                                    551,
+                                    1104,
+                                    548
+                                ],
+                                "text": "firmware",
+                                "confidence": 0.749
+                            },
+                            {
+                                "boundingBox": [
+                                    1387,
+                                    491,
+                                    1444,
+                                    492,
+                                    1447,
+                                    552,
+                                    1389,
+                                    551
+                                ],
+                                "text": "or",
+                                "confidence": 0.956
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            176,
+                            599,
+                            1556,
+                            575,
+                            1558,
+                            636,
+                            177,
+                            675
+                        ],
+                        "text": "a software that makes virtualisation possible.",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    188,
+                                    618,
+                                    244,
+                                    613,
+                                    248,
+                                    671,
+                                    191,
+                                    675
+                                ],
+                                "text": "a",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    297,
+                                    609,
+                                    523,
+                                    595,
+                                    526,
+                                    654,
+                                    300,
+                                    668
+                                ],
+                                "text": "software",
+                                "confidence": 0.648
+                            },
+                            {
+                                "boundingBox": [
+                                    583,
+                                    591,
+                                    707,
+                                    586,
+                                    710,
+                                    646,
+                                    586,
+                                    651
+                                ],
+                                "text": "that",
+                                "confidence": 0.979
+                            },
+                            {
+                                "boundingBox": [
+                                    764,
+                                    583,
+                                    911,
+                                    579,
+                                    913,
+                                    639,
+                                    767,
+                                    643
+                                ],
+                                "text": "makes",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    956,
+                                    578,
+                                    1349,
+                                    576,
+                                    1350,
+                                    635,
+                                    958,
+                                    638
+                                ],
+                                "text": "virtualisation",
+                                "confidence": 0.786
+                            },
+                            {
+                                "boundingBox": [
+                                    1360,
+                                    576,
+                                    1557,
+                                    580,
+                                    1557,
+                                    637,
+                                    1361,
+                                    635
+                                ],
+                                "text": "possible.",
+                                "confidence": 0.747
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            186,
+                            697,
+                            1560,
+                            670,
+                            1562,
+                            725,
+                            188,
+                            766
+                        ],
+                        "text": "It ruates a layer over the physical resources",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    187,
+                                    711,
+                                    269,
+                                    706,
+                                    273,
+                                    764,
+                                    191,
+                                    767
+                                ],
+                                "text": "It",
+                                "confidence": 0.986
+                            },
+                            {
+                                "boundingBox": [
+                                    306,
+                                    703,
+                                    510,
+                                    692,
+                                    514,
+                                    752,
+                                    310,
+                                    762
+                                ],
+                                "text": "ruates",
+                                "confidence": 0.752
+                            },
+                            {
+                                "boundingBox": [
+                                    540,
+                                    690,
+                                    596,
+                                    688,
+                                    600,
+                                    749,
+                                    544,
+                                    751
+                                ],
+                                "text": "a",
+                                "confidence": 0.986
+                            },
+                            {
+                                "boundingBox": [
+                                    629,
+                                    686,
+                                    771,
+                                    681,
+                                    774,
+                                    742,
+                                    633,
+                                    748
+                                ],
+                                "text": "layer",
+                                "confidence": 0.943
+                            },
+                            {
+                                "boundingBox": [
+                                    786,
+                                    680,
+                                    920,
+                                    676,
+                                    923,
+                                    738,
+                                    789,
+                                    742
+                                ],
+                                "text": "over",
+                                "confidence": 0.967
+                            },
+                            {
+                                "boundingBox": [
+                                    950,
+                                    675,
+                                    1050,
+                                    673,
+                                    1053,
+                                    734,
+                                    953,
+                                    737
+                                ],
+                                "text": "the",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    1091,
+                                    673,
+                                    1330,
+                                    671,
+                                    1332,
+                                    728,
+                                    1094,
+                                    733
+                                ],
+                                "text": "physical",
+                                "confidence": 0.562
+                            },
+                            {
+                                "boundingBox": [
+                                    1341,
+                                    670,
+                                    1561,
+                                    672,
+                                    1563,
+                                    725,
+                                    1343,
+                                    728
+                                ],
+                                "text": "resources",
+                                "confidence": 0.652
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            183,
+                            786,
+                            1452,
+                            768,
+                            1454,
+                            825,
+                            185,
+                            854
+                        ],
+                        "text": "and hosts multiple quest oss . In case",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    204,
+                                    803,
+                                    312,
+                                    795,
+                                    315,
+                                    850,
+                                    208,
+                                    855
+                                ],
+                                "text": "and",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    366,
+                                    791,
+                                    494,
+                                    784,
+                                    497,
+                                    842,
+                                    369,
+                                    847
+                                ],
+                                "text": "hosts",
+                                "confidence": 0.879
+                            },
+                            {
+                                "boundingBox": [
+                                    717,
+                                    774,
+                                    913,
+                                    770,
+                                    916,
+                                    830,
+                                    720,
+                                    835
+                                ],
+                                "text": "multiple",
+                                "confidence": 0.877
+                            },
+                            {
+                                "boundingBox": [
+                                    957,
+                                    769,
+                                    1092,
+                                    769,
+                                    1095,
+                                    827,
+                                    960,
+                                    830
+                                ],
+                                "text": "quest",
+                                "confidence": 0.652
+                            },
+                            {
+                                "boundingBox": [
+                                    1109,
+                                    769,
+                                    1197,
+                                    770,
+                                    1199,
+                                    827,
+                                    1112,
+                                    827
+                                ],
+                                "text": "oss",
+                                "confidence": 0.652
+                            },
+                            {
+                                "boundingBox": [
+                                    1207,
+                                    770,
+                                    1258,
+                                    770,
+                                    1260,
+                                    826,
+                                    1210,
+                                    827
+                                ],
+                                "text": ".",
+                                "confidence": 0.975
+                            },
+                            {
+                                "boundingBox": [
+                                    1271,
+                                    770,
+                                    1342,
+                                    772,
+                                    1345,
+                                    826,
+                                    1274,
+                                    826
+                                ],
+                                "text": "In",
+                                "confidence": 0.957
+                            },
+                            {
+                                "boundingBox": [
+                                    1352,
+                                    773,
+                                    1450,
+                                    775,
+                                    1453,
+                                    826,
+                                    1355,
+                                    826
+                                ],
+                                "text": "case",
+                                "confidence": 0.794
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            175,
+                            869,
+                            1547,
+                            855,
+                            1547,
+                            920,
+                            176,
+                            929
+                        ],
+                        "text": "this hypervisor comes in control of the",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    176,
+                                    874,
+                                    271,
+                                    874,
+                                    271,
+                                    925,
+                                    177,
+                                    924
+                                ],
+                                "text": "this",
+                                "confidence": 0.979
+                            },
+                            {
+                                "boundingBox": [
+                                    316,
+                                    874,
+                                    577,
+                                    872,
+                                    578,
+                                    929,
+                                    317,
+                                    926
+                                ],
+                                "text": "hypervisor",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    815,
+                                    869,
+                                    982,
+                                    867,
+                                    982,
+                                    927,
+                                    816,
+                                    929
+                                ],
+                                "text": "comes",
+                                "confidence": 0.761
+                            },
+                            {
+                                "boundingBox": [
+                                    1024,
+                                    866,
+                                    1102,
+                                    865,
+                                    1103,
+                                    926,
+                                    1024,
+                                    927
+                                ],
+                                "text": "in",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    1148,
+                                    864,
+                                    1344,
+                                    860,
+                                    1344,
+                                    921,
+                                    1148,
+                                    925
+                                ],
+                                "text": "control",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    1373,
+                                    859,
+                                    1445,
+                                    858,
+                                    1445,
+                                    917,
+                                    1373,
+                                    920
+                                ],
+                                "text": "of",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    1471,
+                                    857,
+                                    1546,
+                                    855,
+                                    1546,
+                                    914,
+                                    1471,
+                                    917
+                                ],
+                                "text": "the",
+                                "confidence": 0.98
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            174,
+                            971,
+                            1568,
+                            949,
+                            1569,
+                            1002,
+                            175,
+                            1033
+                        ],
+                        "text": "attacker, all the guest OS and the underlying",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    188,
+                                    980,
+                                    450,
+                                    969,
+                                    451,
+                                    1026,
+                                    190,
+                                    1034
+                                ],
+                                "text": "attacker,",
+                                "confidence": 0.69
+                            },
+                            {
+                                "boundingBox": [
+                                    481,
+                                    968,
+                                    584,
+                                    964,
+                                    585,
+                                    1023,
+                                    483,
+                                    1026
+                                ],
+                                "text": "all",
+                                "confidence": 0.978
+                            },
+                            {
+                                "boundingBox": [
+                                    612,
+                                    963,
+                                    711,
+                                    960,
+                                    712,
+                                    1020,
+                                    613,
+                                    1022
+                                ],
+                                "text": "the",
+                                "confidence": 0.977
+                            },
+                            {
+                                "boundingBox": [
+                                    753,
+                                    959,
+                                    891,
+                                    956,
+                                    892,
+                                    1016,
+                                    754,
+                                    1019
+                                ],
+                                "text": "guest",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    909,
+                                    956,
+                                    994,
+                                    954,
+                                    994,
+                                    1013,
+                                    910,
+                                    1015
+                                ],
+                                "text": "OS",
+                                "confidence": 0.822
+                            },
+                            {
+                                "boundingBox": [
+                                    1050,
+                                    953,
+                                    1170,
+                                    951,
+                                    1171,
+                                    1010,
+                                    1051,
+                                    1012
+                                ],
+                                "text": "and",
+                                "confidence": 0.78
+                            },
+                            {
+                                "boundingBox": [
+                                    1192,
+                                    951,
+                                    1284,
+                                    951,
+                                    1284,
+                                    1008,
+                                    1192,
+                                    1009
+                                ],
+                                "text": "the",
+                                "confidence": 0.978
+                            },
+                            {
+                                "boundingBox": [
+                                    1315,
+                                    950,
+                                    1566,
+                                    950,
+                                    1566,
+                                    1003,
+                                    1315,
+                                    1007
+                                ],
+                                "text": "underlying",
+                                "confidence": 0.592
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            168,
+                            1068,
+                            1567,
+                            1055,
+                            1568,
+                            1112,
+                            169,
+                            1132
+                        ],
+                        "text": "Aotyical sh tt Save Airver is compromised",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    176,
+                                    1077,
+                                    369,
+                                    1070,
+                                    373,
+                                    1127,
+                                    181,
+                                    1133
+                                ],
+                                "text": "Aotyical",
+                                "confidence": 0.571
+                            },
+                            {
+                                "boundingBox": [
+                                    402,
+                                    1069,
+                                    484,
+                                    1067,
+                                    488,
+                                    1124,
+                                    406,
+                                    1126
+                                ],
+                                "text": "sh",
+                                "confidence": 0.568
+                            },
+                            {
+                                "boundingBox": [
+                                    566,
+                                    1064,
+                                    673,
+                                    1062,
+                                    677,
+                                    1119,
+                                    569,
+                                    1121
+                                ],
+                                "text": "tt",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    714,
+                                    1061,
+                                    848,
+                                    1059,
+                                    851,
+                                    1116,
+                                    717,
+                                    1118
+                                ],
+                                "text": "Save",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    878,
+                                    1059,
+                                    1082,
+                                    1056,
+                                    1084,
+                                    1113,
+                                    880,
+                                    1115
+                                ],
+                                "text": "Airver",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    1123,
+                                    1056,
+                                    1193,
+                                    1056,
+                                    1195,
+                                    1112,
+                                    1124,
+                                    1113
+                                ],
+                                "text": "is",
+                                "confidence": 0.979
+                            },
+                            {
+                                "boundingBox": [
+                                    1238,
+                                    1056,
+                                    1568,
+                                    1057,
+                                    1569,
+                                    1112,
+                                    1239,
+                                    1112
+                                ],
+                                "text": "compromised",
+                                "confidence": 0.559
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            160,
+                            1166,
+                            1501,
+                            1149,
+                            1502,
+                            1206,
+                            161,
+                            1233
+                        ],
+                        "text": "and a is under the attackers control . Auch a",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    176,
+                                    1185,
+                                    279,
+                                    1178,
+                                    281,
+                                    1229,
+                                    179,
+                                    1233
+                                ],
+                                "text": "and",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    326,
+                                    1174,
+                                    372,
+                                    1172,
+                                    375,
+                                    1225,
+                                    328,
+                                    1227
+                                ],
+                                "text": "a",
+                                "confidence": 0.69
+                            },
+                            {
+                                "boundingBox": [
+                                    385,
+                                    1171,
+                                    447,
+                                    1168,
+                                    450,
+                                    1223,
+                                    387,
+                                    1225
+                                ],
+                                "text": "is",
+                                "confidence": 0.954
+                            },
+                            {
+                                "boundingBox": [
+                                    494,
+                                    1165,
+                                    640,
+                                    1159,
+                                    643,
+                                    1217,
+                                    496,
+                                    1221
+                                ],
+                                "text": "under",
+                                "confidence": 0.973
+                            },
+                            {
+                                "boundingBox": [
+                                    656,
+                                    1158,
+                                    743,
+                                    1155,
+                                    746,
+                                    1215,
+                                    658,
+                                    1217
+                                ],
+                                "text": "the",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    803,
+                                    1154,
+                                    1046,
+                                    1150,
+                                    1049,
+                                    1210,
+                                    805,
+                                    1214
+                                ],
+                                "text": "attackers",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    1065,
+                                    1150,
+                                    1246,
+                                    1150,
+                                    1248,
+                                    1208,
+                                    1067,
+                                    1209
+                                ],
+                                "text": "control",
+                                "confidence": 0.766
+                            },
+                            {
+                                "boundingBox": [
+                                    1255,
+                                    1151,
+                                    1302,
+                                    1151,
+                                    1305,
+                                    1208,
+                                    1258,
+                                    1208
+                                ],
+                                "text": ".",
+                                "confidence": 0.976
+                            },
+                            {
+                                "boundingBox": [
+                                    1321,
+                                    1151,
+                                    1452,
+                                    1154,
+                                    1454,
+                                    1208,
+                                    1323,
+                                    1208
+                                ],
+                                "text": "Auch",
+                                "confidence": 0.644
+                            },
+                            {
+                                "boundingBox": [
+                                    1467,
+                                    1155,
+                                    1499,
+                                    1155,
+                                    1501,
+                                    1208,
+                                    1470,
+                                    1208
+                                ],
+                                "text": "a",
+                                "confidence": 0.986
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            167,
+                            1261,
+                            1213,
+                            1242,
+                            1214,
+                            1308,
+                            168,
+                            1324
+                        ],
+                        "text": "dithatit is called Hyperjacking.",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    177,
+                                    1275,
+                                    375,
+                                    1264,
+                                    377,
+                                    1320,
+                                    179,
+                                    1324
+                                ],
+                                "text": "dithatit",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    467,
+                                    1259,
+                                    531,
+                                    1256,
+                                    534,
+                                    1317,
+                                    470,
+                                    1318
+                                ],
+                                "text": "is",
+                                "confidence": 0.973
+                            },
+                            {
+                                "boundingBox": [
+                                    579,
+                                    1254,
+                                    777,
+                                    1248,
+                                    780,
+                                    1313,
+                                    582,
+                                    1316
+                                ],
+                                "text": "called",
+                                "confidence": 0.839
+                            },
+                            {
+                                "boundingBox": [
+                                    825,
+                                    1246,
+                                    1212,
+                                    1242,
+                                    1215,
+                                    1310,
+                                    828,
+                                    1313
+                                ],
+                                "text": "Hyperjacking.",
+                                "confidence": 0.559
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            89,
+                            1386,
+                            1478,
+                            1381,
+                            1478,
+                            1443,
+                            89,
+                            1448
+                        ],
+                        "text": "In case of witwelised systems, their are threats",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    93,
+                                    1398,
+                                    176,
+                                    1395,
+                                    180,
+                                    1448,
+                                    97,
+                                    1448
+                                ],
+                                "text": "In",
+                                "confidence": 0.979
+                            },
+                            {
+                                "boundingBox": [
+                                    220,
+                                    1393,
+                                    330,
+                                    1390,
+                                    334,
+                                    1448,
+                                    224,
+                                    1448
+                                ],
+                                "text": "case",
+                                "confidence": 0.927
+                            },
+                            {
+                                "boundingBox": [
+                                    340,
+                                    1390,
+                                    407,
+                                    1388,
+                                    410,
+                                    1448,
+                                    344,
+                                    1448
+                                ],
+                                "text": "of",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    454,
+                                    1387,
+                                    704,
+                                    1383,
+                                    707,
+                                    1448,
+                                    457,
+                                    1448
+                                ],
+                                "text": "witwelised",
+                                "confidence": 0.564
+                            },
+                            {
+                                "boundingBox": [
+                                    734,
+                                    1383,
+                                    971,
+                                    1382,
+                                    974,
+                                    1447,
+                                    737,
+                                    1448
+                                ],
+                                "text": "systems,",
+                                "confidence": 0.749
+                            },
+                            {
+                                "boundingBox": [
+                                    991,
+                                    1382,
+                                    1125,
+                                    1383,
+                                    1127,
+                                    1445,
+                                    994,
+                                    1446
+                                ],
+                                "text": "their",
+                                "confidence": 0.788
+                            },
+                            {
+                                "boundingBox": [
+                                    1165,
+                                    1384,
+                                    1285,
+                                    1385,
+                                    1287,
+                                    1444,
+                                    1167,
+                                    1445
+                                ],
+                                "text": "are",
+                                "confidence": 0.973
+                            },
+                            {
+                                "boundingBox": [
+                                    1305,
+                                    1386,
+                                    1476,
+                                    1390,
+                                    1477,
+                                    1442,
+                                    1307,
+                                    1444
+                                ],
+                                "text": "threats",
+                                "confidence": 0.69
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            99,
+                            1468,
+                            1396,
+                            1472,
+                            1395,
+                            1542,
+                            99,
+                            1534
+                        ],
+                        "text": "and vull rust wilt vulnerabilities at different",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    110,
+                                    1476,
+                                    222,
+                                    1474,
+                                    226,
+                                    1527,
+                                    114,
+                                    1530
+                                ],
+                                "text": "and",
+                                "confidence": 0.982
+                            },
+                            {
+                                "boundingBox": [
+                                    261,
+                                    1473,
+                                    387,
+                                    1471,
+                                    391,
+                                    1524,
+                                    265,
+                                    1526
+                                ],
+                                "text": "vull",
+                                "confidence": 0.567
+                            },
+                            {
+                                "boundingBox": [
+                                    416,
+                                    1471,
+                                    538,
+                                    1469,
+                                    541,
+                                    1523,
+                                    419,
+                                    1523
+                                ],
+                                "text": "rust",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    584,
+                                    1469,
+                                    686,
+                                    1469,
+                                    689,
+                                    1523,
+                                    587,
+                                    1523
+                                ],
+                                "text": "wilt",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    697,
+                                    1469,
+                                    1044,
+                                    1471,
+                                    1046,
+                                    1529,
+                                    699,
+                                    1523
+                                ],
+                                "text": "vulnerabilities",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    1069,
+                                    1472,
+                                    1142,
+                                    1473,
+                                    1144,
+                                    1533,
+                                    1071,
+                                    1530
+                                ],
+                                "text": "at",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    1199,
+                                    1474,
+                                    1392,
+                                    1479,
+                                    1393,
+                                    1543,
+                                    1201,
+                                    1535
+                                ],
+                                "text": "different",
+                                "confidence": 0.559
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            102,
+                            1552,
+                            302,
+                            1536,
+                            306,
+                            1589,
+                            104,
+                            1607
+                        ],
+                        "text": "leweb :",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    120,
+                                    1552,
+                                    233,
+                                    1541,
+                                    236,
+                                    1596,
+                                    122,
+                                    1606
+                                ],
+                                "text": "leweb",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    244,
+                                    1540,
+                                    296,
+                                    1537,
+                                    299,
+                                    1591,
+                                    247,
+                                    1595
+                                ],
+                                "text": ":",
+                                "confidence": 0.569
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            72,
+                            1639,
+                            1443,
+                            1639,
+                            1443,
+                            1705,
+                            72,
+                            1709
+                        ],
+                        "text": "( ' , Physical Sumer security - The actual physical",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    72,
+                                    1639,
+                                    77,
+                                    1640,
+                                    81,
+                                    1710,
+                                    77,
+                                    1710
+                                ],
+                                "text": "(",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    77,
+                                    1640,
+                                    100,
+                                    1640,
+                                    105,
+                                    1710,
+                                    81,
+                                    1710
+                                ],
+                                "text": "'",
+                                "confidence": 0.727
+                            },
+                            {
+                                "boundingBox": [
+                                    115,
+                                    1640,
+                                    180,
+                                    1640,
+                                    184,
+                                    1709,
+                                    119,
+                                    1710
+                                ],
+                                "text": ",",
+                                "confidence": 0.64
+                            },
+                            {
+                                "boundingBox": [
+                                    195,
+                                    1640,
+                                    416,
+                                    1641,
+                                    419,
+                                    1705,
+                                    199,
+                                    1709
+                                ],
+                                "text": "Physical",
+                                "confidence": 0.895
+                            },
+                            {
+                                "boundingBox": [
+                                    439,
+                                    1641,
+                                    627,
+                                    1641,
+                                    630,
+                                    1702,
+                                    442,
+                                    1704
+                                ],
+                                "text": "Sumer",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    646,
+                                    1641,
+                                    853,
+                                    1641,
+                                    855,
+                                    1701,
+                                    648,
+                                    1702
+                                ],
+                                "text": "security",
+                                "confidence": 0.652
+                            },
+                            {
+                                "boundingBox": [
+                                    867,
+                                    1641,
+                                    919,
+                                    1641,
+                                    920,
+                                    1701,
+                                    869,
+                                    1701
+                                ],
+                                "text": "-",
+                                "confidence": 0.953
+                            },
+                            {
+                                "boundingBox": [
+                                    933,
+                                    1641,
+                                    1046,
+                                    1641,
+                                    1047,
+                                    1701,
+                                    934,
+                                    1701
+                                ],
+                                "text": "The",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    1079,
+                                    1640,
+                                    1253,
+                                    1640,
+                                    1253,
+                                    1701,
+                                    1080,
+                                    1701
+                                ],
+                                "text": "actual",
+                                "confidence": 0.838
+                            },
+                            {
+                                "boundingBox": [
+                                    1267,
+                                    1640,
+                                    1441,
+                                    1639,
+                                    1441,
+                                    1703,
+                                    1267,
+                                    1702
+                                ],
+                                "text": "physical",
+                                "confidence": 0.559
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            197,
+                            1744,
+                            1598,
+                            1741,
+                            1598,
+                            1807,
+                            197,
+                            1808
+                        ],
+                        "text": "south that resides in the CSP datacenter",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    429,
+                                    1752,
+                                    587,
+                                    1747,
+                                    588,
+                                    1802,
+                                    431,
+                                    1804
+                                ],
+                                "text": "south",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    617,
+                                    1746,
+                                    727,
+                                    1744,
+                                    728,
+                                    1802,
+                                    618,
+                                    1802
+                                ],
+                                "text": "that",
+                                "confidence": 0.961
+                            },
+                            {
+                                "boundingBox": [
+                                    778,
+                                    1743,
+                                    953,
+                                    1742,
+                                    954,
+                                    1801,
+                                    778,
+                                    1801
+                                ],
+                                "text": "resides",
+                                "confidence": 0.939
+                            },
+                            {
+                                "boundingBox": [
+                                    977,
+                                    1742,
+                                    1055,
+                                    1742,
+                                    1055,
+                                    1802,
+                                    977,
+                                    1801
+                                ],
+                                "text": "in",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    1063,
+                                    1742,
+                                    1144,
+                                    1743,
+                                    1144,
+                                    1802,
+                                    1064,
+                                    1802
+                                ],
+                                "text": "the",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    1194,
+                                    1743,
+                                    1302,
+                                    1745,
+                                    1301,
+                                    1804,
+                                    1194,
+                                    1803
+                                ],
+                                "text": "CSP",
+                                "confidence": 0.828
+                            },
+                            {
+                                "boundingBox": [
+                                    1388,
+                                    1746,
+                                    1599,
+                                    1753,
+                                    1598,
+                                    1808,
+                                    1388,
+                                    1805
+                                ],
+                                "text": "datacenter",
+                                "confidence": 0.652
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            202,
+                            1832,
+                            1429,
+                            1842,
+                            1428,
+                            1911,
+                            202,
+                            1893
+                        ],
+                        "text": "is very vulnerable to attacks. an access to",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    206,
+                                    1845,
+                                    270,
+                                    1843,
+                                    270,
+                                    1893,
+                                    206,
+                                    1894
+                                ],
+                                "text": "is",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    305,
+                                    1841,
+                                    420,
+                                    1837,
+                                    421,
+                                    1891,
+                                    305,
+                                    1893
+                                ],
+                                "text": "very",
+                                "confidence": 0.825
+                            },
+                            {
+                                "boundingBox": [
+                                    446,
+                                    1836,
+                                    705,
+                                    1833,
+                                    706,
+                                    1890,
+                                    446,
+                                    1891
+                                ],
+                                "text": "vulnerable",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    725,
+                                    1833,
+                                    792,
+                                    1834,
+                                    793,
+                                    1891,
+                                    725,
+                                    1890
+                                ],
+                                "text": "to",
+                                "confidence": 0.986
+                            },
+                            {
+                                "boundingBox": [
+                                    843,
+                                    1834,
+                                    1045,
+                                    1840,
+                                    1046,
+                                    1896,
+                                    844,
+                                    1892
+                                ],
+                                "text": "attacks.",
+                                "confidence": 0.737
+                            },
+                            {
+                                "boundingBox": [
+                                    1090,
+                                    1842,
+                                    1170,
+                                    1846,
+                                    1171,
+                                    1900,
+                                    1090,
+                                    1897
+                                ],
+                                "text": "an",
+                                "confidence": 0.69
+                            },
+                            {
+                                "boundingBox": [
+                                    1221,
+                                    1849,
+                                    1368,
+                                    1859,
+                                    1369,
+                                    1909,
+                                    1222,
+                                    1902
+                                ],
+                                "text": "access",
+                                "confidence": 0.64
+                            },
+                            {
+                                "boundingBox": [
+                                    1381,
+                                    1860,
+                                    1429,
+                                    1863,
+                                    1429,
+                                    1911,
+                                    1382,
+                                    1909
+                                ],
+                                "text": "to",
+                                "confidence": 0.986
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            215,
+                            1926,
+                            1506,
+                            1932,
+                            1505,
+                            1984,
+                            215,
+                            1973
+                        ],
+                        "text": "auch a so sowel can compromise with the",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    226,
+                                    1928,
+                                    344,
+                                    1927,
+                                    346,
+                                    1973,
+                                    228,
+                                    1971
+                                ],
+                                "text": "auch",
+                                "confidence": 0.84
+                            },
+                            {
+                                "boundingBox": [
+                                    400,
+                                    1927,
+                                    442,
+                                    1927,
+                                    444,
+                                    1974,
+                                    402,
+                                    1973
+                                ],
+                                "text": "a",
+                                "confidence": 0.735
+                            },
+                            {
+                                "boundingBox": [
+                                    495,
+                                    1927,
+                                    563,
+                                    1927,
+                                    564,
+                                    1976,
+                                    497,
+                                    1975
+                                ],
+                                "text": "so",
+                                "confidence": 0.821
+                            },
+                            {
+                                "boundingBox": [
+                                    616,
+                                    1927,
+                                    756,
+                                    1927,
+                                    757,
+                                    1978,
+                                    617,
+                                    1976
+                                ],
+                                "text": "sowel",
+                                "confidence": 0.69
+                            },
+                            {
+                                "boundingBox": [
+                                    801,
+                                    1927,
+                                    910,
+                                    1928,
+                                    911,
+                                    1980,
+                                    802,
+                                    1979
+                                ],
+                                "text": "can",
+                                "confidence": 0.984
+                            },
+                            {
+                                "boundingBox": [
+                                    958,
+                                    1928,
+                                    1238,
+                                    1931,
+                                    1238,
+                                    1983,
+                                    958,
+                                    1980
+                                ],
+                                "text": "compromise",
+                                "confidence": 0.571
+                            },
+                            {
+                                "boundingBox": [
+                                    1294,
+                                    1931,
+                                    1400,
+                                    1933,
+                                    1400,
+                                    1984,
+                                    1294,
+                                    1983
+                                ],
+                                "text": "with",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    1443,
+                                    1933,
+                                    1504,
+                                    1934,
+                                    1504,
+                                    1984,
+                                    1442,
+                                    1984
+                                ],
+                                "text": "the",
+                                "confidence": 0.981
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            1065,
+                            2272,
+                            1498,
+                            2272,
+                            1498,
+                            2308,
+                            1065,
+                            2308
+                        ],
+                        "text": "Scanned with CamScanner",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    1065,
+                                    2272,
+                                    1203,
+                                    2272,
+                                    1204,
+                                    2309,
+                                    1067,
+                                    2309
+                                ],
+                                "text": "Scanned",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    1210,
+                                    2272,
+                                    1280,
+                                    2273,
+                                    1281,
+                                    2309,
+                                    1211,
+                                    2309
+                                ],
+                                "text": "with",
+                                "confidence": 0.987
+                            },
+                            {
+                                "boundingBox": [
+                                    1287,
+                                    2273,
+                                    1499,
+                                    2273,
+                                    1499,
+                                    2309,
+                                    1288,
+                                    2309
+                                ],
+                                "text": "CamScanner",
+                                "confidence": 0.981
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

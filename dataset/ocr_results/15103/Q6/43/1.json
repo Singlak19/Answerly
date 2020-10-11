@@ -1,0 +1,925 @@
+{
+    "status": "succeeded",
+    "createdDateTime": "2020-10-11T09:32:57Z",
+    "lastUpdatedDateTime": "2020-10-11T09:32:57Z",
+    "analyzeResult": {
+        "version": "3.0.0",
+        "readResults": [
+            {
+                "page": 1,
+                "language": "en",
+                "angle": 2.1219,
+                "width": 2339,
+                "height": 1653,
+                "unit": "pixel",
+                "lines": [
+                    {
+                        "boundingBox": [
+                            0,
+                            61,
+                            100,
+                            62,
+                            99,
+                            161,
+                            0,
+                            160
+                        ],
+                        "text": "b",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    20,
+                                    61,
+                                    99,
+                                    62,
+                                    98,
+                                    161,
+                                    19,
+                                    160
+                                ],
+                                "text": "b",
+                                "confidence": 0.966
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            143,
+                            102,
+                            2304,
+                            105,
+                            2303,
+                            221,
+                            142,
+                            212
+                        ],
+                        "text": "For Iaas, we can use the AWS Cloud Watch",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    164,
+                                    103,
+                                    356,
+                                    109,
+                                    348,
+                                    203,
+                                    155,
+                                    197
+                                ],
+                                "text": "For",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    399,
+                                    111,
+                                    697,
+                                    118,
+                                    690,
+                                    211,
+                                    391,
+                                    204
+                                ],
+                                "text": "Iaas,",
+                                "confidence": 0.572
+                            },
+                            {
+                                "boundingBox": [
+                                    728,
+                                    119,
+                                    852,
+                                    121,
+                                    845,
+                                    214,
+                                    721,
+                                    212
+                                ],
+                                "text": "we",
+                                "confidence": 0.986
+                            },
+                            {
+                                "boundingBox": [
+                                    877,
+                                    121,
+                                    1076,
+                                    124,
+                                    1069,
+                                    218,
+                                    870,
+                                    215
+                                ],
+                                "text": "can",
+                                "confidence": 0.986
+                            },
+                            {
+                                "boundingBox": [
+                                    1101,
+                                    124,
+                                    1256,
+                                    124,
+                                    1250,
+                                    220,
+                                    1094,
+                                    218
+                                ],
+                                "text": "use",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    1274,
+                                    124,
+                                    1454,
+                                    123,
+                                    1449,
+                                    221,
+                                    1268,
+                                    220
+                                ],
+                                "text": "the",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    1554,
+                                    123,
+                                    1758,
+                                    120,
+                                    1754,
+                                    221,
+                                    1548,
+                                    221
+                                ],
+                                "text": "AWS",
+                                "confidence": 0.876
+                            },
+                            {
+                                "boundingBox": [
+                                    1802,
+                                    119,
+                                    2093,
+                                    112,
+                                    2090,
+                                    220,
+                                    1797,
+                                    221
+                                ],
+                                "text": "Cloud",
+                                "confidence": 0.677
+                            },
+                            {
+                                "boundingBox": [
+                                    2112,
+                                    112,
+                                    2304,
+                                    106,
+                                    2301,
+                                    218,
+                                    2108,
+                                    220
+                                ],
+                                "text": "Watch",
+                                "confidence": 0.98
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            180,
+                            286,
+                            2297,
+                            336,
+                            2296,
+                            435,
+                            177,
+                            379
+                        ],
+                        "text": "to keep a check monitor health. This service is",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    188,
+                                    286,
+                                    321,
+                                    289,
+                                    311,
+                                    382,
+                                    178,
+                                    378
+                                ],
+                                "text": "to",
+                                "confidence": 0.909
+                            },
+                            {
+                                "boundingBox": [
+                                    339,
+                                    289,
+                                    550,
+                                    293,
+                                    542,
+                                    388,
+                                    329,
+                                    382
+                                ],
+                                "text": "keep",
+                                "confidence": 0.888
+                            },
+                            {
+                                "boundingBox": [
+                                    580,
+                                    294,
+                                    671,
+                                    296,
+                                    663,
+                                    392,
+                                    572,
+                                    389
+                                ],
+                                "text": "a",
+                                "confidence": 0.986
+                            },
+                            {
+                                "boundingBox": [
+                                    701,
+                                    297,
+                                    930,
+                                    302,
+                                    924,
+                                    399,
+                                    694,
+                                    393
+                                ],
+                                "text": "check",
+                                "confidence": 0.944
+                            },
+                            {
+                                "boundingBox": [
+                                    1003,
+                                    303,
+                                    1323,
+                                    311,
+                                    1319,
+                                    410,
+                                    997,
+                                    401
+                                ],
+                                "text": "monitor",
+                                "confidence": 0.645
+                            },
+                            {
+                                "boundingBox": [
+                                    1341,
+                                    311,
+                                    1691,
+                                    321,
+                                    1689,
+                                    420,
+                                    1337,
+                                    411
+                                ],
+                                "text": "health.",
+                                "confidence": 0.913
+                            },
+                            {
+                                "boundingBox": [
+                                    1709,
+                                    321,
+                                    1896,
+                                    326,
+                                    1895,
+                                    426,
+                                    1707,
+                                    421
+                                ],
+                                "text": "This",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    1914,
+                                    327,
+                                    2192,
+                                    335,
+                                    2193,
+                                    434,
+                                    1914,
+                                    426
+                                ],
+                                "text": "service",
+                                "confidence": 0.652
+                            },
+                            {
+                                "boundingBox": [
+                                    2210,
+                                    336,
+                                    2295,
+                                    338,
+                                    2296,
+                                    436,
+                                    2211,
+                                    435
+                                ],
+                                "text": "is",
+                                "confidence": 0.985
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            216,
+                            500,
+                            2288,
+                            583,
+                            2287,
+                            675,
+                            213,
+                            593
+                        ],
+                        "text": "available in AUS and computer the EC2 4",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    227,
+                                    501,
+                                    578,
+                                    520,
+                                    576,
+                                    604,
+                                    224,
+                                    583
+                                ],
+                                "text": "available",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    616,
+                                    522,
+                                    759,
+                                    529,
+                                    757,
+                                    614,
+                                    613,
+                                    606
+                                ],
+                                "text": "in",
+                                "confidence": 0.979
+                            },
+                            {
+                                "boundingBox": [
+                                    818,
+                                    532,
+                                    1004,
+                                    540,
+                                    1002,
+                                    627,
+                                    816,
+                                    617
+                                ],
+                                "text": "AUS",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    1031,
+                                    541,
+                                    1196,
+                                    548,
+                                    1194,
+                                    636,
+                                    1029,
+                                    628
+                                ],
+                                "text": "and",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    1244,
+                                    550,
+                                    1621,
+                                    564,
+                                    1621,
+                                    654,
+                                    1242,
+                                    638
+                                ],
+                                "text": "computer",
+                                "confidence": 0.634
+                            },
+                            {
+                                "boundingBox": [
+                                    1664,
+                                    565,
+                                    1818,
+                                    570,
+                                    1818,
+                                    661,
+                                    1663,
+                                    656
+                                ],
+                                "text": "the",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    1893,
+                                    573,
+                                    2122,
+                                    579,
+                                    2122,
+                                    671,
+                                    1892,
+                                    664
+                                ],
+                                "text": "EC2",
+                                "confidence": 0.825
+                            },
+                            {
+                                "boundingBox": [
+                                    2239,
+                                    582,
+                                    2287,
+                                    583,
+                                    2287,
+                                    675,
+                                    2239,
+                                    674
+                                ],
+                                "text": "4",
+                                "confidence": 0.559
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            230,
+                            696,
+                            2317,
+                            768,
+                            2312,
+                            876,
+                            228,
+                            777
+                        ],
+                        "text": "storage bucket in the system. It depicts graphs",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    234,
+                                    696,
+                                    554,
+                                    698,
+                                    555,
+                                    781,
+                                    237,
+                                    777
+                                ],
+                                "text": "storage",
+                                "confidence": 0.799
+                            },
+                            {
+                                "boundingBox": [
+                                    580,
+                                    698,
+                                    852,
+                                    703,
+                                    852,
+                                    789,
+                                    582,
+                                    782
+                                ],
+                                "text": "bucket",
+                                "confidence": 0.85
+                            },
+                            {
+                                "boundingBox": [
+                                    889,
+                                    705,
+                                    1028,
+                                    709,
+                                    1028,
+                                    795,
+                                    890,
+                                    790
+                                ],
+                                "text": "in",
+                                "confidence": 0.986
+                            },
+                            {
+                                "boundingBox": [
+                                    1060,
+                                    710,
+                                    1204,
+                                    716,
+                                    1203,
+                                    802,
+                                    1059,
+                                    796
+                                ],
+                                "text": "the",
+                                "confidence": 0.978
+                            },
+                            {
+                                "boundingBox": [
+                                    1241,
+                                    718,
+                                    1571,
+                                    735,
+                                    1568,
+                                    821,
+                                    1240,
+                                    804
+                                ],
+                                "text": "system.",
+                                "confidence": 0.722
+                            },
+                            {
+                                "boundingBox": [
+                                    1635,
+                                    739,
+                                    1762,
+                                    747,
+                                    1759,
+                                    834,
+                                    1632,
+                                    825
+                                ],
+                                "text": "It",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    1778,
+                                    748,
+                                    2065,
+                                    770,
+                                    2061,
+                                    856,
+                                    1775,
+                                    835
+                                ],
+                                "text": "depicts",
+                                "confidence": 0.913
+                            },
+                            {
+                                "boundingBox": [
+                                    2097,
+                                    773,
+                                    2315,
+                                    792,
+                                    2309,
+                                    877,
+                                    2092,
+                                    859
+                                ],
+                                "text": "graphs",
+                                "confidence": 0.639
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            238,
+                            885,
+                            2143,
+                            946,
+                            2138,
+                            1057,
+                            237,
+                            977
+                        ],
+                        "text": "status, running time, processing time of a",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    238,
+                                    885,
+                                    598,
+                                    890,
+                                    597,
+                                    978,
+                                    237,
+                                    973
+                                ],
+                                "text": "status,",
+                                "confidence": 0.873
+                            },
+                            {
+                                "boundingBox": [
+                                    633,
+                                    891,
+                                    924,
+                                    898,
+                                    922,
+                                    987,
+                                    631,
+                                    979
+                                ],
+                                "text": "running",
+                                "confidence": 0.652
+                            },
+                            {
+                                "boundingBox": [
+                                    941,
+                                    899,
+                                    1204,
+                                    908,
+                                    1202,
+                                    999,
+                                    939,
+                                    988
+                                ],
+                                "text": "time,",
+                                "confidence": 0.649
+                            },
+                            {
+                                "boundingBox": [
+                                    1233,
+                                    909,
+                                    1632,
+                                    927,
+                                    1629,
+                                    1022,
+                                    1230,
+                                    1000
+                                ],
+                                "text": "processing",
+                                "confidence": 0.786
+                            },
+                            {
+                                "boundingBox": [
+                                    1649,
+                                    928,
+                                    1866,
+                                    941,
+                                    1863,
+                                    1037,
+                                    1646,
+                                    1023
+                                ],
+                                "text": "time",
+                                "confidence": 0.752
+                            },
+                            {
+                                "boundingBox": [
+                                    1918,
+                                    944,
+                                    2037,
+                                    952,
+                                    2034,
+                                    1051,
+                                    1914,
+                                    1041
+                                ],
+                                "text": "of",
+                                "confidence": 0.975
+                            },
+                            {
+                                "boundingBox": [
+                                    2083,
+                                    955,
+                                    2140,
+                                    959,
+                                    2136,
+                                    1058,
+                                    2079,
+                                    1054
+                                ],
+                                "text": "a",
+                                "confidence": 0.986
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            237,
+                            1048,
+                            2103,
+                            1127,
+                            2100,
+                            1220,
+                            237,
+                            1141
+                        ],
+                        "text": "particular souwice, which helps in the",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    243,
+                                    1049,
+                                    691,
+                                    1066,
+                                    692,
+                                    1162,
+                                    245,
+                                    1140
+                                ],
+                                "text": "particular",
+                                "confidence": 0.63
+                            },
+                            {
+                                "boundingBox": [
+                                    721,
+                                    1067,
+                                    1109,
+                                    1084,
+                                    1109,
+                                    1181,
+                                    722,
+                                    1164
+                                ],
+                                "text": "souwice,",
+                                "confidence": 0.652
+                            },
+                            {
+                                "boundingBox": [
+                                    1175,
+                                    1087,
+                                    1473,
+                                    1100,
+                                    1472,
+                                    1197,
+                                    1175,
+                                    1184
+                                ],
+                                "text": "which",
+                                "confidence": 0.976
+                            },
+                            {
+                                "boundingBox": [
+                                    1521,
+                                    1102,
+                                    1766,
+                                    1114,
+                                    1764,
+                                    1209,
+                                    1520,
+                                    1199
+                                ],
+                                "text": "helps",
+                                "confidence": 0.982
+                            },
+                            {
+                                "boundingBox": [
+                                    1825,
+                                    1116,
+                                    1945,
+                                    1122,
+                                    1943,
+                                    1215,
+                                    1824,
+                                    1211
+                                ],
+                                "text": "in",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    1968,
+                                    1123,
+                                    2100,
+                                    1130,
+                                    2098,
+                                    1220,
+                                    1967,
+                                    1216
+                                ],
+                                "text": "the",
+                                "confidence": 0.981
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            259,
+                            1249,
+                            2162,
+                            1328,
+                            2161,
+                            1429,
+                            256,
+                            1338
+                        ],
+                        "text": "monitoring of health of the particular",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    318,
+                                    1251,
+                                    698,
+                                    1261,
+                                    697,
+                                    1359,
+                                    316,
+                                    1336
+                                ],
+                                "text": "monitoring",
+                                "confidence": 0.751
+                            },
+                            {
+                                "boundingBox": [
+                                    763,
+                                    1263,
+                                    888,
+                                    1267,
+                                    887,
+                                    1370,
+                                    762,
+                                    1363
+                                ],
+                                "text": "of",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    948,
+                                    1270,
+                                    1246,
+                                    1283,
+                                    1245,
+                                    1389,
+                                    947,
+                                    1373
+                                ],
+                                "text": "health",
+                                "confidence": 0.947
+                            },
+                            {
+                                "boundingBox": [
+                                    1322,
+                                    1286,
+                                    1457,
+                                    1294,
+                                    1457,
+                                    1399,
+                                    1321,
+                                    1393
+                                ],
+                                "text": "of",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    1479,
+                                    1295,
+                                    1647,
+                                    1305,
+                                    1647,
+                                    1408,
+                                    1479,
+                                    1401
+                                ],
+                                "text": "the",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    1717,
+                                    1309,
+                                    2161,
+                                    1341,
+                                    2162,
+                                    1429,
+                                    1717,
+                                    1412
+                                ],
+                                "text": "particular",
+                                "confidence": 0.559
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            273,
+                            1436,
+                            624,
+                            1444,
+                            620,
+                            1531,
+                            269,
+                            1516
+                        ],
+                        "text": "sewice.",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    284,
+                                    1436,
+                                    625,
+                                    1445,
+                                    620,
+                                    1532,
+                                    279,
+                                    1510
+                                ],
+                                "text": "sewice.",
+                                "confidence": 0.559
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

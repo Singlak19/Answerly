@@ -1,0 +1,572 @@
+{
+    "status": "succeeded",
+    "createdDateTime": "2020-10-11T08:11:28Z",
+    "lastUpdatedDateTime": "2020-10-11T08:11:28Z",
+    "analyzeResult": {
+        "version": "3.0.0",
+        "readResults": [
+            {
+                "page": 1,
+                "language": "en",
+                "angle": -0.5267,
+                "width": 2339,
+                "height": 1653,
+                "unit": "pixel",
+                "lines": [
+                    {
+                        "boundingBox": [
+                            185,
+                            629,
+                            1834,
+                            603,
+                            1836,
+                            669,
+                            186,
+                            700
+                        ],
+                        "text": "- There should proper and implementable",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    197,
+                                    645,
+                                    252,
+                                    642,
+                                    252,
+                                    699,
+                                    197,
+                                    700
+                                ],
+                                "text": "-",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    288,
+                                    640,
+                                    452,
+                                    632,
+                                    452,
+                                    695,
+                                    288,
+                                    698
+                                ],
+                                "text": "There",
+                                "confidence": 0.69
+                            },
+                            {
+                                "boundingBox": [
+                                    477,
+                                    631,
+                                    721,
+                                    621,
+                                    722,
+                                    689,
+                                    478,
+                                    694
+                                ],
+                                "text": "should",
+                                "confidence": 0.979
+                            },
+                            {
+                                "boundingBox": [
+                                    798,
+                                    618,
+                                    1002,
+                                    612,
+                                    1004,
+                                    683,
+                                    799,
+                                    687
+                                ],
+                                "text": "proper",
+                                "confidence": 0.685
+                            },
+                            {
+                                "boundingBox": [
+                                    1042,
+                                    611,
+                                    1188,
+                                    608,
+                                    1190,
+                                    680,
+                                    1044,
+                                    682
+                                ],
+                                "text": "and",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    1231,
+                                    607,
+                                    1833,
+                                    604,
+                                    1837,
+                                    671,
+                                    1234,
+                                    679
+                                ],
+                                "text": "implementable",
+                                "confidence": 0.786
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            260,
+                            716,
+                            1850,
+                            688,
+                            1852,
+                            750,
+                            262,
+                            786
+                        ],
+                        "text": "transaction sessions for card payments.",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    277,
+                                    735,
+                                    682,
+                                    711,
+                                    683,
+                                    773,
+                                    279,
+                                    786
+                                ],
+                                "text": "transaction",
+                                "confidence": 0.722
+                            },
+                            {
+                                "boundingBox": [
+                                    744,
+                                    708,
+                                    1021,
+                                    698,
+                                    1023,
+                                    765,
+                                    746,
+                                    772
+                                ],
+                                "text": "sessions",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    1050,
+                                    697,
+                                    1162,
+                                    693,
+                                    1164,
+                                    762,
+                                    1052,
+                                    764
+                                ],
+                                "text": "for",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    1225,
+                                    692,
+                                    1406,
+                                    689,
+                                    1408,
+                                    758,
+                                    1227,
+                                    761
+                                ],
+                                "text": "card",
+                                "confidence": 0.978
+                            },
+                            {
+                                "boundingBox": [
+                                    1478,
+                                    689,
+                                    1850,
+                                    690,
+                                    1853,
+                                    752,
+                                    1481,
+                                    756
+                                ],
+                                "text": "payments.",
+                                "confidence": 0.69
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            204,
+                            795,
+                            1890,
+                            775,
+                            1891,
+                            859,
+                            205,
+                            870
+                        ],
+                        "text": "- If any kind of fraudulent activity",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    227,
+                                    804,
+                                    282,
+                                    803,
+                                    284,
+                                    863,
+                                    228,
+                                    862
+                                ],
+                                "text": "-",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    308,
+                                    803,
+                                    393,
+                                    801,
+                                    395,
+                                    866,
+                                    310,
+                                    864
+                                ],
+                                "text": "If",
+                                "confidence": 0.908
+                            },
+                            {
+                                "boundingBox": [
+                                    412,
+                                    800,
+                                    563,
+                                    797,
+                                    566,
+                                    868,
+                                    414,
+                                    866
+                                ],
+                                "text": "any",
+                                "confidence": 0.652
+                            },
+                            {
+                                "boundingBox": [
+                                    619,
+                                    796,
+                                    796,
+                                    792,
+                                    799,
+                                    870,
+                                    621,
+                                    869
+                                ],
+                                "text": "kind",
+                                "confidence": 0.786
+                            },
+                            {
+                                "boundingBox": [
+                                    840,
+                                    792,
+                                    929,
+                                    790,
+                                    933,
+                                    870,
+                                    844,
+                                    870
+                                ],
+                                "text": "of",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    988,
+                                    789,
+                                    1420,
+                                    782,
+                                    1426,
+                                    865,
+                                    992,
+                                    870
+                                ],
+                                "text": "fraudulent",
+                                "confidence": 0.691
+                            },
+                            {
+                                "boundingBox": [
+                                    1527,
+                                    780,
+                                    1875,
+                                    776,
+                                    1882,
+                                    851,
+                                    1534,
+                                    862
+                                ],
+                                "text": "activity",
+                                "confidence": 0.565
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            53,
+                            867,
+                            108,
+                            864,
+                            112,
+                            924,
+                            58,
+                            927
+                        ],
+                        "text": "8",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    77,
+                                    866,
+                                    109,
+                                    864,
+                                    112,
+                                    924,
+                                    80,
+                                    926
+                                ],
+                                "text": "8",
+                                "confidence": 0.962
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            309,
+                            887,
+                            1886,
+                            879,
+                            1887,
+                            951,
+                            309,
+                            956
+                        ],
+                        "text": "occurs it should be reported and bookers",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    317,
+                                    892,
+                                    533,
+                                    891,
+                                    535,
+                                    955,
+                                    319,
+                                    953
+                                ],
+                                "text": "occurs",
+                                "confidence": 0.71
+                            },
+                            {
+                                "boundingBox": [
+                                    558,
+                                    891,
+                                    646,
+                                    890,
+                                    647,
+                                    956,
+                                    559,
+                                    955
+                                ],
+                                "text": "it",
+                                "confidence": 0.986
+                            },
+                            {
+                                "boundingBox": [
+                                    658,
+                                    890,
+                                    890,
+                                    889,
+                                    891,
+                                    956,
+                                    659,
+                                    956
+                                ],
+                                "text": "should",
+                                "confidence": 0.974
+                            },
+                            {
+                                "boundingBox": [
+                                    918,
+                                    889,
+                                    1014,
+                                    888,
+                                    1015,
+                                    956,
+                                    919,
+                                    956
+                                ],
+                                "text": "be",
+                                "confidence": 0.889
+                            },
+                            {
+                                "boundingBox": [
+                                    1038,
+                                    888,
+                                    1346,
+                                    885,
+                                    1347,
+                                    955,
+                                    1039,
+                                    956
+                                ],
+                                "text": "reported",
+                                "confidence": 0.889
+                            },
+                            {
+                                "boundingBox": [
+                                    1386,
+                                    885,
+                                    1538,
+                                    883,
+                                    1539,
+                                    954,
+                                    1387,
+                                    955
+                                ],
+                                "text": "and",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    1619,
+                                    883,
+                                    1883,
+                                    880,
+                                    1884,
+                                    949,
+                                    1619,
+                                    953
+                                ],
+                                "text": "bookers",
+                                "confidence": 0.65
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            318,
+                            972,
+                            2163,
+                            961,
+                            2163,
+                            1028,
+                            319,
+                            1042
+                        ],
+                        "text": "legal & compliance measures should be taken.",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    319,
+                                    981,
+                                    499,
+                                    977,
+                                    504,
+                                    1039,
+                                    324,
+                                    1042
+                                ],
+                                "text": "legal",
+                                "confidence": 0.69
+                            },
+                            {
+                                "boundingBox": [
+                                    531,
+                                    976,
+                                    594,
+                                    975,
+                                    599,
+                                    1038,
+                                    536,
+                                    1039
+                                ],
+                                "text": "&",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    610,
+                                    975,
+                                    1014,
+                                    968,
+                                    1019,
+                                    1033,
+                                    615,
+                                    1038
+                                ],
+                                "text": "compliance",
+                                "confidence": 0.652
+                            },
+                            {
+                                "boundingBox": [
+                                    1114,
+                                    966,
+                                    1434,
+                                    963,
+                                    1438,
+                                    1030,
+                                    1119,
+                                    1032
+                                ],
+                                "text": "measures",
+                                "confidence": 0.581
+                            },
+                            {
+                                "boundingBox": [
+                                    1462,
+                                    963,
+                                    1746,
+                                    962,
+                                    1749,
+                                    1030,
+                                    1466,
+                                    1030
+                                ],
+                                "text": "should",
+                                "confidence": 0.958
+                            },
+                            {
+                                "boundingBox": [
+                                    1809,
+                                    962,
+                                    1897,
+                                    962,
+                                    1901,
+                                    1030,
+                                    1813,
+                                    1030
+                                ],
+                                "text": "be",
+                                "confidence": 0.828
+                            },
+                            {
+                                "boundingBox": [
+                                    1921,
+                                    962,
+                                    2157,
+                                    962,
+                                    2161,
+                                    1030,
+                                    1925,
+                                    1030
+                                ],
+                                "text": "taken.",
+                                "confidence": 0.93
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,557 @@
+{
+    "status": "succeeded",
+    "createdDateTime": "2020-10-11T08:59:54Z",
+    "lastUpdatedDateTime": "2020-10-11T08:59:55Z",
+    "analyzeResult": {
+        "version": "3.0.0",
+        "readResults": [
+            {
+                "page": 1,
+                "language": "en",
+                "angle": 2.0455,
+                "width": 1653,
+                "height": 2339,
+                "unit": "pixel",
+                "lines": [
+                    {
+                        "boundingBox": [
+                            67,
+                            889,
+                            1620,
+                            939,
+                            1617,
+                            1028,
+                            67,
+                            967
+                        ],
+                        "text": "(111) The machine knows about the virtualisation , thus ' dividing",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    67,
+                                    890,
+                                    150,
+                                    891,
+                                    150,
+                                    970,
+                                    68,
+                                    969
+                                ],
+                                "text": "(111)",
+                                "confidence": 0.571
+                            },
+                            {
+                                "boundingBox": [
+                                    166,
+                                    891,
+                                    285,
+                                    893,
+                                    285,
+                                    971,
+                                    166,
+                                    970
+                                ],
+                                "text": "The",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    301,
+                                    893,
+                                    513,
+                                    898,
+                                    513,
+                                    976,
+                                    301,
+                                    972
+                                ],
+                                "text": "machine",
+                                "confidence": 0.923
+                            },
+                            {
+                                "boundingBox": [
+                                    529,
+                                    898,
+                                    705,
+                                    904,
+                                    704,
+                                    982,
+                                    528,
+                                    977
+                                ],
+                                "text": "knows",
+                                "confidence": 0.979
+                            },
+                            {
+                                "boundingBox": [
+                                    721,
+                                    904,
+                                    871,
+                                    910,
+                                    870,
+                                    988,
+                                    720,
+                                    982
+                                ],
+                                "text": "about",
+                                "confidence": 0.984
+                            },
+                            {
+                                "boundingBox": [
+                                    886,
+                                    911,
+                                    964,
+                                    914,
+                                    963,
+                                    992,
+                                    886,
+                                    989
+                                ],
+                                "text": "the",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    980,
+                                    914,
+                                    1254,
+                                    928,
+                                    1253,
+                                    1007,
+                                    979,
+                                    993
+                                ],
+                                "text": "virtualisation",
+                                "confidence": 0.69
+                            },
+                            {
+                                "boundingBox": [
+                                    1270,
+                                    929,
+                                    1296,
+                                    930,
+                                    1294,
+                                    1009,
+                                    1268,
+                                    1007
+                                ],
+                                "text": ",",
+                                "confidence": 0.979
+                            },
+                            {
+                                "boundingBox": [
+                                    1311,
+                                    931,
+                                    1384,
+                                    935,
+                                    1382,
+                                    1014,
+                                    1310,
+                                    1010
+                                ],
+                                "text": "thus",
+                                "confidence": 0.94
+                            },
+                            {
+                                "boundingBox": [
+                                    1399,
+                                    936,
+                                    1420,
+                                    937,
+                                    1418,
+                                    1016,
+                                    1398,
+                                    1015
+                                ],
+                                "text": "'",
+                                "confidence": 0.837
+                            },
+                            {
+                                "boundingBox": [
+                                    1435,
+                                    938,
+                                    1617,
+                                    950,
+                                    1615,
+                                    1029,
+                                    1434,
+                                    1017
+                                ],
+                                "text": "dividing",
+                                "confidence": 0.913
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            181,
+                            997,
+                            1594,
+                            1050,
+                            1593,
+                            1108,
+                            178,
+                            1060
+                        ],
+                        "text": "the processing time, which makes use system resowices.",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    182,
+                                    997,
+                                    296,
+                                    1001,
+                                    293,
+                                    1065,
+                                    179,
+                                    1062
+                                ],
+                                "text": "the",
+                                "confidence": 0.972
+                            },
+                            {
+                                "boundingBox": [
+                                    308,
+                                    1001,
+                                    557,
+                                    1010,
+                                    555,
+                                    1073,
+                                    306,
+                                    1065
+                                ],
+                                "text": "processing",
+                                "confidence": 0.759
+                            },
+                            {
+                                "boundingBox": [
+                                    570,
+                                    1011,
+                                    738,
+                                    1017,
+                                    737,
+                                    1079,
+                                    568,
+                                    1073
+                                ],
+                                "text": "time,",
+                                "confidence": 0.931
+                            },
+                            {
+                                "boundingBox": [
+                                    751,
+                                    1018,
+                                    907,
+                                    1025,
+                                    906,
+                                    1084,
+                                    749,
+                                    1079
+                                ],
+                                "text": "which",
+                                "confidence": 0.93
+                            },
+                            {
+                                "boundingBox": [
+                                    920,
+                                    1025,
+                                    1067,
+                                    1032,
+                                    1066,
+                                    1089,
+                                    918,
+                                    1084
+                                ],
+                                "text": "makes",
+                                "confidence": 0.967
+                            },
+                            {
+                                "boundingBox": [
+                                    1080,
+                                    1033,
+                                    1177,
+                                    1038,
+                                    1176,
+                                    1093,
+                                    1079,
+                                    1090
+                                ],
+                                "text": "use",
+                                "confidence": 0.98
+                            },
+                            {
+                                "boundingBox": [
+                                    1189,
+                                    1038,
+                                    1371,
+                                    1048,
+                                    1370,
+                                    1100,
+                                    1189,
+                                    1094
+                                ],
+                                "text": "system",
+                                "confidence": 0.941
+                            },
+                            {
+                                "boundingBox": [
+                                    1383,
+                                    1049,
+                                    1594,
+                                    1061,
+                                    1594,
+                                    1108,
+                                    1383,
+                                    1100
+                                ],
+                                "text": "resowices.",
+                                "confidence": 0.652
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            60,
+                            1101,
+                            1583,
+                            1184,
+                            1579,
+                            1254,
+                            59,
+                            1176
+                        ],
+                        "text": "(IV) Curtius of heat and communication systems of",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    60,
+                                    1101,
+                                    150,
+                                    1107,
+                                    150,
+                                    1180,
+                                    59,
+                                    1178
+                                ],
+                                "text": "(IV)",
+                                "confidence": 0.652
+                            },
+                            {
+                                "boundingBox": [
+                                    165,
+                                    1108,
+                                    391,
+                                    1121,
+                                    390,
+                                    1186,
+                                    165,
+                                    1180
+                                ],
+                                "text": "Curtius",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    406,
+                                    1122,
+                                    482,
+                                    1126,
+                                    480,
+                                    1189,
+                                    405,
+                                    1186
+                                ],
+                                "text": "of",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    497,
+                                    1127,
+                                    647,
+                                    1136,
+                                    646,
+                                    1195,
+                                    495,
+                                    1189
+                                ],
+                                "text": "heat",
+                                "confidence": 0.954
+                            },
+                            {
+                                "boundingBox": [
+                                    713,
+                                    1140,
+                                    848,
+                                    1148,
+                                    846,
+                                    1205,
+                                    711,
+                                    1198
+                                ],
+                                "text": "and",
+                                "confidence": 0.981
+                            },
+                            {
+                                "boundingBox": [
+                                    863,
+                                    1148,
+                                    1265,
+                                    1172,
+                                    1262,
+                                    1230,
+                                    861,
+                                    1205
+                                ],
+                                "text": "communication",
+                                "confidence": 0.885
+                            },
+                            {
+                                "boundingBox": [
+                                    1280,
+                                    1173,
+                                    1506,
+                                    1186,
+                                    1503,
+                                    1248,
+                                    1277,
+                                    1231
+                                ],
+                                "text": "systems",
+                                "confidence": 0.865
+                            },
+                            {
+                                "boundingBox": [
+                                    1521,
+                                    1187,
+                                    1581,
+                                    1190,
+                                    1578,
+                                    1254,
+                                    1518,
+                                    1249
+                                ],
+                                "text": "of",
+                                "confidence": 0.985
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            35,
+                            1238,
+                            460,
+                            1223,
+                            462,
+                            1311,
+                            40,
+                            1336
+                        ],
+                        "text": "Il a device.",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    47,
+                                    1248,
+                                    157,
+                                    1233,
+                                    162,
+                                    1317,
+                                    54,
+                                    1336
+                                ],
+                                "text": "Il",
+                                "confidence": 0.559
+                            },
+                            {
+                                "boundingBox": [
+                                    175,
+                                    1231,
+                                    245,
+                                    1227,
+                                    247,
+                                    1309,
+                                    179,
+                                    1314
+                                ],
+                                "text": "a",
+                                "confidence": 0.986
+                            },
+                            {
+                                "boundingBox": [
+                                    263,
+                                    1226,
+                                    462,
+                                    1229,
+                                    459,
+                                    1309,
+                                    265,
+                                    1308
+                                ],
+                                "text": "device.",
+                                "confidence": 0.941
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            1065,
+                            2272,
+                            1498,
+                            2272,
+                            1498,
+                            2308,
+                            1065,
+                            2309
+                        ],
+                        "text": "Scanned with CamScanner",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    1065,
+                                    2272,
+                                    1202,
+                                    2273,
+                                    1203,
+                                    2309,
+                                    1067,
+                                    2310
+                                ],
+                                "text": "Scanned",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    1209,
+                                    2273,
+                                    1278,
+                                    2273,
+                                    1279,
+                                    2309,
+                                    1211,
+                                    2309
+                                ],
+                                "text": "with",
+                                "confidence": 0.987
+                            },
+                            {
+                                "boundingBox": [
+                                    1285,
+                                    2273,
+                                    1498,
+                                    2272,
+                                    1497,
+                                    2309,
+                                    1286,
+                                    2309
+                                ],
+                                "text": "CamScanner",
+                                "confidence": 0.981
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

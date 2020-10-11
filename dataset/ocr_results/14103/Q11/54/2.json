@@ -1,0 +1,134 @@
+{
+    "status": "succeeded",
+    "createdDateTime": "2020-10-11T08:00:57Z",
+    "lastUpdatedDateTime": "2020-10-11T08:00:58Z",
+    "analyzeResult": {
+        "version": "3.0.0",
+        "readResults": [
+            {
+                "page": 1,
+                "language": "en",
+                "angle": -0.0662,
+                "width": 1653,
+                "height": 2339,
+                "unit": "pixel",
+                "lines": [
+                    {
+                        "boundingBox": [
+                            85,
+                            795,
+                            1085,
+                            781,
+                            1086,
+                            866,
+                            85,
+                            876
+                        ],
+                        "text": "and relevant statistics.",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    95,
+                                    799,
+                                    277,
+                                    796,
+                                    278,
+                                    876,
+                                    95,
+                                    876
+                                ],
+                                "text": "and",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    323,
+                                    795,
+                                    671,
+                                    789,
+                                    673,
+                                    873,
+                                    323,
+                                    876
+                                ],
+                                "text": "relevant",
+                                "confidence": 0.682
+                            },
+                            {
+                                "boundingBox": [
+                                    737,
+                                    787,
+                                    1080,
+                                    782,
+                                    1084,
+                                    867,
+                                    739,
+                                    872
+                                ],
+                                "text": "statistics.",
+                                "confidence": 0.652
+                            }
+                        ]
+                    },
+                    {
+                        "boundingBox": [
+                            1065,
+                            2272,
+                            1498,
+                            2272,
+                            1498,
+                            2308,
+                            1065,
+                            2309
+                        ],
+                        "text": "Scanned with CamScanner",
+                        "words": [
+                            {
+                                "boundingBox": [
+                                    1065,
+                                    2272,
+                                    1202,
+                                    2273,
+                                    1203,
+                                    2309,
+                                    1067,
+                                    2310
+                                ],
+                                "text": "Scanned",
+                                "confidence": 0.985
+                            },
+                            {
+                                "boundingBox": [
+                                    1209,
+                                    2273,
+                                    1278,
+                                    2273,
+                                    1279,
+                                    2309,
+                                    1211,
+                                    2309
+                                ],
+                                "text": "with",
+                                "confidence": 0.987
+                            },
+                            {
+                                "boundingBox": [
+                                    1285,
+                                    2273,
+                                    1498,
+                                    2272,
+                                    1497,
+                                    2309,
+                                    1286,
+                                    2309
+                                ],
+                                "text": "CamScanner",
+                                "confidence": 0.981
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
