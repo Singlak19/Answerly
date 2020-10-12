@@ -1,0 +1,429 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<head>
+<style>
+
+
+.module {
+/*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);*/
+  /*background-attachment: fixed;*/
+  /*width: 400px;*/
+  /*height: 300px;*/
+  /*position: relative;*/
+  /*overflow: hidden;*/
+  /*margin: 20px;*/
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("file:///C:/Users/gargraj45/Downloads/bg-masthead.jpg");
+  /*background-attachment: fixed;*/
+  /* Add the blur effect */
+  /*background-blend-mode: lighten;*/
+  /*filter: blur(2px);*/
+  /*-webkit-filter: blur(2px);*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* Full height */
+  height: 100%;
+
+
+  /*background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/bg-masthead.jpg");*/
+  /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);*/
+  /*background-attachment: fixed;*/
+  /*width: 400px;*/
+  /*height: 300px;*/
+  /*position: relative;*/
+  /*overflow: hidden;*/
+  /*margin: 20px;*/
+  /*background: url("https://www.insidehighered.com/sites/default/server_files/media/iStock-953193582_0.jpg");*/
+  /*background-attachment: fixed;*/
+  /* Add the blur effect */
+  /*background-blend-mode: lighten;*/
+  /*filter: blur(2px);*/
+  /*-webkit-filter: blur(2px);*/
+
+  /* Full height */
+  /*height: 100%;*/
+
+  /* Center and scale the image nicely */
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  /*position: relative;*/
+  /*overflow: hidden;*/
+}
+.module > header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  /*background: inherit;*/
+    filter: blur(0px);
+  -webkit-filter: blur(0px);
+  /*background-attachment: fixed;*/
+  overflow: hidden;
+}
+.module > header::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  /*background: inherit;*/
+  /*background-attachment: fixed;*/
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+.module > header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15)
+}
+.module > header > h1 {
+  margin: 0;
+  color: white;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 45;
+}
+.module > header1 {
+  position: absolute;
+  top: 180;
+  left: 310;
+  width: 55%;
+  height: 200%
+  vertical-align: center;
+  align-content: center;
+  padding: 20px 10px;
+  /*background: inherit;*/
+  /*background-position: inherit;*/
+  /*backgrond-size: initial;*/
+  /*background-attachment: fixed;*/
+  overflow: hidden;
+  align-items: center;
+  alignment-baseline: central;
+    /*-webkit-filter: blur(2px);*/
+  /*filter: blur(2px);*/
+}
+.module > header1::before {
+  vertical-align: center;
+  content: "";
+  position: absolute;
+  top: 180;
+  left: 310;
+  align-content: center;
+  width: 100%;
+  height: 200%;
+  padding: 20px 10px;
+  /*background: inherit;*/
+  /*background-attachment: fixed;*/
+  /*-webkit-filter: blur(8px);*/
+  /*filter: blur(8px);*/
+}
+.module > header1::after {
+  vertical-align: center;
+  content: "";
+  position: absolute;
+  top: 0;
+  /*left: 310;*/
+  align-content: center;
+  /*text-align: center;*/
+  /*left: 380;*/
+  width: 100%;
+  height: 200%;
+  /*-webkit-filter: blur(8px);*/
+  /*filter: blur(8px);*/
+  padding: 20px 10px;
+  background: rgba(0, 0, 0, 0.15)
+}
+.module > header1 > h2 {
+  vertical-align: center;
+  margin: 0;
+  color: white;
+  align-content: center;
+  font-size: 35;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+    /*-webkit-filter: blur(0);*/
+  /*filter: blur(0);*/
+}
+.module > header1 > h3 {
+  vertical-align: center;
+  margin: 0;
+  color: white;
+  align-content: center;
+  font-size: 30;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.module > button {
+  position: absolute;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  top: 65%;
+  left: 45%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #4CAF50;  
+  color: white; 
+  border: 2px solid 853510;
+  border-radius: 25px;
+}
+
+
+.module > button:hover {
+  background-color: 74A73F;
+  color: white;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 26px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 22px 12px ;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+</style>
+</head>
+
+
+<!-- <div class = "bg-image"> </div> -->
+
+<!-- <div class="wrapper">
+  <div class="bg-image"> </div>    
+  <button>Hello world</button>
+</div>
+
+<body>
+
+
+</body>
+ -->
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <div class="navbar">
+  <!-- <i class="material-icons">person</i> -->
+  <a href="#home">Home</a>
+  <a href="#news">Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn"> <i class="material-icons"> person </i>
+      <!-- <i class="fa fa-caret-down"></i> -->
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Sign Out</a>
+      <!-- <a href="#">Link 2</a> -->
+      <!-- <a href="#">Link 3</a> -->
+    </div>
+  </div> 
+</div>
+<!-- <div class="enableBlur"> -->
+<div class="module">
+ 
+  <header>
+    <!-- <div class="disableBlur"> -->
+    <h1>
+        Welcome Vinni!
+    </h1>
+  <!-- </div> -->
+  </header>
+  <header1>
+    <!-- <div class="disableBlur"> -->
+    <h2>
+      Worried about checking the answer sheets?
+    </h2>
+  <!-- </div> -->
+  <!-- <div class="disableBlur"> -->
+    <h3>
+      <br> Now get them checked by us within seconds.
+    </h3>
+  <!-- </div> -->
+  </header1>
+  <!-- <div class="disableBlur"> -->
+  <button>
+    Get Started
+  </button>
+<!-- </div> -->
+</div>
+<!-- </div> -->
+
+</html>
+
+
+
+<!-- <html>
+
+<head>
+<style>
+
+
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://www.insidehighered.com/sites/default/server_files/media/iStock-953193582_0.jpg");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.wrapper {
+  position: relative;
+}
+.wrapper bg-image{
+  posi
+  /* The image used */
+  background-image: url("https://www.insidehighered.com/sites/default/server_files/media/iStock-953193582_0.jpg");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.wrapper button {
+  position: absolute;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;  
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+
+.wrapper button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+</style>
+</head>
+ -->
+<!-- <div class = "bg-image"> </div> -->
+<!-- 
+<div class="wrapper">
+  <div class="bg-image"> </div>    
+  <button>Hello world</button>
+</div>
+
+<body>
+
+
+</body>
+
+
+
+
+</html>
+
+ -->
