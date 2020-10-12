@@ -18,6 +18,7 @@ for question_paper in os.listdir(starting_folder):
                 json_file=json.load(json_file_object)
                 lines=json_file['analyzeResult']['readResults'][0]['lines']
                 for line in lines:
-                    text_file_object.write(line['text']+"\n")
+                    text_file_object.write(line['text']+" ")
                 json_file_object.close()
             text_file_object.close()
+print("Code Completed!!")
