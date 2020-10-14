@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <!-- Sweet Alert JavaScript -->
+    <script src="./sweetalert.min.js"></script>
+    <!-- Nunito Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <title>Log in | Firebase Auth</title>
+</head>
+<body class="bg-light" style="padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url(file:///C:/Users/gargraj45/Downloads/bg-masthead.jpg);
+  /*background-image: url(file:///C:/Users/gargraj45/Downloads/bg-masthead.jpg);*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+ 
+  min-height: 150%;
+  min-width: 100%;">
+    <div style="width: 60%; height: 100%; margin-left: 230px; margin-top: -138px;">
+        <!-- <div class="row mx-1"> -->
+            <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 text-center mt-5 pb-4 text-primary">
+                <h1 class="h1" style="color: white;">Welcome On-Board</h1>
+            </div>
+            <!-- <div class="col-lg-5 col-md-10 offset-lg-1 offset-md-1 bg-white shadow mb-5 border border-primary"> -->
+                <!-- <div class="row"> -->
+                    <!-- <div class="col-lg-6 col-md-6 p-4 bg-primary divCover"> -->
+                        <!-- <img src="./images/firebase_logo.png" alt="Firebase cover image"> -->
+                    <!-- </div> -->
+                    <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 bg-white shadow mb-5 border border-primary" style=" opacity: 90%">
+                <div style="width: 400px; margin-left: 120px; margin-top: 20px; margin-bottom: 20px;">
+                    <!-- <div class="col-lg-6 col-md-6 p-lg-5 p-md-5 px-3 py-4"> -->
+                        <div id="signInForm">
+                            <!-- <h2 class="h2 text-center text-dark mb-3" >Sign In</h2> -->
+                            <div class="form-group">
+                                <label for="userSIEmail" >Email adress<span class="text-danger ml-1">*</span></label>
+                                <input type="email" class="form-control" id="userSIEmail" onblur="checkUserSIEmail()"placeholder="mail@mail.com">
+                                <small id="userSIEmailError" class="form-text text-danger">Please check your login information.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="userSIPassword" >Password<span class="text-danger ml-1">*</span></label>
+                                <input type="password" class="form-control" id="userSIPassword" onblur="checkUserSIPassword()" placeholder="password">
+                                <small id="userSIPasswordError" class="form-text text-danger" >Please check your password.</small>
+                            </div>
+                            <button type="button" class="btn btn-outline-primary text-uppercase mb-3" onclick="signIn()" >Sign In</button>
+                            <p >Not a member yet? Become a member: <a href="./signup.html"><strong class="text-primary text-uppercase showSignUpForm" >Sign Up</strong></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Firebase -->
+    
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCS_gMDiPnr4xoBGLcdFfZ8RL_Ff4SmH4k",
+    authDomain: "answerly-17371.firebaseapp.com",
+    databaseURL: "https://answerly-17371.firebaseio.com",
+    projectId: "answerly-17371",
+    storageBucket: "answerly-17371.appspot.com",
+    messagingSenderId: "555938980709",
+    appId: "1:555938980709:web:d4fb0426ec0fdbe5c0778c",
+    measurementId: "G-YHRZYV7RTR"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+    <script>
+        // xxxxxxxxxx Working For Sign Up Form xxxxxxxxxx
+// xxxxxxxxxx Full Name Validation xxxxxxxxxx
+function checkUserFullName(){
+    var userSurname = document.getElementById("userFullName").value;
+    var flag = false;
+    if(userSurname === ""){
+        flag = true;
+    }
+    if(flag){
+        document.getElementById("userFullNameError").style.display = "block";
+    }else{
+        document.getElementById("userFullNameError").style.display = "none";
+    }
+}
+// xxxxxxxxxx User Surname Validation xxxxxxxxxx
+function checkUserSurname(){
+    var userSurname = document.getElementById("userSurname").value;
+    var flag = false;
+    if(userSurname === ""){
+        flag = true;
+    }
+    if(flag){
+        document.getElementById("userSurnameError").style.display = "block";
+    }else{
+        document.getElementById("userSurnameError").style.display = "none";
+    }
+}
+// xxxxxxxxxx Email Validation xxxxxxxxxx
+function checkUserEmail(){
+    var userEmail = document.getElementById("userEmail");
+    var userEmailFormate = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var flag;
+    if(userEmail.value.match(userEmailFormate)){
+        flag = false;
+    }else{
+        flag = true;
+    }
+    if(flag){
+        document.getElementById("userEmailError").style.display = "block";
+    }else{
+        document.getElementById("userEmailError").style.display = "none";
+    }
+}
+// xxxxxxxxxx Password Validation xxxxxxxxxx
+function checkUserPassword(){
+    var userPassword = document.getElementById("userPassword");
+    var userPasswordFormate = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}/;      
+    var flag;
+    if(userPassword.value.match(userPasswordFormate)){
+        flag = false;
+    }else{
+        flag = true;
+    }    
+    if(flag){
+        document.getElementById("userPasswordError").style.display = "block";
+    }else{
+        document.getElementById("userPasswordError").style.display = "none";
+    }
+}
+// xxxxxxxxxx Check user bio characters. It'll use later xxxxxxxxxx
+function checkUserBio(){
+    var userBio = document.getElementById("userBio").value;
+    var flag = false;
+    if(flag){
+        document.getElementById("userBioError").style.display = "block";
+    }else{
+        document.getElementById("userBioError").style.display = "none";
+    }
+}
+// xxxxxxxxxx Submitting and Creating new user in firebase authentication xxxxxxxxxx
+function signUp(){
+    var userFullName = document.getElementById("userFullName").value;
+    var userSurname = document.getElementById("userSurname").value;
+    var userEmail = document.getElementById("userEmail").value;
+    var userPassword = document.getElementById("userPassword").value;
+    var userFullNameFormate = /^([A-Za-z.\s_-])/;    
+    var userEmailFormate = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var userPasswordFormate = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}/;      
+
+    var checkUserFullNameValid = userFullName.match(userFullNameFormate);
+    var checkUserEmailValid = userEmail.match(userEmailFormate);
+    var checkUserPasswordValid = userPassword.match(userPasswordFormate);
+
+    if(checkUserFullNameValid == null){
+        return checkUserFullName();
+    }else if(userSurname === ""){
+        return checkUserSurname();
+    }else if(checkUserEmailValid == null){
+        return checkUserEmail();
+    }else if(checkUserPasswordValid == null){
+        return checkUserPassword();
+    }else{
+        console.log("yaya");
+        firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword).then((success) => {
+            var user = firebase.auth().currentUser;
+            var uid;
+            if (user != null) {
+                uid = user.uid;
+            }
+            var firebaseRef = firebase.database().ref();
+            var userData = {
+                userFullName: userFullName,
+                userSurname: userSurname,
+                userEmail: userEmail,
+                userPassword: userPassword,
+                // userFb: "https://www.facebook.com/",
+                // userTw: "https://twitter.com/",
+                // userGp: "https://plus.google.com/",
+                // userBio: "User biography",
+            }
+            console.log("yay");
+            firebaseRef.child(uid).set(userData);
+            console.log("Y");
+            swal('Your Account Created','Your account was created successfully, you can log in now.',
+            ).then((value) => {
+                setTimeout(function(){
+                    window.location.replace("./login.html");
+                }, 1000)
+            });
+        }).catch((error) => {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            swal({
+                icon: 'error',
+                title: errorCode,
+                text: errorMessage,
+            })
+        });
+    }
+}
+// xxxxxxxxxx Working For Sign In Form xxxxxxxxxx
+// xxxxxxxxxx Sign In Email Validation xxxxxxxxxx
+function checkUserSIEmail(){
+    var userSIEmail = document.getElementById("userSIEmail");
+    var userSIEmailFormate = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var flag;
+    if(userSIEmail.value.match(userSIEmailFormate)){
+        flag = false;
+    }else{
+        flag = true;
+    }
+    if(flag){
+        document.getElementById("userSIEmailError").style.display = "block";
+    }else{
+        document.getElementById("userSIEmailError").style.display = "none";
+    }
+}
+// xxxxxxxxxx Sign In Password Validation xxxxxxxxxx
+function checkUserSIPassword(){
+    var userSIPassword = document.getElementById("userSIPassword");
+    var userSIPasswordFormate = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}/;      
+    var flag;
+    if(userSIPassword.value.match(userSIPasswordFormate)){
+        flag = false;
+    }else{
+        flag = true;
+    }    
+    if(flag){
+        document.getElementById("userSIPasswordError").style.display = "block";
+    }else{
+        document.getElementById("userSIPasswordError").style.display = "none";
+    }
+}
+// xxxxxxxxxx Check email or password exsist in firebase authentication xxxxxxxxxx    
+function signIn(){
+    var userSIEmail = document.getElementById("userSIEmail").value;
+    var userSIPassword = document.getElementById("userSIPassword").value;
+    var userSIEmailFormate = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var userSIPasswordFormate = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}/;      
+
+    var checkUserEmailValid = userSIEmail.match(userSIEmailFormate);
+    var checkUserPasswordValid = userSIPassword.match(userSIPasswordFormate);
+
+    if(checkUserEmailValid == null){
+        return checkUserSIEmail();
+    }else if(checkUserPasswordValid == null){
+        return checkUserSIPassword();
+    }else{
+        firebase.auth().signInWithEmailAndPassword(userSIEmail, userSIPassword).then((success) => {
+            swal({
+                type: 'successfull',
+                title: 'Succesfully signed in', 
+            }).then((value) => {
+                setTimeout(function(){
+                    window.location.replace("./answerly.html");
+                }, 1000)
+            });
+        }).catch((error) => {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            swal({
+                type: 'error',
+                title: 'Error',
+                text: "Error",
+            })
+        });
+    }
+}
+// xxxxxxxxxx Working For Profile Page xxxxxxxxxx
+// xxxxxxxxxx Get data from server and show in the page xxxxxxxxxx
+firebase.auth().onAuthStateChanged((user)=>{
+    if (user) {
+    //   User is signed in.
+        let user = firebase.auth().currentUser;
+        let uid
+        if(user != null){
+            uid = user.uid;
+        }
+        let firebaseRefKey = firebase.database().ref().child(uid);
+        firebaseRefKey.on('value', (dataSnapShot)=>{
+            // document.getElementById("userFullName").innerHTML = dataSnapShot.val().userFullName;
+            // document.getElementById("userSurname").value = dataSnapShot.val().userSurname;
+            userEmail = dataSnapShot.val().userEmail;
+            userPassword = dataSnapShot.val().userPassword;
+            // document.getElementById("userFb").setAttribute('href', dataSnapShot.val().userFb);
+            // document.getElementById("userTw").setAttribute('href', dataSnapShot.val().userTw);
+            // document.getElementById("userGp").setAttribute('href', dataSnapShot.val().userGp);
+            // document.getElementById("userBio").innerHTML = dataSnapShot.val().userBio;
+        })
+    } else {
+    //   No user is signed in.
+    }
+});
+// xxxxxxxxxx Show edit profile form with detail xxxxxxxxxx
+function showEditProfileForm(){
+    document.getElementById("profileSection").style.display = "none"
+    document.getElementById("editProfileForm").style.display = "block"
+    var userFullName = document.getElementById("userPfFullName").innerHTML;
+    var userSurname = document.getElementById("userPfSurname").innerHTML;
+    var userFb = document.getElementById("userPfFb").getAttribute("href");
+    var userTw = document.getElementById("userPfTw").getAttribute("href");
+    var userGp = document.getElementById("userPfGp").getAttribute("href");
+    var userBio = document.getElementById("userPfBio").innerHTML;
+    document.getElementById("userFullName").value = userFullName; 
+    document.getElementById("userSurname").value = userSurname; 
+    document.getElementById("userFacebook").value = userFb; 
+    document.getElementById("userTwitter").value = userTw; 
+    document.getElementById("userGooglePlus").value = userGp; 
+    document.getElementById("userBio").value = userBio; 
+}
+// xxxxxxxxxx Hide edit profile form xxxxxxxxxx
+function hideEditProfileForm(){
+    document.getElementById("profileSection").style.display = "block";
+    document.getElementById("editProfileForm").style.display = "none";
+}
+// xxxxxxxxxx Save profile and update database xxxxxxxxxx
+function saveProfile(){
+    let userFullName = document.getElementById("userFullName").value 
+    let userSurname = document.getElementById("userSurname").value 
+    let userFacebook = document.getElementById("userFacebook").value 
+    let userTwitter = document.getElementById("userTwitter").value 
+    let userGooglePlus = document.getElementById("userGooglePlus").value 
+    let userBio = document.getElementById("userBio").value
+    var userFullNameFormate = /^([A-Za-z.\s_-])/; 
+    var checkUserFullNameValid = userFullName.match(userFullNameFormate);
+    if(checkUserFullNameValid == null){
+        return checkUserFullName();
+    }else if(userSurname === ""){
+        return checkUserSurname();
+    }else{
+        let user = firebase.auth().currentUser;
+        let uid;
+        if(user != null){
+            uid = user.uid;
+        }
+        var firebaseRef = firebase.database().ref();
+        var userData = {
+            userFullName: userFullName,
+            userSurname: userSurname,
+            userFb: userFacebook,
+            userTw: userTwitter,
+            userGp: userGooglePlus,
+            userBio: userBio,
+        }
+        firebaseRef.child(uid).set(userData);
+        swal({
+            type: 'successfull',
+            title: 'Update successfull',
+            text: 'Profile updated.', 
+        }).then((value) => {
+            setTimeout(function(){
+                document.getElementById("profileSection").style.display = "block";
+
+                document.getElementById("editProfileForm").style.display = "none";
+            }, 1000)
+        });
+    }
+}
+// xxxxxxxxxx Working For Sign Out xxxxxxxxxx
+function signOut(){
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        swal({
+            type: 'successfull',
+            title: 'Signed Out', 
+        }).then((value) => {
+            setTimeout(function(){
+                window.location.replace("../index.html");
+            }, 1000)
+        });
+    }).catch(function(error) {
+        // An error happened.
+        let errorMessage = error.message;
+        swal({
+            type: 'error',
+            title: 'Error',
+            text: "Error",
+        })
+    });
+}
+    </script>
+
+    <!-- Custom JavaScript -->
+    <!-- <script src="./login-.js"></script> -->
+
+</body>
+</html>
