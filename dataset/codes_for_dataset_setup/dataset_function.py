@@ -2,12 +2,12 @@ my_dict={"14103_Q1":0,"14103_Q2":1,"14103_Q3":2,"14103_Q4":3,"14103_Q5":4,"14103
 def load_training_dataset():
     import pandas as pd
     import os
-    starting_point="../extracted_text"
+    starting_point="../../dataset/extracted_text"
     text_values=[]
     question_codes=[]
     y_values=[]
-    y_14103_values=pd.read_csv("../14103/14103.csv")
-    y_15103_values=pd.read_csv("../15103/15103.csv")
+    y_14103_values=pd.read_csv("../../dataset/14103/14103.csv")
+    y_15103_values=pd.read_csv("../../dataset/15103/15103.csv")
     for question_paper in os.listdir(starting_point):
         if question_paper=="14103" or question_paper=="15103":
             level_1=starting_point+'/'+question_paper
@@ -37,5 +37,3 @@ def load_training_dataset():
 
 def get_question_codes():
     return my_dict
-
-X,y=load_training_dataset()
