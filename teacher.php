@@ -29,7 +29,7 @@ function  createConfirmationmbox($msg, $url){
 		$log_password= $_POST['lpassword'];
 		echo "$log_email";
 
-		$conn= mysqli_connect('localhost', 'root', 'soumyamysql', 'answerly');
+		$conn= mysqli_connect('localhost', 'root', '', 'answerly');
 
 		$e_sql= "SELECT * FROM teacher_login WHERE EMAIL= '$log_email' and PASSWORD= '$log_password'";
 		$e_result= mysqli_query($conn, $e_sql);
@@ -58,7 +58,7 @@ function  createConfirmationmbox($msg, $url){
 		echo 'Entered isset';
 	//Database connection
 
-	$conn= mysqli_connect('localhost', 'root','soumyamysql', 'answerly');
+	$conn= mysqli_connect('localhost', 'root','', 'answerly');
 
 	$sql_e= "SELECT * FROM teacher_login WHERE EMAIL= '$email_id';";
 	$res_e= mysqli_query($conn, $sql_e);
