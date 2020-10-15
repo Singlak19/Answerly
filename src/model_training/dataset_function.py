@@ -29,11 +29,23 @@ def load_training_dataset():
                             y_values.append(y_14103_values[question_number].iloc[int(paper_number)-1])
                         else:
                             y_values.append(y_15103_values[question_number].iloc[int(paper_number)-1])
-                            
+
     text_values=pd.DataFrame(text_values,columns=["text"])
     text_values["question_code"]=question_codes
-    y_values=pd.Series(y_values)
+    y_values=pd.DataFrame(y_values,columns=["marks"])
+    y_values["question_code"]=question_codes
     return text_values,y_values
 
 def get_question_codes():
     return my_dict
+
+def get_ideal_answers():
+    import pandas as pd
+    import os
+    text=[]
+    starting_point="../../dataset/ideal_answers"
+    for answer in os.listdir(starting_point):
+        f=open(starting_point+'/'+answer)
+        text.append([f.read(),my_dict[answer[:-4]]])
+        # answer[:-4] <- This this the question_number
+    return pd.DataFrame(text, columns=["text","question_code"])
