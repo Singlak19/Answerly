@@ -11,6 +11,7 @@ def azure_api_call(image_path):
     params={'language':'en','detectOrientation':'true'}
     image_data=open(image_path,"rb").read()
     response=requests.post(text_recognition_url,headers=headers,params=params,data=image_data)
+    # response.raise_for_status()
     operation_url = response.headers["Operation-Location"]
     headers = {'Ocp-Apim-Subscription-Key': subscription_key}
     analysis={}
@@ -24,7 +25,7 @@ def azure_api_call(image_path):
             poll = False
         if ("status" in analysis and analysis['status'] == 'failed'):
             poll = False
-    return analysis    
+    return analysis
 def show_result(json_file):
     lines=json_file['analyzeResult']['readResults'][0]['lines']
     for line in lines:
