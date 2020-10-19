@@ -38,7 +38,7 @@ def get_text(pdfURL):
         json_file=ocr_azure()
         lines=json_file['analyzeResult']['readResults'][0]['lines']
         for line in lines:
-            ocr_text=ocr_text+line['text']
+            ocr_text=ocr_text+line['text']+" "
     return ocr_text
 # pdfURL="https://firebasestorage.googleapis.com/v0/b/answerly-17371.appspot.com/o/1602957333879-1.pdf?alt=media&token=e8a61b5e-e0f5-4818-8375-e4775bf7c131"
 # from pdf2image import convert_from_path

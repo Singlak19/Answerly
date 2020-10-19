@@ -1,37 +1,52 @@
-from azure_api_call import get_text
-t=get_text("https://firebasestorage.googleapis.com/v0/b/answerly-17371.appspot.com/o/1602957333879-1.pdf?alt=media&token=e8a61b5e-e0f5-4818-8375-e4775bf7c131")
-print(t)
-
-
-
-
-
-
-# import pandas as pd
-# import numpy as np
-# import dataset_function
-# import os
-# from rake_nltk import Rake
-# X,y=dataset_function.load_training_dataset()
-# question_codes= dataset_function.get_question_codes()
-# print("Hello World!!!")
-# X.head()
-# ideal_answers=dataset_function.get_ideal_answers()
-# question_code=8
-# X=X[X["question_code"]==question_code]
-# y=y[y["question_code"]==question_code]
-# ideal_answer=ideal_answers[ideal_answers["question_code"]==question_code]["text"].iloc[0]
-# from sklearn.model_selection import train_test_split
-# X_train, X_test, y_train, y_test=train_test_split(X,y,test_size=0.2)
-# ideal_answer=ideal_answer.lower()
-# import nltk
-# tokenized_ideal_answer=nltk.word_tokenize(ideal_answer,preserve_line=True)
-# WNlemma=nltk.WordNetLemmatizer()
-# lemmatized_ideal_answer=[WNlemma.lemmatize(t) for t in tokenized_ideal_answer]
-# lemmatized_ideal_answer_1=[WNlemma.lemmatize(t) for t in lemmatized_ideal_answer]
-# r=Rake(language='english')
-# r.extract_keywords_from_sentences(lemmatized_ideal_answer)
-# p=nltk.PorterStemmer()
-# stemmed_ideal_answer=[p.stem(t) for t in tokenized_ideal_answer]
-# r_1=Rake()
-# r_1.extract_keywords_from_sentences(stemmed_ideal_answer)
+import dataset_function
+import pandas as pd
+import numpy as np
+import math
+from fuzzywuzzy import fuzz
+from sklearn.model_selection import train_test_split
+from similarity_function import givKeywordsValue as keywordval
+from sklearn.naive_bayes import GaussianNB
+answer_sheets=dataset_function.load_training_dataset()
+ideal_answers=dataset_function.get_ideal_answers()
+question_codes=dataset_function.get_question_codes()
+available_question_codes=list(ideal_answers["question_code"])
+answer_sheets.head()
+answer_sheets=answer_sheets[answer_sheets["question_code"].isin(available_question_codes)]
+set(answer_sheets["question_code"])
+# print(my_ideal_answer)
+# selected_answer_sheets=answer_sheets[answer_sheets["question_code"]==question_code]["text"]
+# # selected_answer_sheets.head()
+# type(selected_answer_sheets)
+# # y_values.head()
+# type(my_ideal_answer)
+# selected_y_values=y_values[y_values["question_code"]==question_code]["marks"]
+# # selected_y_values.head()
+# selected_answer_sheets=np.array(selected_answer_sheets)
+# selected_y_values=np.array(selected_y_values)
+# out_of=5
+# raw_data=pd.DataFrame(selected_answer_sheets,columns=["text"])
+# raw_data["marks"]=selected_y_values
+# raw_data.head()
+# train_raw_data, test_raw_data=train_test_split(raw_data, train_size=0.8)
+#
+# X=[]
+# y=[]
+# for i in range(0,len(train_raw_data)):
+#     X.append([keywordval(train_raw_data.iloc[i]["text"], my_ideal_answer), math.ceil(fuzz.token_set_ratio(train_raw_data.iloc[i]["text"], my_ideal_answer)*6/100)])
+#     y.append(train_raw_data.iloc[i]["marks"])
+# X
+# y
+# X=pd.DataFrame(X, columns=["k","q"])
+# y=pd.Series(y)
+# y=y.apply(lambda x: x*2)
+# clf=GaussianNB().fit(X,y)
+# X_test=[]
+# y_test=[]
+# for i in range(0,len(test_raw_data)):
+#     X_test.append([keywordval(test_raw_data.iloc[i]["text"], my_ideal_answer), math.ceil(fuzz.token_set_ratio(test_raw_data.iloc[i]["text"], my_ideal_answer)*6/100)])
+#     y_test.append(test_raw_data.iloc[i]["marks"])
+# y_predicted=clf.predict(X_test)
+# y_predicted
+# y_test=pd.Series(y_test)
+# y_test=y_test.apply(lambda x :x*2)
+# y_test
