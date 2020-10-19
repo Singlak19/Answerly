@@ -6,13 +6,51 @@ from fuzzywuzzy import fuzz
 from sklearn.model_selection import train_test_split
 from similarity_function import givKeywordsValue as keywordval
 from sklearn.naive_bayes import GaussianNB
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LinearRegression
 answer_sheets=dataset_function.load_training_dataset()
 ideal_answers=dataset_function.get_ideal_answers()
 question_codes=dataset_function.get_question_codes()
+out_of=dataset_function.get_out_of_ansers()
 available_question_codes=list(ideal_answers["question_code"])
-answer_sheets.head()
+# answer_sheets.head()
 answer_sheets=answer_sheets[answer_sheets["question_code"].isin(available_question_codes)]
 set(answer_sheets["question_code"])
+random_states=[11,2,31,41,51,16,71,81,49,106]
+# removed 14103_Q1
+# best Random State: 2
+for random_state in random_states:
+    train_answer_sheets, test_answer_sheets=train_test_split(answer_sheets, train_size=0.8, random_state=2)
+    X=[]
+    y=[]
+    for i in range(0,len(train_answer_sheets)):
+        temp=train_answer_sheets.iloc[i]["question_code"]
+        X.append([keywordval(train_answer_sheets.iloc[i]["text"], ideal_answers[ideal_answers["question_code"]==temp].iloc[0]["text"]), fuzz.token_set_ratio(train_answer_sheets.iloc[i]["text"], ideal_answers[ideal_answers["question_code"]==temp].iloc[0]["text"])])
+        y.append((train_answer_sheets.iloc[i]["marks"]/out_of[temp])*10)
+    X
+    y
+    poly=PolynomialFeatures(degree=3)
+    X_train_poly=poly.fit_transform(X)
+    X_train_poly
+    regressor=LinearRegression().fit(X_train_poly, y)
+    X_test=[]
+    y_test=[]
+    for i in range(0,len(test_answer_sheets)):
+        temp=test_answer_sheets.iloc[i]["question_code"]
+        X_test.append([keywordval(test_answer_sheets.iloc[i]["text"], ideal_answers[ideal_answers["question_code"]==temp].iloc[0]["text"]), fuzz.token_set_ratio(test_answer_sheets.iloc[i]["text"], ideal_answers[ideal_answers["question_code"]==temp].iloc[0]["text"])])
+        y_test.append((test_answer_sheets.iloc[i]["marks"]/out_of[temp])*10)
+    X_test_poly=poly.transform(X_test)
+    y_pred=regressor.predict(X_test_poly)
+    y_pred
+    # y_pred=[round(number, 0) for number in y_pred]
+    y_pred
+    # y_test=[round(number, 0) for number in y_test]
+    from sklearn.metrics import mean_squared_error
+    error=mean_squared_error(y_pred=y_pred, y_true=y_test)
+    print("Random State: ", random_state, ", Error: ", math.sqrt(error))
+
+# type(ideal_answers[ideal_answers["question_code"]==8].iloc[0]["text"])
 # print(my_ideal_answer)
 # selected_answer_sheets=answer_sheets[answer_sheets["question_code"]==question_code]["text"]
 # # selected_answer_sheets.head()

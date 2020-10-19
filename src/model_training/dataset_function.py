@@ -45,8 +45,9 @@ def get_ideal_answers():
     text=[]
     starting_point="../../dataset/ideal_answers"
     for answer in os.listdir(starting_point):
-        f=open(starting_point+'/'+answer)
-        text.append([f.read(),my_dict[answer[:-4]]])
+        if answer!="14103_Q1":
+            f=open(starting_point+'/'+answer, encoding="utf8")
+            text.append([f.read(),my_dict[answer[:-4]]])
         # answer[:-4] <- This this the question_number
     return pd.DataFrame(text, columns=["text","question_code"])
 
