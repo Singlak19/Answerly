@@ -12,6 +12,40 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  // var uid = firebase.auth().currentUser.uid
+  var final_files = [];
+  var count=0
+  var uid=0;
+  var z=0;
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    uid = user.uid
+    // var db = firebase.firestore();
+    //   var docRef = db.collection("deyaPayusers").doc(user.uid);
+    //   docRef.get().then(function(doc) {
+    //      if(doc && doc.exists) {
+    //      const myData = doc.data();
+    //      const ffname = myData.FirstName;
+    //      const llname = myData.LastName;
+    //      const phonen = myData.PhoneNumber;
+    //      document.getElementById("fname").value = ffname;
+    //      document.getElementById("lname").value = llname;
+    //      document.getElementById("phone").value = phonen;
+
+    // }
+    console.log(uid)
+    // }).catch(function(error) {
+    // console.log("Got an error: ",error);
+    // });
+  } else {
+  	console.log("No user")
+    // No user is signed in.
+  }
+});
+
+
+  // let uid = user.uid
   		const ref = firebase.storage().ref();
 		// const dbRef = firebase.database().ref();
 		var fileselect = $id("fileselect"),
@@ -92,10 +126,28 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 
 		// fetch FileList object
 		var files = e.target.files || e.dataTransfer.files;
+		final_files.push.apply(final_files,files);
 // const storage = firebase.storage();
 		// const ref = firebase.storage().ref();
 		// process all File objects
-		for (var i = 0, f; f = files[i]; i++) {
+
+      console.log(uid)
+      
+      firebase.database().ref(uid).child('Training_Data').once("value", function(snapshot) {
+      			// z=1;
+	    		count = snapshot.numChildren()
+	    		if(z==1){
+	    			count = count -1
+	    		}
+	    		console.log(count)
+	    		firebase.database().ref(uid).child('Training_Data').child(String(count)).child("answer").set(document.getElementById("ideal_answer").value)
+	    		// String c
+	    		z=1;
+	    		
+	    		// return;
+  // console.log("There are "+snapshot.numChildren()+" messages");
+	  });
+	  for (var i = 0, f; f = files[i]; i++) {
 
 			// const image = f;
 
@@ -104,65 +156,201 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
   //     alert(url);
   //   }
   // }
+  const storage = firebase.storage();
 			const file = f;
-			const name = (+new Date()) + '-' + file.name;
-			const metadata = { contentType: file.type };
-			const task = ref.child(name).put(file, metadata);
-			const storage = firebase.storage();
-			task.on('state_changed',
-    function progress (snapshot) {
-      self.status = 'UPLOADING...'
-      self.percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-    },
-    function error () {
-      self.status = 'FAILED TRY AGAIN!'
-      self.isUploading = false
-    },
-
-    function complete (event) {
-      self.status = 'UPLOAD COMPLETED'
-      self.isUploading = false
-      storage.ref(name).getDownloadURL().then((url) => { firebase.database().ref('answers').set({url:url})})
-    }
-  )
-// 			const storage = firebase.storage();
-
-// storage.ref(name).getDownloadURL()
-//   .then((url) => {
-//   	console.log(url)
-//     // Do something with the URL ...
-//   })
-			
-			// task.then((snapshot) => {
-   //  console.log(snapshot.downloadURL); });
-			// task
-   //  .then((snapshot) => {
-   //    document.querySelector('#someImageTagID').src = snapshot.downloadURL;
-   //  })
-    // .catch((error) => {
-    //   // A list of errors can be found at
-    //   // https://firebase.google.com/docs/storage/web/handle-errors
-    //   switch (error.code) {
-    //     case 'storage/unauthorized':
-    //       // User doesn't have permission to access the object
-    //       break;
-    //     case 'storage/canceled':
-    //       // User canceled the upload
-    //       break;
-    //     // ...
-    //     case 'storage/unknown':
-    //       // Unknown error occurred
-    //       break;
-    //   }
-    // })
-
 			ParseFile(f);
 		}
+      // if(firebase.database().ref(uid).child('Training_Data').getRoot()!=null){
+      	// firebase.database().ref().child(uid).child('Training_Data').set({0:0})
+      // 	// console.log("yaya")
+      // 	// var d = {
+      // 	// 	answer: document.getElementById("ideal_answer")
+      // 	// }
+      // 	// console.log(document.getElementById("ideal_answer").value)
+      // 	firebase.database().ref().child(uid).child('Training_Data').set({"answer":document.getElementById("ideal_answer").value})
+	     //  	// firebase.database().ref(uid).child('Training_Data').set(d)
+      	
+      // }
+      // else{
+      // 	console.log("P")
+      // }
+		
 
 	}
+// }
 
 
 	// output file information
+	async function onSubmit(){
+		var res = '';
+		console.log("IIIIIIIIIIII")
+		
+		for (var i = 0, f; f = final_files[i]; i++) {
+			console.log(String(i))
+			// const image = f;
+let p = Promise.resolve();
+  // path.put(image).then(function() {
+  //   path.getDownloadURL().then(function(url) {
+  //     alert(url);
+  //   }
+  // }
+  const storage = firebase.storage();
+			const file = f;
+			const name = (+new Date()) + '-' + file.name;
+			const metadata = { contentType: file.type };
+			var uploadPromises = [];
+			const task = ref.child(name).put(file, metadata);
+
+//       storage.ref(name).getDownloadURL().then((url) => { 
+//       	// firebase.database().ref(uid/'Training_Data').Add({url,-1})
+//       	if(firebase.database().ref(uid).child('Training_Data').getRoot()==null){
+// 	      	firebase.database().ref(uid/'Training_Data').child(url).setValue("-1")
+// 	    }
+// 	    else{
+// 	    	console.log(url)
+// 	    	firebase.database().ref(uid).child('Training_Data').set({0:0})
+// 	    	exports.setCount = functions.database.ref(uid/'Training_Data').onWrite(event => {
+//     return event.data.ref.parent.once("value", (snapshot) => {
+//       const count = snapshot.numChildren();
+//       console.log(count)
+//       return event.data.ref.update({ count });
+//     });
+// })
+// 	    	// firebase.database().ref(uid).child('Training_Data').addListenerForSingleValueEvent(new ValueEventListener() {
+//       // //           @Override
+//       // //           public void onDataChange(DataSnapshot dataSnapshot) {
+//       // //              long count= dataSnapshot.getChildrenCount();
+//       // //              count = count +1
+//       // //              firebase.database().ref(uid).child('Training_Data').set({string(count):url})
+//       // //           }  
+//       //        });
+// 	    }
+//   });
+    // }
+  // )
+			// const storage = firebase.storage();
+			 uploadPromises.push(
+			 	new Promise((resolve, reject) => {
+
+task.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+          function (snapshot) {
+            var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log('Upload is ' + progress + '% done');
+            switch (snapshot.state) {
+                case firebase.storage.TaskState.PAUSED: // or 'paused'
+                    console.log('Upload is paused');
+                    break;
+                case firebase.storage.TaskState.RUNNING: // or 'running'
+                    console.log('Upload is running');
+                    break;
+            }
+          },
+          function () {
+            task.snapshot.ref.getDownloadURL()
+              .then(function(url) {
+                  // console.log('File available at', downloadURL);
+                  var snapshot =  firebase.database().ref(uid).child('Training_Data').child(String(count)).once('value');
+	    	if(snapshot.exists()){
+	    		var count2 =  snapshot.numChildren()
+	    		console.log(count2)
+	    		var x =  firebase.database().ref(uid).child('Training_Data').child(String(count)).child(String(count2)).child("url").set(url)
+	    		var y =  firebase.database().ref(uid).child('Training_Data').child(String(count)).child(String(count2)).child("name").set(file.name)
+	    		    // let getData = await new Promise((resolve, reject) => {resolve('xx')})
+}
+                  resolve()
+              });
+          }
+        );
+
+// 			task.on('state_changed',
+//     function progress (snapshot) {
+//       self.status = 'UPLOADING...'
+//       self.percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+//     },
+//     function error () {
+//       self.status = 'FAILED TRY AGAIN!'
+//       self.isUploading = false
+//     },
+
+//     async function complete (event) {
+//       self.status = 'UPLOAD COMPLETED'
+//       self.isUploading = false
+
+
+// var url = await storage.ref(name).getDownloadURL()
+// // .then(async function(url) { 
+//       	// firebase.database().ref(uid/'Training_Data').Add({url,-1})
+//      //  	if(firebase.database().ref(uid).child('Training_Data').getRoot()==null){
+// 	    //   	firebase.database().ref(uid/'Training_Data').child(url).setValue("-1")
+// 	    // }
+// 	    // else{
+// 	    	console.log(count)
+// 	    	// firebase.database().ref(uid).child('Training_Data').set({0:0})
+// 	    	p = await p.then(async()=>{
+// 	    	var snapshot = await firebase.database().ref(uid).child('Training_Data').child(String(count)).once('value');
+// 	    	if(snapshot.exists()){
+// 	    		var count2 =  snapshot.numChildren()
+// 	    		console.log(count2)
+// 	    		var x = await firebase.database().ref(uid).child('Training_Data').child(String(count)).child(String(count2)).child("url").set(url)
+// 	    		var y = await firebase.database().ref(uid).child('Training_Data').child(String(count)).child(String(count2)).child("name").set(file.name)
+// 	    		    // let getData = await new Promise((resolve, reject) => {resolve('xx')})
+// }
+//     				// let xx = await getData; 
+// 	    		// String c
+	    		
+// 	    		// return;
+//   // console.log("There are "+snapshot.numChildren()+" messages");
+// 	    });
+// 	    	// firebase.database().ref(uid).child('Training_Data').child(String(count)).set(url)
+// 	    	// firebase.database().ref(uid).child('Training_Data').addListenerForSingleValueEvent(new ValueEventListener() {
+//       // //           @Override
+//       // //           public void onDataChange(DataSnapshot dataSnapshot) {
+//       // //              long count= dataSnapshot.getChildrenCount();
+//       // //              count = count +1
+//       // //              firebase.database().ref(uid).child('Training_Data').set({string(count):url})
+//       // //           }  
+//       //        });
+// 	    // }
+//   // });
+// // 			const storage = firebase.storage();
+
+// // storage.ref(name).getDownloadURL()
+// //   .then((url) => {
+// //   	console.log(url)
+// //     // Do something with the URL ...
+// //   })
+			
+// 			// task.then((snapshot) => {
+//    //  console.log(snapshot.downloadURL); });
+// 			// task
+//    //  .then((snapshot) => {
+//    //    document.querySelector('#someImageTagID').src = snapshot.downloadURL;
+//    //  })
+//     // .catch((error) => {
+//     //   // A list of errors can be found at
+//     //   // https://firebase.google.com/docs/storage/web/handle-errors
+//     //   switch (error.code) {
+//     //     case 'storage/unauthorized':
+//     //       // User doesn't have permission to access the object
+//     //       break;
+//     //     case 'storage/canceled':
+//     //       // User canceled the upload
+//     //       break;
+//     //     // ...
+//     //     case 'storage/unknown':
+//     //       // Unknown error occurred
+//     //       break;
+//     //   }
+//     })
+
+			// ParseFile(f);
+		})
+		)
+  await Promise.all(uploadPromises)
+		}
+
+		return res;
+	}
 	function ParseFile(file) {
 
 		Output(
