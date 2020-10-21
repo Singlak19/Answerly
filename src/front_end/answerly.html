@@ -15,7 +15,7 @@
   /*margin: 20px;*/
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("file:///C:/Users/gargraj45/Downloads/bg-masthead.jpg");
+  background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("C:/Vinni/Github Projects/Answerly/src/front_end/bg-masthead.jpg");
   /*background-attachment: fixed;*/
   /* Add the blur effect */
   /*background-blend-mode: lighten;*/
@@ -280,8 +280,8 @@
     <button class="dropbtn"> <i class="material-icons"> person </i>
       <!-- <i class="fa fa-caret-down"></i> -->
     </button>
-    <div class="dropdown-content">
-      <a href="#">Sign Out</a>
+    <div class="dropdown-content" onclick="signOut()">
+      <a href="./home_page.html">Sign Out</a>
       <!-- <a href="#">Link 2</a> -->
       <!-- <a href="#">Link 3</a> -->
     </div>
@@ -321,6 +321,29 @@
 
 <!-- </div> -->
 </div>
+<script>
+  function signOut(){
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        swal({
+            type: 'successfull',
+            title: 'Signed Out', 
+        }).then((value) => {
+            setTimeout(function(){
+                window.location.replace("../index.html");
+            }, 1000)
+        });
+    }).catch(function(error) {
+        // An error happened.
+        let errorMessage = error.message;
+        swal({
+            type: 'error',
+            title: 'Error',
+            text: "Error",
+        })
+    });
+}
+  </script>
 <!-- </div> -->
 
 </html>
