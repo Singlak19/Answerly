@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <head>
-
+<script src="./sweetalert.min.js"></script>
 <style>
 
 
@@ -201,6 +201,9 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+    padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 .dropdown-content a {
@@ -337,7 +340,7 @@ color: white;
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content" onclick="signOut()">
-      <a href="./home_page.html">Sign Out</a>
+      Sign Out
       <!-- <a href="#">Link 2</a> -->
       <!-- <a href="#">Link 3</a> -->
     </div>
@@ -543,9 +546,9 @@ color: white;
 //             // z=1;
           count2 = snapshot.numChildren()
 //           // if(z==1){
-            count2 = count2 -1
+            count2 = count2 -2
 //           // }
-// console.log(count2)
+console.log(count2)
           // console.log(count2)
           // var node
           var r=-1;
@@ -557,10 +560,11 @@ color: white;
             waitForIt2();
             function waitForIt2(){
         if (r!=i*(-1)) {
-          // console.log("o")
+          console.log(r)
             setTimeout(function(){waitForIt2()},100);
         } else {
-          // console.log("Y")
+          var rep = r;
+          console.log(r)
           var para = document.createElement("P");
             // var r=0;
             // document.getElementsByTagName("p1").setAttribute("class", "styles1");
@@ -572,7 +576,7 @@ color: white;
             
             element.appendChild(para);
                         // var ele = document.getElementById("div1")
-
+console.log(r)
             // var br = document.createElement("BR");
             // ele.appendChild(br);
 
@@ -587,8 +591,10 @@ color: white;
             var pa = document.createElement("TEXTAREA")
             // var node = document.createTextNode("Enter marks given.");
             
-            pa.setAttribute("style","color:black; font-size: 20; ")
-            pa.setAttribute("placeholder","  Enter marks given.")
+            pa.setAttribute("style","color:black; font-size: 20; padding-left:15px")
+            pa.setAttribute("id",String(rep*(-1)))
+            console.log(rep)
+            pa.setAttribute("placeholder","Enter marks given.")
             // pa.appendChild(node);
             // div1 = document.getElementById("div1")
             
@@ -608,7 +614,7 @@ color: white;
             waitForIt();
             function waitForIt(){
         if (r!=i) {
-          console.log("o")
+          console.log(r)
             setTimeout(function(){waitForIt()},100);
         } else {
           console.log("PPP")
@@ -650,7 +656,7 @@ console.log(count2);
             function waitForIt3(){
 
         if (r!=(count2+1)*(-1)) {
-          console.log("o")
+          console.log(r)
             setTimeout(function(){waitForIt3()},100);
         } else {
 
@@ -678,7 +684,7 @@ console.log(count2);
             function waitForIt4(){
 
         if (r!=(count2+1)*(-1)-1) {
-          console.log("o")
+          // console.log("o")
             setTimeout(function(){waitForIt4()},100);
         } else {
 
@@ -688,6 +694,8 @@ console.log(count2);
            // var d1 = document.getElementById("div1");
 
           var bt = document.createElement("button");
+          bt.setAttribute("id","done");
+          bt.setAttribute("onclick","onDone()");
           var t = document.createTextNode("Done");
           bt.appendChild(t);
           
@@ -790,6 +798,51 @@ console.log(count2);
   // console.log(document.getElementById("ideal_answer").value)
 </script>
 <script>
+  function onDone(){
+      firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var uid = user.uid
+    var count=0
+        firebase.database().ref(uid).child('Training_Data').once("value", function(snapshot) {
+//             // z=1;
+
+          // console.log()
+//           // if(z==1){
+            count = snapshot.numChildren()-1 
+            var count2=0
+            // console.log(count)
+      firebase.database().ref(uid).child('Training_Data').child(String(count)).once("value", function(snapshot) {
+//             // z=1;
+          count2 = snapshot.numChildren()
+//           // if(z==1){
+            count2 = count2 -2
+            var i=1;
+            for(;i<=count2;i++){
+              if(document.getElementById(String(i)).value==""){
+                  swal({
+                icon: 'error',
+                title: 'Missing marks field!', 
+            })
+                  break;
+              }
+              else{
+                firebase.database().ref(uid).child("Training_Data").child(count).child(String(i)).child("marks").set(document.getElementById(String(i)).value)
+              }
+            }
+            if(i==count2+1){
+              setTimeout(function(){
+                    window.location.replace("./home_page.html");
+                }, 1000)
+            }
+          });
+    });
+          }
+        });
+    // console.log(document.getElementById("1").value)
+  }
+</script>
+<script>
   function signOut(){
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
@@ -798,7 +851,7 @@ console.log(count2);
             title: 'Signed Out', 
         }).then((value) => {
             setTimeout(function(){
-                window.location.replace("../index.html");
+                window.location.replace("./home_page.html");
             }, 1000)
         });
     }).catch(function(error) {

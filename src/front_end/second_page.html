@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <head>
+  <script src="./sweetalert.min.js"></script>
 <style>
 
 
@@ -258,6 +259,9 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+    padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 .dropdown-content a {
@@ -305,7 +309,7 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content" onclick="signOut()">
-      <a href="./home_page.html">Sign Out</a>
+     Sign Out
       <!-- <a href="#">Link 2</a> -->
       <!-- <a href="#">Link 3</a> -->
     </div>
@@ -357,7 +361,7 @@
             title: 'Signed Out', 
         }).then((value) => {
             setTimeout(function(){
-                window.location.replace("../index.html");
+                window.location.replace("./home_page.html");
             }, 1000)
         });
     }).catch(function(error) {
