@@ -220,7 +220,7 @@ function signUp(){
             }
             console.log("yay");
             firebaseRef.child(uid).set(userData);
-            firebaseRef.child(uid).child('Training_Data');
+            // firebaseRef.child(uid).child('Training_Data');
             console.log("Y");
             swal('Your Account Created','Your account was created successfully, you can log in now.',
             ).then((value) => {

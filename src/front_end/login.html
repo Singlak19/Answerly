@@ -280,7 +280,7 @@ function signIn(){
     }else{
         firebase.auth().signInWithEmailAndPassword(userSIEmail, userSIPassword).then((success) => {
             swal({
-                type: 'successfull',
+                type: 'success',
                 title: 'Succesfully signed in', 
             }).then((value) => {
                 setTimeout(function(){

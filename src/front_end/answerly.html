@@ -2,6 +2,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <head>
+	<script src="./sweetalert.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"> </script>
+	<script>
+	         var firebaseConfig = {
+    apiKey: "AIzaSyCS_gMDiPnr4xoBGLcdFfZ8RL_Ff4SmH4k",
+    authDomain: "answerly-17371.firebaseapp.com",
+    databaseURL: "https://answerly-17371.firebaseio.com",
+    projectId: "answerly-17371",
+    storageBucket: "answerly-17371.appspot.com",
+    messagingSenderId: "555938980709",
+    appId: "1:555938980709:web:d4fb0426ec0fdbe5c0778c",
+    measurementId: "G-YHRZYV7RTR"
+  };
+   <!-- Initialize Firebase -->
+   firebase.initializeApp(firebaseConfig);
+</script>
+	<!-- <script> -->
+<!-- // 		firebase.auth().onAuthStateChanged(function(user) {
+//   if (user) {
+//     // User is signed in.
+//     var uid = user.uid
+//     var name = firebase.database().ref(uid).child("userFullName").val();
+// }
+// }); -->
+	<!-- </script> -->
 <style>
 
 
@@ -15,7 +40,7 @@
   /*margin: 20px;*/
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("C:/Vinni/Github Projects/Answerly/src/front_end/bg-masthead.jpg");
+  background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("./bg-masthead.jpg");
   /*background-attachment: fixed;*/
   /* Add the blur effect */
   /*background-blend-mode: lighten;*/
@@ -234,15 +259,21 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  /*padding-top: 5px;*/
+  /*padding-bottom: 5px;*/
+  /*padding-left: 5px;*/
+  padding-right: 25px;
 }
+
 
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 22px 12px ;
+  /*padding: 22px 12px ;*/
   text-decoration: none;
   display: block;
   text-align: left;
+  padding-right: 40px;
 }
 
 .dropdown-content a:hover {
@@ -280,11 +311,15 @@
     <button class="dropbtn"> <i class="material-icons"> person </i>
       <!-- <i class="fa fa-caret-down"></i> -->
     </button>
-    <div class="dropdown-content" onclick="signOut()">
-      <a href="./home_page.html">Sign Out</a>
+    <div class="dropdown-content"> 
+    	<a href=""> View Profile </a>
+    	<a onclick="signOut()"> Sign Out </a>
+     </div>
+    <!-- <div class="dropdown-content" onclick="signOut()"> -->
+      <!-- Sign Out -->
       <!-- <a href="#">Link 2</a> -->
       <!-- <a href="#">Link 3</a> -->
-    </div>
+    <!-- </div> -->
   </div> 
 </div>
 <!-- <div class="enableBlur"> -->
@@ -292,9 +327,7 @@
  
   <header>
     <!-- <div class="disableBlur"> -->
-    <h1>
-        Welcome Vinni!
-    </h1>
+    
   <!-- </div> -->
   </header>
   <header1>
@@ -311,16 +344,18 @@
   </header1>
   <!-- <div class="disableBlur"> -->
     
-  <button>
-    <a href="./second_page.html" style="color:white; text-underline-position: auto;"> 
+  <button onclick="func3()">
+    <!-- <a href="./second_page.html" style="color:white; text-underline-position: auto;">  -->
     Get Started
-  </a>  
+  <!-- </a>   -->
     
   </button>
 
 
 <!-- </div> -->
 </div>
+<p id="h11"></p>
+
 <script>
   function signOut(){
     firebase.auth().signOut().then(function() {
@@ -330,7 +365,7 @@
             title: 'Signed Out', 
         }).then((value) => {
             setTimeout(function(){
-                window.location.replace("../index.html");
+                window.location.replace("./home_page.html");
             }, 1000)
         });
     }).catch(function(error) {
@@ -345,7 +380,157 @@
 }
   </script>
 <!-- </div> -->
+<script >
+	firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var uid = user.uid
+    var ref = firebase.database().ref(uid).child("userFullName");
 
+ref.on("value", function(snapshot) {
+	var name = snapshot.val();
+	var ele = document.getElementById("h11");
+	ele.setAttribute("style","  margin: 0;  color: white;  margin-right:0px; margin-left:40px;margin-top: -560px; position: relative;  text-align: center;  font-size: 52; top: 0;")
+	document.getElementById("h11").innerHTML="Welcome "+name+"!";
+   // console.log(snapshot.val());
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+    // var name = firebase.database().ref(uid).child("userFullName").val();
+}
+});
+	// var ele = document.getElementById("h11");
+	// ele.setAttribute("style","  margin: 0;  color: white;  position: absolute;  z-index: 1;  text-align: center;  font-size: 45;")
+	// document.getElementById("h11").innerHTML="Welcome ";
+</script>
+<script>
+	async function func3(){
+		var sum=0;
+		sum = await func();
+		// if()
+		// func2(await func()); 
+		// func2(sum);
+	}
+	async function func(){
+		firebase.auth().onAuthStateChanged( async function(user) {
+  if (user) {
+    // User is signed in.
+    var uid = user.uid
+    var sum=0;
+    var count=0
+    var uploadPromises = [];
+    uploadPromises.push(
+			 	new Promise((resolve, reject) => {
+
+        firebase.database().ref(uid).child('Training_Data').once("value", function(snapshot) {
+//             // z=1;
+
+          // console.log()
+//           // if(z==1){
+            count = snapshot.numChildren() 
+            var count2=0
+            console.log(count)
+            var i=1;
+            var r=-1;
+            var r1=1;
+            for(;i<=count;i++){
+            	waitForIt2();
+            function waitForIt2(){
+        if (r!=i*(-1)) {
+          console.log(i)
+            setTimeout(function(){waitForIt2()},10000);
+        } else {
+        	// var r1=0;
+        	// console.log(r)
+        	
+          // console.log("PPP")
+          firebase.database().ref(uid).child('Training_Data').child(String(((r)*(-1))-1)).once("value", function(snapshot) {
+//             // z=1;
+          count2 = snapshot.numChildren()
+//           // if(z==1){
+            count2 = count2 -2
+            sum = sum + count2;
+            // console.log(sum)
+            // console.log(i)
+            
+
+            
+            // console.log("OOO")
+            r1=r1+1
+            if(r1==(count+1)){
+            	// console.log("iiiiiiiii")
+            	resolve()
+            }
+            // i=i+1;
+            // r=i;
+        });
+          r=i;
+            // go do that thing
+            // r=i+1;
+            // r=r*(-1);
+        };
+    }
+            	// var v=i;
+      
+      waitForIt();
+            function waitForIt(){
+        if (r!=i) {
+          console.log(i)
+          console.log(r)
+            setTimeout(function(){waitForIt()},10000);
+        } else {
+          // console.log("PPP")
+          r=i+1;
+            r=r*(-1);
+            // go do that thing
+            // r=i+1;
+            // r=r*(-1);
+        };
+    }
+    
+      // while(i!=v+1){
+      // 	console.log(i)
+      // 	setTimeout(function(){console.log(i)},2000);
+      // }
+  }
+
+  });
+    })
+			 	);
+    var a = await Promise.all(uploadPromises)
+        // func2(sum);
+        if(sum<25){
+        	swal({
+        		// icon: 'error'
+        		title: 25 - sum +' More Documents Needed For Completely Training Your Model!',
+        		message: 'documents left'
+        	}).then((value) => {
+            setTimeout(function(){
+                window.location.replace("./upload answer sheets.html");
+            }, 1000)
+        });
+        }
+        else{
+        	swal({
+        		icon: 'success',
+        		title: 'Your Model Is Already Trained!',
+        		// text: 'documents left'
+        	}).then((value) => {
+            setTimeout(function(){
+                window.location.replace("./upload answer sheets.html");
+            }, 1000)
+        });
+        }
+
+        return sum;
+}
+});
+	}
+
+	// function func2(sum){
+	// 	console.log("aaa")
+	// }
+	</script>
 </html>
 
 
