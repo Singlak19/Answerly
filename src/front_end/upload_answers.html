@@ -201,20 +201,22 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-    padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  /*padding-top: 5px;*/
+  /*padding-bottom: 5px;*/
+  /*padding-left: 5px;*/
+  padding-right: 25px;
 }
+
 
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 22px 12px ;
+  /*padding: 22px 12px ;*/
   text-decoration: none;
   display: block;
   text-align: left;
+  padding-right: 40px;
 }
-
 .dropdown-content a:hover {
   background-color: #ddd;
 }
@@ -339,11 +341,10 @@ color: white;
     <button class="dropbtn"> <i class="material-icons"> person </i>
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content" onclick="signOut()">
-      Sign Out
-      <!-- <a href="#">Link 2</a> -->
-      <!-- <a href="#">Link 3</a> -->
-    </div>
+    <div class="dropdown-content"> 
+      <a href="./profile.html"> View Profile </a>
+      <a onclick="signOut()"> Sign Out </a>
+     </div>
   </div> 
 </div>
 <!-- <div class="enableBlur"> -->

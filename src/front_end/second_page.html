@@ -259,18 +259,21 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-    padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  /*padding-top: 5px;*/
+  /*padding-bottom: 5px;*/
+  /*padding-left: 5px;*/
+  padding-right: 25px;
 }
+
 
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 22px 12px ;
+  /*padding: 22px 12px ;*/
   text-decoration: none;
   display: block;
   text-align: left;
+  padding-right: 40px;
 }
 
 .dropdown-content a:hover {
@@ -308,17 +311,16 @@
     <button class="dropbtn"> <i class="material-icons"> person </i>
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content" onclick="signOut()">
-     Sign Out
-      <!-- <a href="#">Link 2</a> -->
-      <!-- <a href="#">Link 3</a> -->
-    </div>
+    <div class="dropdown-content"> 
+      <a href="./profile.html"> View Profile </a>
+      <a onclick="signOut()"> Sign Out </a>
+     </div>
   </div> 
 </div>
 <!-- <div class="enableBlur"> -->
 <div class="module">
  <h1>
-  Quickly Complete Training Your Model.
+  Hey! Your Model Is Ready To Be Used!
 </h1>
   <!-- <header> -->
     <!-- <div class="disableBlur"> -->
@@ -340,17 +342,17 @@
   <!-- </div> -->
   <!-- </header1> -->
   <!-- <div class="disableBlur"> -->
-  <button>
-    <div class="1">
-    View previously uploaded answer sheets
+  <button style="left:39%">
+    <div class="1" onclick="check()">
+    Get answer sheets checked
   </div>
   </button>
   
     <button1>
-      <a href="./upload answer sheets.html" style="color:white;">
-  <div class="2"> Upload new answer sheets
+      <!-- <a href="./upload answer sheets.html" style="color:white;"> -->
+  <div class="2" onclick="upload1()"> Upload new training documents
   </div>
-  </a>
+  <!-- </a> -->
   </button1>
 <script>
   function signOut(){
@@ -374,6 +376,19 @@
         })
     });
 }
+
+function upload1(){
+  setTimeout(function(){
+                window.location.replace("./upload answer sheets.html");
+            }, 1000)
+}
+
+function check(){
+  setTimeout(function(){
+                window.location.replace("./check_questions.html");
+            }, 1000)
+}
+
 </script>
 <!-- </div> -->
 <!-- </div> -->
