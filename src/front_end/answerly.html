@@ -430,6 +430,9 @@ ref.on("value", function(snapshot) {
             count = snapshot.numChildren() 
             var count2=0
             console.log(count)
+            if(count==0){
+              resolve()
+            }
             var i=1;
             var r=-1;
             var r1=1;
@@ -506,7 +509,7 @@ ref.on("value", function(snapshot) {
         		message: 'documents left'
         	}).then((value) => {
             setTimeout(function(){
-                window.location.replace("./upload answer sheets.html");
+                window.location.href="./upload answer sheets.html";
             }, 1000)
         });
         }
@@ -517,7 +520,7 @@ ref.on("value", function(snapshot) {
         		// text: 'documents left'
         	}).then((value) => {
             setTimeout(function(){
-                window.location.replace("./second_page.html");
+                window.location.href="./second_page.html";
             }, 1000)
         });
         }

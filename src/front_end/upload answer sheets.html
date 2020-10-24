@@ -343,6 +343,9 @@ color: white;
   Done
 <!-- </a> -->
 </button>
+<button onclick="cancel()" style="left: 15%; color: black; background-color: white">
+  Cancel
+</button>
  <h3>
   Enter Max Marks:
 </h3>
@@ -545,6 +548,13 @@ color: white;
             text: "Error",
         })
     });
+}
+
+function cancel(){
+  setTimeout(function(){
+                window.history.back()
+                // window.location.replace("./upload answer sheets.html");
+            }, 1000)
 }
 
 </script>
