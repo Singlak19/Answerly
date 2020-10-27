@@ -7,54 +7,14 @@
 
 
 .module {
-/*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);*/
-  /*background-attachment: fixed;*/
-  /*width: 400px;*/
-  /*height: 300px;*/
-  /*position: relative;*/
-  /*overflow: hidden;*/
-  /*margin: 20px;*/
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
   background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("C:/Vinni/Github Projects/Answerly/src/front_end/bg-masthead.jpg");
-  /*background-attachment: fixed;*/
-  /* Add the blur effect */
-  /*background-blend-mode: lighten;*/
-  /*filter: blur(2px);*/
-  /*-webkit-filter: blur(2px);*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  /* Full height */
   min-height: 150%
-  /*height: 100%;*/
-
-
-  /*background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/bg-masthead.jpg");*/
-  /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);*/
-  /*background-attachment: fixed;*/
-  /*width: 400px;*/
-  /*height: 300px;*/
-  /*position: relative;*/
-  /*overflow: hidden;*/
-  /*margin: 20px;*/
-  /*background: url("https://www.insidehighered.com/sites/default/server_files/media/iStock-953193582_0.jpg");*/
-  /*background-attachment: fixed;*/
-  /* Add the blur effect */
-  /*background-blend-mode: lighten;*/
-  /*filter: blur(2px);*/
-  /*-webkit-filter: blur(2px);*/
-
-  /* Full height */
-  /*height: 100%;*/
-
-  /* Center and scale the image nicely */
-  /*background-position: center;*/
-  /*background-repeat: no-repeat;*/
-  /*background-size: cover;*/
-  /*position: relative;*/
-  /*overflow: hidden;*/
 }
 .module > header {
   position: absolute;
@@ -294,20 +254,6 @@ color: white;
 }
 </style>
 </head>
-
-
-<!-- <div class = "bg-image"> </div> -->
-
-<!-- <div class="wrapper">
-  <div class="bg-image"> </div>    
-  <button>Hello world</button>
-</div>
-
-<body>
-
-
-</body>
- -->
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  <div class="navbar">
   <!-- <i class="material-icons">person</i> -->
@@ -328,12 +274,6 @@ color: white;
  <h1>
   Enter Ideal Answer:
 </h1>
-<!-- </div> -->
-<!-- <div class="li">
-  <form>
-<input type="text" name="ideal" size = 30 align="middle">
-</form>
-</div> -->
 <textarea id ="ideal_answer"></textarea>
  <h2>
   Upload Answer Sheets:
@@ -349,12 +289,6 @@ color: white;
  <h3>
   Enter Max Marks:
 </h3>
-<!-- </div> -->
-<!-- <div class="li">
-  <form>
-<input type="text" name="ideal" size = 30 align="middle">
-</form>
-</div> -->
 <textarea id ="max_marks" style="top: 685px;"></textarea>
 
 </div>
@@ -382,58 +316,7 @@ color: white;
 
 <div id="messages" style="color: white; font-size: 18; height: 90; overflow: auto; padding-left: 10px;" ></div>
 </div>
-
-<!-- <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script> -->
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"> </script>
-     <!-- <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script> -->
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<!-- <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script> -->
-
-<!-- Add Firebase products that you want to use -->
-<!-- <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script> -->
-
-<!-- <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script> -->
-<!-- <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script> -->
-<!-- <script> -->
-    <!-- var firebaseConfig = {
-    apiKey: "AIzaSyCS_gMDiPnr4xoBGLcdFfZ8RL_Ff4SmH4k",
-    authDomain: "answerly-17371.firebaseapp.com",
-    databaseURL: "https://answerly-17371.firebaseio.com",
-    projectId: "answerly-17371",
-    storageBucket: "answerly-17371.appspot.com",
-    messagingSenderId: "555938980709",
-    appId: "1:555938980709:web:d4fb0426ec0fdbe5c0778c",
-    measurementId: "G-YHRZYV7RTR"
-  };
-  // Initialize Firebase
-  // firebase.initializeApp(firebaseConfig); -->
-<!-- </script> -->
-<!-- <script>
-    //function to save file
-    function uploadFile(){
-      
-      // Created a Storage Reference with root dir
-      var storageRef = firebase.storage().ref();
-      // Get the file from DOM
-      var file = document.getElementById("files").files[0];
-      console.log(file);
-      
-      //dynamically set reference to the file name
-      var thisRef = storageRef.child(file.name);
-
-      //put request upload file to firebase storage
-      thisRef.put(file).then(function(snapshot) {
-         alert("File Uploaded")
-         console.log('Uploaded a blob or file!');
-      });
-    }
-
- </script> -->
 <script src="C:/Vinni/Github Projects/Answerly/src/front_end/myscripts.js"></script>
 <script >
   async function onclic(){
@@ -488,42 +371,6 @@ color: white;
                 }, 1000)
        
   }
-//     var uid=0;
-//       firebase.auth().onAuthStateChanged(function(user) {
-//   if (user) {
-//     // User is signed in.
-//     uid = user.uid
-//     // var db = firebase.firestore();
-//     //   var docRef = db.collection("deyaPayusers").doc(user.uid);
-//     //   docRef.get().then(function(doc) {
-//     //      if(doc && doc.exists) {
-//     //      const myData = doc.data();
-//     //      const ffname = myData.FirstName;
-//     //      const llname = myData.LastName;
-//     //      const phonen = myData.PhoneNumber;
-//     //      document.getElementById("fname").value = ffname;
-//     //      document.getElementById("lname").value = llname;
-//     //      document.getElementById("phone").value = phonen;
-
-//     // }
-//     console.log(uid)
-//     // }).catch(function(error) {
-//     // console.log("Got an error: ",error);
-//     // });
-//   } else {
-//     console.log("No user")
-//     // No user is signed in.
-//   }
-// });
-//     firebase.database().ref(uid).child('Training_Data').once("value", function(snapshot) {
-//     count = snapshot.numChildren()
-//           // if(z==1){
-//             count = count -1
-//           // }
-//           console.log(count)
-//           firebase.database().ref(uid).child('Training_Data').child(String(count)).child("answer").set(document.getElementById("ideal_answer").value)
-//         });
-          // document.getElementById("ideal_answer").value = ''
 
   }
 </script>
@@ -558,153 +405,5 @@ function cancel(){
 }
 
 </script>
-<!-- </div> -->
-        <!-- <div class="uploadfile" > -->
-            <!-- <input type="file" id="fileupload" name="UploadFiles"/> -->
-        <!-- </div> -->
-    <!-- </div> -->
-<!-- <input type="text" > -->
-  <!-- <header> -->
-    <!-- <div class="disableBlur"> -->
-    <!-- <h1> -->
-        <!-- Welcome Vinni! -->
-    <!-- </h1> -->
-  <!-- </div> -->
-  <!-- </header> -->
-  <!-- <header1> -->
-    <!-- <div class="disableBlur"> -->
-    <!-- <h2> -->
-      <!-- Worried about checking the answer sheets? -->
-    <!-- </h2> -->
-  <!-- </div> -->
-  <!-- <div class="disableBlur"> -->
-    <!-- <h3> -->
-      <!-- <br> Now get them checked by us within seconds. -->
-    <!-- </h3> -->
-  <!-- </div> -->
-  <!-- </header1> -->
-  <!-- <div class="disableBlur"> -->
-  <!-- <button>
-    <div class="1">
-    View previously uploaded answer sheets
-  </div>
-  </button>
-    <button1>
-  <div class="2"> Upload new answer sheets
-  </div>
-  </button1> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
 
 </html>
-
-
-
-<!-- <html>
-
-<head>
-<style>
-
-
-
-.bg-image {
-  /* The image used */
-  background-image: url("https://www.insidehighered.com/sites/default/server_files/media/iStock-953193582_0.jpg");
-
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-/* Position text in the middle of the page/image */
-.bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
-}
-.wrapper {
-  position: relative;
-}
-.wrapper bg-image{
-  posi
-  /* The image used */
-  background-image: url("https://www.insidehighered.com/sites/default/server_files/media/iStock-953193582_0.jpg");
-
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.wrapper button {
-  position: absolute;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: white;  
-  color: black; 
-  border: 2px solid #4CAF50;
-}
-
-
-.wrapper button:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-
-</style>
-</head>
- -->
-<!-- <div class = "bg-image"> </div> -->
-<!-- 
-<div class="wrapper">
-  <div class="bg-image"> </div>    
-  <button>Hello world</button>
-</div>
-
-<body>
-
-
-</body>
-
-
-
-
-</html>
-
- -->
