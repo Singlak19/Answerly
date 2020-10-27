@@ -1,14 +1,28 @@
-import dataset_function
+from . import dataset_function
 import pandas as pd
 import numpy as np
 import math
 from fuzzywuzzy import fuzz
 from sklearn.model_selection import train_test_split
-from similarity_function import givKeywordsValue as keywordval
+from .similarity_function import givKeywordsValue as keywordval
 from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import LinearRegression
+
+
+
+def get_parameters(answer, ideal_answer):
+    return [keywordval(answr,ideal_answer), fuzz.token_set_ratio(answer, ideal_answer)]
+
+def train_model(X,y):
+    poly=PolynomialFeatures(degree=3)
+    X_train_poly=poly.fit_transform(X)
+    regressor=LinearRegression().fit(X_train_poly, y)
+    return regressor
+
+
+
 answer_sheets=dataset_function.load_training_dataset()
 ideal_answers=dataset_function.get_ideal_answers()
 question_codes=dataset_function.get_question_codes()
@@ -43,7 +57,9 @@ y_pred=regressor.predict(X_test_poly)
 from sklearn.metrics import mean_squared_error
 error=mean_squared_error(y_pred=y_pred, y_true=y_test)
 print("Random State: ", 2, ", Error: ", math.sqrt(error))
-
+jj=poly.transform(np.array([1,2]).reshape(1,-1))
+jj
+regressor.predict(jj)
 # type(ideal_answers[ideal_answers["question_code"]==8].iloc[0]["text"])
 # print(my_ideal_answer)
 # selected_answer_sheets=answer_sheets[answer_sheets["question_code"]==question_code]["text"]

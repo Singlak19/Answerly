@@ -3,12 +3,12 @@ out_of={0:10,1:5,2:10,3:10,4:5,5:5,6:5,7:10,8:10,9:10,10:5,11:5,12:5,13:10}
 def load_training_dataset():
     import pandas as pd
     import os
-    starting_point="../../dataset/extracted_text"
+    starting_point="dataset/extracted_text"
     text_values=[]
     question_codes=[]
     y_values=[]
-    y_14103_values=pd.read_csv("../../dataset/14103/14103.csv")
-    y_15103_values=pd.read_csv("../../dataset/15103/15103.csv")
+    y_14103_values=pd.read_csv("dataset/14103/14103.csv")
+    y_15103_values=pd.read_csv("dataset/15103/15103.csv")
     for question_paper in os.listdir(starting_point):
         if question_paper=="14103" or question_paper=="15103":
             level_1=starting_point+'/'+question_paper
@@ -43,7 +43,7 @@ def get_ideal_answers():
     import pandas as pd
     import os
     text=[]
-    starting_point="../../dataset/ideal_answers"
+    starting_point="dataset/ideal_answers"
     for answer in os.listdir(starting_point):
         if answer!="14103_Q1":
             f=open(starting_point+'/'+answer, encoding="utf8")
