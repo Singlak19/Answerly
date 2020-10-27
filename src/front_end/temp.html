@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <button onclick="temp_function()">Done</button>
+  </body>
+  <script>
+  function temp_function(){
+  var start_point="http://127.0.0.1:8000/";
+  var request = new XMLHttpRequest();
+  request.open("GET",start_point);
+  request.send();
+  console.log(request)
+  console.log(request.response)
+  }
+  </script>
+</html>
