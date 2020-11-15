@@ -9,7 +9,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import LinearRegression
-
+import pickle
 
 
 def get_parameters(answer, ideal_answer):
@@ -60,6 +60,7 @@ print("Random State: ", 2, ", Error: ", math.sqrt(error))
 jj=poly.transform(np.array([1,2]).reshape(1,-1))
 jj
 regressor.predict(jj)
+
 # type(ideal_answers[ideal_answers["question_code"]==8].iloc[0]["text"])
 # print(my_ideal_answer)
 # selected_answer_sheets=answer_sheets[answer_sheets["question_code"]==question_code]["text"]

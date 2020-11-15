@@ -57,11 +57,12 @@ def train_model_1(request):
         received_json_data=json.loads(request.body)
         firebase_unique_id=received_json_data['firebase_unique_id']
         dataset=pd.read_csv('csv_files/'+firebase_unique_id+'.csv',index_col=0)
-        print(dataset)
         X=dataset[['k','g']]
         y=dataset['y']
         regressor=train_model(X,y)
         file_location='model_uploads'+'/'+firebase_unique_id+'.pickle'
+        if(os.path.isfile(file_location)):
+            os.remove(file_location)
         pickle.dump(regressor,open(file_location,'wb'))
         return JsonResponse({'Status':'Model_trained'})
 @csrf_exempt
