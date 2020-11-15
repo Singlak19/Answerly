@@ -9,7 +9,7 @@
 .module {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("C:/Vinni/Github Projects/Answerly/src/front_end/bg-masthead.jpg");
+  background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("./bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,7 +61,7 @@
   position: relative;
   z-index: 1;
   text-align: center;
-} 
+}
 .module > h2{
   vertical-align: top;
   top: -37;
@@ -73,7 +73,7 @@
   position: relative;
   z-index: 1;
   text-align: center;
-} 
+}
 .button {
   /*position: relative;*/
   /*top: 66%;*/
@@ -88,8 +88,8 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: #4CAF50;  
-  color: white; 
+  background-color: #4CAF50;
+  color: white;
   border: 2px solid 853510;
   border-radius: 25px;
 }
@@ -108,8 +108,8 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: #4CAF50;  
-  color: white; 
+  background-color: #4CAF50;
+  color: white;
   border: 2px solid 853510;
   border-radius: 25px;
 }
@@ -141,7 +141,7 @@
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 16px;
   border: none;
   outline: none;
   color: white;
@@ -213,7 +213,7 @@ color: white;
  border: 4px solid #ccc;
  border-radius: 5px;
  background-color: AF987A;
- resize: none;  
+ resize: none;
  color: white;
 }
 #filedrag
@@ -269,8 +269,8 @@ color: white;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: #4CAF50;  
-  color: white; 
+  background-color: #4CAF50;
+  color: white;
   border: 2px solid 853510;
   border-radius: 25px;
 }
@@ -288,11 +288,11 @@ color: white;
     <button class="dropbtn"> <i class="material-icons"> person </i>
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content"> 
+    <div class="dropdown-content">
       <a href="./profile.html"> View Profile </a>
       <a onclick="signOut()"> Sign Out </a>
      </div>
-  </div> 
+  </div>
 </div>
 <!-- <div class="enableBlur"> -->
 <div class="module">
@@ -327,7 +327,7 @@ color: white;
 
           // console.log()
 //           // if(z==1){
-            count = snapshot.numChildren()-1 
+            count = snapshot.numChildren()-1
             var count2=0
             // console.log(count)
       firebase.database().ref(uid).child('Training_Data').child(String(count)).once("value", function(snapshot) {
@@ -361,13 +361,13 @@ console.log(count2)
                var node = document.createTextNode("File Name: "+snap.val());
               para.setAttribute("style","color:white; font-size: 20;")
               para.appendChild(node);
-            
+
             element.appendChild(para);
                         // var ele = document.getElementById("div1")
 console.log(r)
             var pa = document.createElement("TEXTAREA")
             // var node = document.createTextNode("Enter marks given.");
-            
+
             pa.setAttribute("style","color:black; font-size: 20; padding-left:15px")
             pa.setAttribute("id",String(rep*(-1)))
             console.log(rep)
@@ -377,12 +377,12 @@ console.log(r)
     var br = document.createElement("BR");
     element.insertBefore(br,element.getElementsByTagName("TEXTAREA")[i-1]);
 
-            
+
   })
             r=i;
         };
     }
-            
+
             waitForIt();
             function waitForIt(){
         if (r!=i) {
@@ -395,7 +395,7 @@ console.log(r)
             r=r*(-1);
         };
     }
-            
+
           }
 console.log(count2);
             waitForIt3();
@@ -432,7 +432,7 @@ console.log(count2);
           bt.setAttribute("onclick","onDone()");
           var t = document.createTextNode("Done");
           bt.appendChild(t);
-          
+
           bt.setAttribute("style","  position: absolute;left: 3%;align-items: center; border: none; color: white; padding: 16px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px;transition-duration: 0.4s; cursor: pointer; background-color: #4CAF50; color: white; border: 2px solid 853510; border-radius: 25px;")
           var brk = document.createElement("BR")
           m[0].appendChild(brk)
@@ -461,7 +461,7 @@ console.log(count2);
 
           // console.log()
 //           // if(z==1){
-            count = snapshot.numChildren()-1 
+            count = snapshot.numChildren()-1
             var count2=0
             firebase.database().ref(uid).child('Training_Data').child(String(count)).child('answer').on("value", function(snapshot) {
                   // var name = snapshot.val();
@@ -479,21 +479,40 @@ console.log(count2);
               if(document.getElementById(String(i)).value==""){
                   swal({
                 icon: 'error',
-                title: 'Missing marks field!', 
+                title: 'Missing marks field!',
             })
                   break;
               }
               else{
                 firebase.database().ref(uid).child("Training_Data").child(count).child(String(i)).child('url').on("value", function(snapshot) {
-                    url_list.push.apply(url_list,snapshot.val());
+                    url_list.push(snapshot.val());
                   });
 
-                marks_list.push.apply(marks_list,document.getElementById(String(i)).value)
+                marks_list.push(document.getElementById(String(i)).value)
                 firebase.database().ref(uid).child("Training_Data").child(count).child(String(i)).child("marks").set(document.getElementById(String(i)).value)
               }
             }
             if(i==count2+1){
-              setTimeout(function(){
+              setTimeout(async function(){
+                data={
+                  'links':url_list,
+                  'ideal_answer':answer,
+                  'y_values':marks_list,
+                  'firebase_unique_id': uid,
+                }
+                var start_point="http://127.0.0.1:8000/data";
+                let request= new XMLHttpRequest();
+                request.open("POST", start_point, true);
+                // request.setRequestHeader( 'Access-Control-Allow-Origin', '*');
+                // request.setRequestHeader( 'Content-Type', 'application/json' );
+                // request.withCredentials = false;
+                request.send(JSON.stringify(data))
+                request.onload = await function () {
+    // do something to response
+    console.log(request.response);
+};
+
+
                     window.location.replace("./answerly.html");
                 }, 1000)
             }
@@ -510,7 +529,7 @@ console.log(count2);
         // Sign-out successful.
         swal({
             type: 'successfull',
-            title: 'Signed Out', 
+            title: 'Signed Out',
         }).then((value) => {
             setTimeout(function(){
                 window.location.replace("./home_page.html");

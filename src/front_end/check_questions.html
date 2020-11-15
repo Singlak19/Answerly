@@ -9,7 +9,7 @@
 .module {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("C:/Vinni/Github Projects/Answerly/src/front_end/bg-masthead.jpg");
+  background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("./bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,7 +59,7 @@
   position: relative;
   z-index: 1;
   text-align: center;
-} 
+}
 .module > h2{
   vertical-align: top;
   top: -37;
@@ -83,7 +83,7 @@
   position: relative;
   z-index: 1;
   text-align: center;
-} 
+}
 .module > button {
   position: absolute;
   top: 89%;
@@ -98,8 +98,8 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: #4CAF50;  
-  color: white; 
+  background-color: #4CAF50;
+  color: white;
   border: 2px solid 853510;
   border-radius: 25px;
 }
@@ -118,8 +118,8 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: #4CAF50;  
-  color: white; 
+  background-color: #4CAF50;
+  color: white;
   border: 2px solid 853510;
   border-radius: 25px;
 }
@@ -151,7 +151,7 @@
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 16px;
   border: none;
   outline: none;
   color: white;
@@ -222,7 +222,7 @@ color: white;
  border: 4px solid #ccc;
  border-radius: 5px;
  background-color: AF987A;
- resize: none;  
+ resize: none;
  color: white;
 }
 #filedrag
@@ -263,11 +263,11 @@ color: white;
     <button class="dropbtn"> <i class="material-icons"> person </i>
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content"> 
+    <div class="dropdown-content">
       <a href="./profile.html"> View Profile </a>
       <a onclick="signOut()"> Sign Out </a>
      </div>
-  </div> 
+  </div>
 </div>
 <!-- <div class="enableBlur"> -->
 <div class="module">
@@ -278,7 +278,7 @@ color: white;
  <h2>
   Upload Answer Sheets:
 </h2>
-<button onclick="onclic()"> 
+<button onclick="onclic()">
   <!-- <a href="./upload_answers.html"> -->
   Done
 <!-- </a> -->
@@ -318,26 +318,26 @@ color: white;
 </div>
 
      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"> </script>
-<script src="C:/Vinni/Github Projects/Answerly/src/front_end/myscripts.js"></script>
+<script src="./myscripts.js"></script>
 <script >
   async function onclic(){
     if(document.getElementById("messages").innerHTML=="" && document.getElementById("ideal_answer").value=="" && document.getElementById("max_marks").value==""){
         swal({
                 icon: 'error',
-                title: 'Please do something!', 
+                title: 'Please do something!',
             })
 
     }
     else if(document.getElementById("messages").innerHTML==""){
       swal({
                 icon: 'error',
-                title: 'No files uploaded!', 
+                title: 'No files uploaded!',
             })
     }
     else if(document.getElementById("ideal_answer").value==""){
       swal({
                 icon: 'error',
-                title: 'No ideal answer given!', 
+                title: 'No ideal answer given!',
             })
     }
     else if(document.getElementById("max_marks").value==""){
@@ -347,8 +347,8 @@ color: white;
       })
     }
   else{
-    var a = await onSubmit2();
-    
+    var a = await onSubmit3();
+
   }
 
   }
@@ -359,7 +359,7 @@ color: white;
         // Sign-out successful.
         swal({
             type: 'successfull',
-            title: 'Signed Out', 
+            title: 'Signed Out',
         }).then((value) => {
             setTimeout(function(){
                 window.location.replace("./home_page.html");

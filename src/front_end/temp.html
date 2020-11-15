@@ -3,13 +3,82 @@
     <button onclick="temp_function()">Done</button>
   </body>
   <script>
-  function temp_function(){
-  var start_point="http://127.0.0.1:8000/";
-  var request = new XMLHttpRequest();
-  request.open("GET",start_point);
-  request.send();
-  console.log(request)
-  console.log(request.response)
-  }
+  async function temp_function(){
+
+
+
+
+
+
+  // Temp FUNCTION
+  //   data={'entry':['4','5','6'],}
+  // var start_point="http://127.0.0.1:8000/temp";
+  // var request= new XMLHttpRequest();
+  // request.open("POST",start_point,true);
+  // request.responseType = 'json';
+  // request.send(JSON.stringify(data));
+  // request.onload = function(){
+  //   let responseobject=request.response;
+  //   console.log(responseobject)
+  // }
+
+
+
+
+
+
+
+
+  // ML_MODEL
+  // data={'url':url,'firebase_unique_id':uid}
+  // var start_point="http://127.0.0.1:8000/ml_model"
+  // var request=new XMLHttpRequest();
+  // request.open("POST",start_point,true);
+  // request.send(JSON.stringify(data))
+  // request.onload = function() {
+  //   let response=request.response;
+  //   console.log(response.ans)
+  // }
+
+
+
+
+
+
+
+
+
+//  UPDATE DATA FUNCTION
+  // data={
+  //   'links':url_list,
+  //   'ideal_answer':answer,
+  //   'y_values':marks_list,
+  //   'firebase_unique_id': uid,
+  // }
+  // var start_point="http://127.0.0.1:8000/data";
+  // let request= new XMLHttpRequest();
+  // request.open("POST", start_point, true)
+  // request.send(JSON.stringify(data))
+  // request.onload = function () {
+  // // do something to response
+  // console.log(request.response);
+  // };
+
+//  Train Model FUNCTION
+// data={'firebase_unique_id':uid};
+// var start_point="http://127.0.0.1:8000/train_model";
+// let request= new XMLHttpRequest();
+// request.open("POST", start_point, true)
+// request.send(JSON.stringify(data))
+// request.onload = function(){
+//   console.log(request.response);
+// }
+
+
+
+
+data={'firebase_unique_id':uid}
+var
+};
   </script>
 </html>

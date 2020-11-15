@@ -13,7 +13,7 @@ from sklearn.linear_model import LinearRegression
 
 
 def get_parameters(answer, ideal_answer):
-    return [keywordval(answr,ideal_answer), fuzz.token_set_ratio(answer, ideal_answer)]
+    return [keywordval(answer,ideal_answer), fuzz.token_set_ratio(answer, ideal_answer)]
 
 def train_model(X,y):
     poly=PolynomialFeatures(degree=3)
