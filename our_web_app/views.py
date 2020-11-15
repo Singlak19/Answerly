@@ -37,12 +37,12 @@ def home(request):
         X=poly.fit_transform(X)
         ans=regressor.predict(X)
         ans=ans[0]
-        int_ans=int(ans)
         if ans>10:
             if ans<20:
                 ans=ans/2
             else:
                 ans=10
+        int_ans=int(ans)
         if ans-int_ans>=0.75:
             ans=int_ans+1
         elif ans-int_ans>=0.25:

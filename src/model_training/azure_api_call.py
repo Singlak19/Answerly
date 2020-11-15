@@ -17,7 +17,7 @@ def ocr_azure():
     while(poll):
         response_final=requests.get(operation_url,headers=headers)
         analysis=response_final.json()
-        print(json.dumps(analysis,indent=4))
+        # print(json.dumps(analysis,indent=4))
         time.sleep(1)
         if ("analyzeResult" in analysis):
             poll = False

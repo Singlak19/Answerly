@@ -53,7 +53,7 @@
 .module > h1{
   vertical-align: top;
   top: -160;
-  left: -500;
+  left: -320;
   /*margin: 0;*/
   color: white;
   /*align-content: center;*/
@@ -297,7 +297,7 @@ color: white;
 <!-- <div class="enableBlur"> -->
 <div class="module">
 
- <h1>Enter Marks:</h1>
+ <h1>List Of Marks Given By The Model:</h1>
 </div>
      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"> </script>
 <script>
@@ -322,7 +322,7 @@ color: white;
     // User is signed in.
     var uid = user.uid
     console.log(uid)
-    firebase.database().ref(uid).child('Training_Data').once("value", function(snapshot) {
+    firebase.database().ref(uid).child('Testing_Data').once("value", function(snapshot) {
 //             // z=1;
 
           // console.log()
@@ -330,11 +330,11 @@ color: white;
             count = snapshot.numChildren()-1
             var count2=0
             // console.log(count)
-      firebase.database().ref(uid).child('Training_Data').child(String(count)).once("value", function(snapshot) {
+      firebase.database().ref(uid).child('Testing_Data').child(String(count)).once("value", function(snapshot) {
 //             // z=1;
           count2 = snapshot.numChildren()
 //           // if(z==1){
-            count2 = count2 -2
+            count2 = count2 -1
 //           // }
 console.log(count2)
           // console.log(count2)
@@ -351,31 +351,69 @@ console.log(count2)
           console.log(r)
             setTimeout(function(){waitForIt2()},100);
         } else {
+          var r2=i;
           var rep = r;
           console.log(r)
           var para = document.createElement("P");
             // var r=0;
             // document.getElementsByTagName("p1").setAttribute("class", "styles1");
-            firebase.database().ref(uid).child("Training_Data").child(String(count)).child(String(i)).child("name").once('value',(snap)=>{
+            firebase.database().ref(uid).child("Testing_Data").child(String(count)).child(String(i)).child("name").once('value',(snap)=>{
     // console.log(snap.val());
                var node = document.createTextNode("File Name: "+snap.val());
               para.setAttribute("style","color:white; font-size: 20;")
+              var br = document.createElement("BR");
               para.appendChild(node);
+              para.appendChild(br);
 
             element.appendChild(para);
                         // var ele = document.getElementById("div1")
 console.log(r)
-            var pa = document.createElement("TEXTAREA")
+
+            // var pa = document.createElement("TEXTAREA")
             // var node = document.createTextNode("Enter marks given.");
 
-            pa.setAttribute("style","color:black; font-size: 20; padding-left:15px")
-            pa.setAttribute("id",String(rep*(-1)))
-            console.log(rep)
-            pa.setAttribute("placeholder","Enter marks given.")
-            element.appendChild(pa)
+            // pa.setAttribute("style","color:black; font-size: 20; padding-left:15px")
+            // pa.setAttribute("id",String(rep*(-1)))
+            // console.log(rep)
+            // pa.setAttribute("placeholder","Enter marks given.")
+            // element.appendChild(pa)
             // var ele = document.getElementById("div1")
-    var br = document.createElement("BR");
-    element.insertBefore(br,element.getElementsByTagName("TEXTAREA")[i-1]);
+    // var br = document.createElement("BR");
+    // element.appendChild(br)
+    // element.insertBefore(br,element.getElementsByTagName("TEXTAREA")[i-1]);
+
+
+  })
+            var br = document.createElement("BR");
+            // element.appendChild(br)
+                      var para2 = document.createElement("P");
+            // var r=0;
+            // document.getElementsByTagName("p1").setAttribute("class", "styles1");
+            firebase.database().ref(uid).child("Testing_Data").child(String(count)).child(String(i)).child("marks_given").once('value',(snap)=>{
+    // console.log(snap.val());
+               var node2 = document.createTextNode("Marks Given: "+snap.val());
+              para.setAttribute("style","color:white; font-size: 20;")
+              para.appendChild(node2);
+            para.appendChild(br);
+            para.appendChild(br);
+            element.appendChild(para2);
+                        // var ele = document.getElementById("div1")
+console.log(r)
+
+            // var pa = document.createElement("TEXTAREA")
+            // var node = document.createTextNode("Enter marks given.");
+
+            // pa.setAttribute("style","color:black; font-size: 20; padding-left:15px")
+            // pa.setAttribute("id",String(rep*(-1)))
+            // console.log(rep)
+            // pa.setAttribute("placeholder","Enter marks given.")
+            // element.appendChild(pa)
+            // var ele = document.getElementById("div1")
+    // var br = document.createElement("BR");
+    // console.log(element.getElementsByTagName("P").length)
+    // console.log((2*r2)-1)
+    // console.log(r2)
+    // element.insertBefore(br,element.getElementsByTagName("P")[(2*r2)-1]);
 
 
   })
@@ -448,78 +486,9 @@ console.log(count2);
 </script>
 <script>
   function onDone(){
-    var marks_list=[];
-    var url_list=[];
-    var answer=""
-      firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    var uid = user.uid
-    var count=0
-        firebase.database().ref(uid).child('Training_Data').once("value", function(snapshot) {
-//             // z=1;
-
-          // console.log()
-//           // if(z==1){
-            count = snapshot.numChildren()-1
-            var count2=0
-            firebase.database().ref(uid).child('Training_Data').child(String(count)).child('answer').on("value", function(snapshot) {
-                  // var name = snapshot.val();
-                  answer=snapshot.val();
-            });
-
-            // console.log(count)
-      firebase.database().ref(uid).child('Training_Data').child(String(count)).once("value", function(snapshot) {
-//             // z=1;
-          count2 = snapshot.numChildren()
-//           // if(z==1){
-            count2 = count2 -2
-            var i=1;
-            for(;i<=count2;i++){
-              if(document.getElementById(String(i)).value==""){
-                  swal({
-                icon: 'error',
-                title: 'Missing marks field!',
-            })
-                  break;
-              }
-              else{
-                firebase.database().ref(uid).child("Training_Data").child(count).child(String(i)).child('url').on("value", function(snapshot) {
-                    url_list.push(snapshot.val());
-                  });
-
-                marks_list.push(document.getElementById(String(i)).value)
-                firebase.database().ref(uid).child("Training_Data").child(count).child(String(i)).child("marks").set(document.getElementById(String(i)).value)
-              }
-            }
-            if(i==count2+1){
-              setTimeout(async function(){
-                data={
-                  'links':url_list,
-                  'ideal_answer':answer,
-                  'y_values':marks_list,
-                  'firebase_unique_id': uid,
-                }
-                var start_point="http://127.0.0.1:8000/data";
-                let request= new XMLHttpRequest();
-                request.open("POST", start_point, true);
-                // request.setRequestHeader( 'Access-Control-Allow-Origin', '*');
-                // request.setRequestHeader( 'Content-Type', 'application/json' );
-                // request.withCredentials = false;
-                request.send(JSON.stringify(data))
-                request.onload = await function () {
-    // do something to response
-    console.log(request.response);
-};
-
-
-                    window.location.replace("./answerly.html");
-                }, 1000)
-            }
-          });
-    });
-          }
-        });
+      setTimeout(function(){
+                   window.location.replace("./second_page.html");
+               }, 1000)
     // console.log(document.getElementById("1").value)
   }
 </script>

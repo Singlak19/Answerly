@@ -246,7 +246,7 @@ task.on('state_changed', function(snapshot){
 
 
   async function onSubmit3(){
-		console.log("rrrrrrrr")
+		// console.log("rrrrrrrr")
 		var url_vector=[]
 		var name_vector=[]
 		var ideal_answer_var = document.getElementById("ideal_answer").value
@@ -266,7 +266,7 @@ firebase.database().ref(uid).child('Testing_Data').once("value", function(snapsh
     });
 
 		var res = '';
-		console.log("IIIIIIIIIIII")
+		// console.log("IIIIIIIIIIII")
 
 		for (var i = 0, f; f = final_files[i]; i++) {
 			console.log(String(i))
@@ -329,11 +329,12 @@ data={'url':downloadURL,'firebase_unique_id':uid,'ideal_answer':ideal_answer_var
     var json_response=JSON.parse(request.responseText)
     console.log(json_response.ans)
     // console.log(response['ans'])
-    firebase.database().ref(uid).child('Testing_Data').child(String(count)).child(String(count2)).child("marks_given").set(response.ans)
+    firebase.database().ref(uid).child('Testing_Data').child(String(count)).child(String(count2)).child("marks_given").set(json_response.ans)
     // ans_vector.push(response.ans)
+    resolve()
   }
 });
-  resolve()
+
             });
           });
 })
