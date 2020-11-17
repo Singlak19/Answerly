@@ -1,5 +1,13 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.swal-size-sm
+{
+   width: 400px !important;
+	 height: 800px !important;
+	 font-size: 4em !important;
+}
+</style>
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <head>
 	<script src="./sweetalert.min.js"></script>
@@ -122,10 +130,10 @@
 }
 .module > header1 {
   position: absolute;
-  top: 180;
-  left: 310;
+  top: 280;
+  left: 410;
   width: 55%;
-  height: 200%
+  height: 250%
   vertical-align: center;
   align-content: center;
   padding: 20px 10px;
@@ -147,7 +155,7 @@
   left: 310;
   align-content: center;
   width: 100%;
-  height: 200%;
+  height: 250%;
   padding: 20px 10px;
   /*background: inherit;*/
   /*background-attachment: fixed;*/
@@ -175,11 +183,12 @@
   margin: 0;
   color: white;
   align-content: center;
-  font-size: 35;
+  font-size: 40;
+	font-weight:8;
   position: relative;
   z-index: 1;
   text-align: center;
-
+/* font-weight: 1px */
     /*-webkit-filter: blur(0);*/
   /*filter: blur(0);*/
 }
@@ -188,9 +197,11 @@
   margin: 0;
   color: white;
   align-content: center;
-  font-size: 30;
+  font-size: 40;
+	font-weight:8;
   position: relative;
   z-index: 1;
+	top:-20px;
   text-align: center;
 }
 .module > button {
@@ -238,14 +249,15 @@
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 26px;
   border: none;
   outline: none;
   color: white;
-  padding: 14px 26px;
+  padding: 14px 35px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+	size: 20px;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -273,7 +285,7 @@
   text-decoration: none;
   display: block;
   text-align: left;
-  padding-right: 40px;
+  padding-right: 30px;
 }
 
 .dropdown-content a:hover {
@@ -305,15 +317,15 @@
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  <div class="navbar">
   <!-- <i class="material-icons">person</i> -->
-  <a href="#home">Home</a>
-  <a href="#news">Contact</a>
+  <a href="#home" style="font-size:25px">Home</a>
+  <a href="#news" style="font-size:25px">Contact</a>
   <div class="dropdown">
     <button class="dropbtn"> <i class="material-icons"> person </i>
       <!-- <i class="fa fa-caret-down"></i> -->
     </button>
     <div class="dropdown-content">
-    	<a href="./profile.html"> View Profile </a>
-    	<a onclick="signOut()"> Sign Out </a>
+    	<a href="./profile.html" style="font-size:20px"> View Profile </a>
+    	<a onclick="signOut()" style="font-size:20px"> Sign Out </a>
      </div>
     <!-- <div class="dropdown-content" onclick="signOut()"> -->
       <!-- Sign Out -->
@@ -344,7 +356,7 @@
   </header1>
   <!-- <div class="disableBlur"> -->
 
-  <button onclick="func3()">
+  <button onclick="func3()" style="font-size: 30px">
     <!-- <a href="./second_page.html" style="color:white; text-underline-position: auto;">  -->
     Get Started
   <!-- </a>   -->
@@ -390,7 +402,7 @@
 ref.on("value", function(snapshot) {
 	var name = snapshot.val();
 	var ele = document.getElementById("h11");
-	ele.setAttribute("style","  margin: 0;  color: white;  margin-right:0px; margin-left:40px;margin-top: -560px; position: relative;  text-align: center;  font-size: 52; top: 0;")
+	ele.setAttribute("style","  margin: 0;  color: white;  margin-right:0px; margin-left:40px;margin-top: -860px; position: relative;text-align: center;  font-size: 72; top: 0; font-weight:500px")
 	document.getElementById("h11").innerHTML="Welcome "+name+"!";
    // console.log(snapshot.val());
 }, function (error) {
@@ -506,6 +518,7 @@ ref.on("value", function(snapshot) {
         	swal({
         		// icon: 'error'
         		title: 25 - sum +' More Documents Needed For Completely Training Your Model!',
+						customClass: 'swal-size-sm',
         		message: 'documents left'
         	}).then((value) => {
             setTimeout(function(){

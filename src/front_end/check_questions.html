@@ -6,6 +6,7 @@
 <style>
 
 
+
 .module {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
@@ -14,7 +15,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  /* Full height */
   min-height: 150%
 }
 .module > header {
@@ -36,6 +36,8 @@
   left: 0;
   width: 200%;
   height: 200%;
+  /*background: inherit;*/
+  /*background-attachment: fixed;*/
   -webkit-filter: blur(4px);
   filter: blur(4px);
 }
@@ -51,50 +53,50 @@
 .module > h1{
   vertical-align: top;
   top: -160;
-  left: -450;
+  left: -630;
   /*margin: 0;*/
   color: white;
   /*align-content: center;*/
-  font-size: 40;
+  font-size: 60;
   position: relative;
   z-index: 1;
   text-align: center;
 }
 .module > h2{
   vertical-align: top;
-  top: -37;
-  left: -430;
+  top: 24;
+  left: -590;
   /*margin: 0;*/
   color: white;
   /*align-content: center;*/
-  font-size: 40;
+  font-size: 60;
   position: relative;
   z-index: 1;
   text-align: center;
 }
 .module > h3{
   vertical-align: top;
-  top: 255;
-  left: -460;
+  top: 395;
+  left: -650;
   /*margin: 0;*/
   color: white;
   /*align-content: center;*/
-  font-size: 40;
+  font-size: 60;
   position: relative;
   z-index: 1;
   text-align: center;
 }
 .module > button {
   position: absolute;
-  top: 89%;
-  left: 4%;
+  top: 86%;
+  left: 3%;
   border: none;
   color: white;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 26px;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -105,7 +107,7 @@
 }
 .module > button1 {
   position: absolute;
-  top: 40%;
+  top: 60%;
   left: 39%;
   align-items: center;
   border: none;
@@ -151,19 +153,21 @@
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 26px;
   border: none;
   outline: none;
   color: white;
-  padding: 14px 26px;
+  padding: 14px 35px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+	size: 20px;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -185,8 +189,9 @@
   text-decoration: none;
   display: block;
   text-align: left;
-  padding-right: 40px;
+  padding-right: 30px;
 }
+
 .dropdown-content a:hover {
   background-color: #ddd;
 }
@@ -207,16 +212,17 @@
     color: white;
 position: absolute;
 left: 100;
-top: 100;
+top: 140;
 size: 30;
 color: white;
+font-size:40px;
 }
 .module > textarea {
   position: absolute;
-  top: 110px;
+  top: 150px;
   left: 50px;
  width: 50%;
- height: 100px;
+ height: 140px;
  padding: 15px 22px;
  box-sizing: border-box;
  border: 4px solid #ccc;
@@ -224,6 +230,7 @@ color: white;
  background-color: AF987A;
  resize: none;
  color: white;
+ font-size:25px;
 }
 #filedrag
 {
@@ -257,15 +264,15 @@ color: white;
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  <div class="navbar">
   <!-- <i class="material-icons">person</i> -->
-  <a href="./answerly.html">Home</a>
-  <a href="#news">Contact</a>
+  <a href="./answerly.html" style="font-size:25px">Home</a>
+  <a href="#news" style="font-size:25px">Contact</a>
   <div class="dropdown">
-    <button class="dropbtn"> <i class="material-icons"> person </i>
+    <button class="dropbtn" style="font-size:25px"> <i class="material-icons" > person </i>
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="./profile.html"> View Profile </a>
-      <a onclick="signOut()"> Sign Out </a>
+      <a href="./profile.html" style="font-size:20px"> View Profile </a>
+      <a onclick="signOut()" style="font-size:20px"> Sign Out </a>
      </div>
   </div>
 </div>
@@ -289,10 +296,10 @@ color: white;
  <h3>
   Enter Max Marks:
 </h3>
-<textarea id ="max_marks" style="top: 685px;"></textarea>
+<textarea id ="max_marks" style="top: 955px;"></textarea>
 
 </div>
-<div style="color: white; width:800px; margin-right:100px; margin-left:50px; border:1px solid #000; margin-top: -600px; position: absolute;  border-color: white;">
+<div style="color: white; width:800px; margin-right:100px; margin-left:50px; border:1px solid #000; margin-top: -880px; position: absolute;  border-color: white;">
 <form id="upload" action="upload.php" method="POST" enctype="multipart/form-data"  >
 
 <fieldset>
@@ -301,9 +308,9 @@ color: white;
 <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
 
 <div>
-  <label for="fileselect" style="color: white;font-size: 20;">Files to upload:</label>
-  <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" style="color: white;font-size: 14;" />
-  <div id="filedrag" style="color: white;font-size: 20;" >or drop files here</div>
+  <label for="fileselect" style="color: white;font-size: 30;">Files to upload:</label>
+  <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" style="color: white;font-size: 20;" />
+  <div id="filedrag" style="color: white;font-size: 30;" >or drop files here</div>
 </div>
 
 <div id="submitbutton">
@@ -314,9 +321,8 @@ color: white;
 
 </form>
 
-<div id="messages" style="color: white; font-size: 18; height: 90; overflow: auto; padding-left: 10px;" ></div>
+<div id="messages" style="color: white; font-size: 22; height: 90; overflow: auto; padding-left: 10px;" ></div>
 </div>
-
      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"> </script>
 <script src="./myscripts.js"></script>
 <script >
